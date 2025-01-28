@@ -29,12 +29,10 @@ nav:
   - References: references.md
   - Contact: contact.md
  
-# CoderDojo Microsite Standards from here down
+# Dan's MicroSite Standards from here down
 
 theme:
   name: material
-  extra_css:
-    - styles/custom.css
   logo: img/logo.png
   # favicon: img/my-icon.png
   palette:
@@ -62,8 +60,16 @@ markdown_extensions:
   - attr_list
   - pymdownx.highlight:
       linenums: true
+  # enable LaTeX extensions
+  - pymdownx.arithmatex:
+      generic: true
 extra_css:
    - css/extra.css
+extra_javascript:
+    - js/extra.js
+extra_javascript:
+  # - js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 #extra:
 #  analytics:
 #    provider: google
