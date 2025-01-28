@@ -9,6 +9,10 @@ edit_uri: 'blob/master/docs'
 nav:
   - Home: index.md
   - Course Description: course-description.md
+  - Prompts:
+    - Intro: prompts/index.md
+  - MicroSims:
+    - Intro: sims/index.md
   - Checklist: checklist.md
   - Code Highlight Test: code-highlight-test.md
   - Glossary: glossary.md
