@@ -1,0 +1,1291 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An example of an intelligent textbook for teaching deep learning. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/deep-learning-course/prompts/03-concept-enumeration/">
+      
+      
+        <link rel="prev" href="../02-bloom-taxonomy-description/">
+      
+      
+        <link rel="next" href="../04-concept-dependencies/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Concept Enumeration - Deep Learning Course with AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#concept-enumeration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Deep Learning Course with AI" class="md-header__button md-logo" aria-label="Deep Learning Course with AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Deep Learning Course with AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Concept Enumeration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/deep-learning-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Deep Learning Course with AI" class="md-nav__button md-logo" aria-label="Deep Learning Course with AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Deep Learning Course with AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/deep-learning-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-bloom-taxonomy-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Concept Enumeration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Concept Enumeration
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the CSV
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-concept-dependencies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Dependencies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-concept-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-glossary-of-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary of Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-equations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checklist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-highlight-test.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code Highlight Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the CSV
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/deep-learning-course/blob/master/docs/prompts/03-concept-enumeration.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="concept-enumeration">Concept Enumeration</h1>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Please generate a list of the 200 core concepts that
+need to be covered in this course and the order in
+which they should be taught.</p>
+<p>Return numbered list of these core concepts using
+a single line per concept.  For each concept,
+just return a short concept name and use acronyms or abbreviations
+when appropriate.  They will be used as labels in a graph network.
+Make sure that the concepts are distinct not duplicated in the list.</p>
+<p>Use title case for the concept names.</p>
+<p>Start with the most basic foundational concepts and then
+proceed to the most complex concepts.</p>
+</div>
+<h2 id="workflow">Workflow</h2>
+<p><strong>Setting the stage</strong></p>
+<p>I'm compiling a list of 200 unique core concepts for a deep learning course. The order will start with basic concepts and gradually advance to more complex ones.</p>
+<p><strong>Expanding the list</strong></p>
+<p>I'm building upon the course outline to include topics like generative AI and RL, ensuring each is distinct and enumerated correctly while avoiding duplicates.</p>
+<p><strong>Organizing topics</strong></p>
+<p>Structuring the course into categories like basic foundations, Python tools, and advanced topics such as generative AI and domain-specific architectures to ensure a systematic progression.</p>
+<p><strong>Finalizing concepts</strong></p>
+<p>Wrapping up the course with distinctions like "AI Definition" and "ML Definition," ensuring clarity with concise, title-case concepts in 200 carefully enumerated lines.</p>
+<p><strong>Ensuring clarity</strong></p>
+<p>I'm refining concepts like "AI Definition" and "ML Definition," combining title case and potentially using acronyms for distinct clarity. The goal is to maintain precision and avoid redundancy.</p>
+<p><strong>Detailed line distribution</strong></p>
+<p>I'm assigning 10-line chunks to various topics, such as Python, ML fundamentals, neural networks, and advanced architectures, ensuring comprehensive coverage across all 200 lines.</p>
+<p><strong>Progressing through topics</strong></p>
+<p>I'm charting our course with concise lines to cover "NN Fundamentals" and "Training Processes," ensuring distinct and systematic progression across 200 meticulously controlled entries.</p>
+<p><strong>Venturing into complexity</strong></p>
+<p>I'm exploring advanced topics in neural networks, including special architectures like Capsule Networks and Tree-Augmented Naive Bayes, as well as Transformer techniques for natural language processing.</p>
+<p><strong>Unraveling generative AI</strong></p>
+<p>I'm analyzing advanced generative models and reinforcement learning techniques. This involves delving into diffusion models, denoising diffusion, principal components, and ethical considerations like fairness and privacy.</p>
+<p><strong>Mapping deployment and application</strong></p>
+<p>I'm covering GPU and TPU acceleration, memory management, model compression, and practical applications like computer vision and autonomous driving. This completes the cycle, ensuring comprehensive coverage.</p>
+<h2 id="result">Result</h2>
+<p>Thought about deep learning curriculum concepts for 1m 42s
+AI Definition
+ML Definition
+History Of AI
+Nobel Prizes
+Key Figures
+AI Branches
+Symbolic AI
+Data-Driven AI
+NN Origins
+Biological Inspiration
+Python Setup
+Conda Environment
+Jupyter Notebooks
+NumPy Basics
+Pandas Basics
+Matplotlib Basics
+SciPy Basics
+Scikit-Learn Overview
+PyTorch Intro
+TensorFlow Intro
+Supervised Vs Unsupervised
+Regression Vs Classification
+Overfitting Vs Underfitting
+Training-Validation-Test
+Bias-Variance Tradeoff
+Regularization Overview
+Cross-Validation
+Evaluation Metrics
+Loss Functions
+Gradient Descent
+Data Preprocessing
+Scaling And Normalization
+Data Augmentation
+Feature Engineering
+Dimensionality Concepts
+Data Splits
+Data Visualization
+Data Cleaning
+Data Imbalance
+Data Ethics
+Perceptron Model
+Multi-Layer Perceptron
+Activation Functions
+Forward Propagation
+Backpropagation
+Weights And Biases
+Batch Training
+Mini-Batch Training
+Stochastic Training
+Learning Rate
+Loss Surface
+Local Minima
+Vanishing Gradients
+Exploding Gradients
+Initialization Methods
+He Initialization
+Xavier Initialization
+Momentum Optimizer
+AdaGrad
+Adam Optimizer
+Convolution Operation
+Filters And Kernels
+Pooling Layers
+Stride And Padding
+Fully Connected Layers
+Batch Normalization
+CNN Architectures
+ImageNet
+Transfer Learning Basics
+Object Detection
+Sequence Modeling
+Vanilla RNN
+LSTM Units
+GRU Units
+Backprop Through Time (BPTT)
+Exploding Gradient Control
+Language Modeling
+Text Generation
+Time-Series Forecasting
+Attention Mechanism
+Deep Architecture
+Layer Stacking
+Depth Vs Width
+Residual Networks (ResNet)
+Inception Modules
+DenseNet
+Skip Connections
+Dropout
+BatchNorm
+Weight Decay
+Capsule Networks
+Graph Neural Networks (GNNs)
+Transformers Intro
+Vision Transformers (ViT)
+Self-Attention
+Positional Encoding
+BERT Overview
+GPT Overview
+Sequence-To-Sequence
+Neural Machine Translation
+Generative Models
+Autoencoders (AE)
+Variational Autoencoders (VAE)
+GAN Basics
+Generator Vs Discriminator
+Latent Space
+Conditional GAN
+CycleGAN
+Style Transfer
+Text-To-Image
+Diffusion Models
+Denoising Diffusion
+Score Matching
+Likelihood Estimation
+Energy-Based Models
+Flow-Based Models
+Prompt Engineering
+Text Generation Models
+Large Language Models (LLMs)
+ChatGPT Concept
+PCA
+t-SNE
+UMAP
+Autoencoder DR
+Manifold Hypothesis
+Feature Space
+Principal Components
+Nonlinear Embeddings
+High-Dimensional Data
+Data Visualization Tools
+RL Definition
+Markov Decision Process (MDP)
+Value Functions
+Policy Gradient
+Q-Learning
+Deep Q-Network (DQN)
+Actor-Critic
+Reward Shaping
+Exploration Vs Exploitation
+Baseline Algorithms
+Model Interpretability
+Explainable AI (XAI)
+SHAP
+LIME
+Fairness
+Bias Mitigation
+Privacy
+Security
+Adversarial Examples
+Responsible AI
+GPU Acceleration
+TPU Acceleration
+Memory Management
+Model Compression
+Quantization
+Pruning
+Edge Deployment
+Cloud Services
+AutoML
+MLOps
+Hyperparameter Tuning
+Grid Search
+Random Search
+Bayesian Optimization
+Early Stopping
+Learning Rate Scheduling
+Data Parallelism
+Model Parallelism
+Checkpointing
+Version Control
+Accuracy
+Precision
+Recall
+F1 Score
+AUC-ROC
+Confusion Matrix
+Top-1 Vs Top-5 Accuracy
+BLEU Score
+Perplexity
+Mean Squared Error (MSE)
+Computer Vision
+Natural Language Processing (NLP)
+Speech Recognition
+Medical Imaging
+Drug Discovery
+Protein Folding
+Autonomous Driving
+Robotics
+Financial Forecasting
+Recommender Systems
+Project Scoping
+Requirement Analysis
+Data Acquisition
+Data Annotation
+Resource Allocation
+Team Collaboration
+Version Control Workflow
+Agile Methods
+Code Review
+Documentation</p>
+<h2 id="getting-the-csv">Getting the CSV</h2>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>please return this list in a single csv file with the first column as ConceptID and the second column as ConceptLabel</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Define the list of concepts</span>
+<span class="n">concepts</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;AI Definition&quot;</span><span class="p">,</span> <span class="s2">&quot;ML Definition&quot;</span><span class="p">,</span> <span class="s2">&quot;History Of AI&quot;</span><span class="p">,</span> <span class="s2">&quot;Nobel Prizes&quot;</span><span class="p">,</span> <span class="s2">&quot;Key Figures&quot;</span><span class="p">,</span> <span class="s2">&quot;AI Branches&quot;</span><span class="p">,</span> <span class="s2">&quot;Symbolic AI&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Data-Driven AI&quot;</span><span class="p">,</span> <span class="s2">&quot;NN Origins&quot;</span><span class="p">,</span> <span class="s2">&quot;Biological Inspiration&quot;</span><span class="p">,</span> <span class="s2">&quot;Python Setup&quot;</span><span class="p">,</span> <span class="s2">&quot;Conda Environment&quot;</span><span class="p">,</span> <span class="s2">&quot;Jupyter Notebooks&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NumPy Basics&quot;</span><span class="p">,</span> <span class="s2">&quot;Pandas Basics&quot;</span><span class="p">,</span> <span class="s2">&quot;Matplotlib Basics&quot;</span><span class="p">,</span> <span class="s2">&quot;SciPy Basics&quot;</span><span class="p">,</span> <span class="s2">&quot;Scikit-Learn Overview&quot;</span><span class="p">,</span> <span class="s2">&quot;PyTorch Intro&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TensorFlow Intro&quot;</span><span class="p">,</span> <span class="s2">&quot;Supervised Vs Unsupervised&quot;</span><span class="p">,</span> <span class="s2">&quot;Regression Vs Classification&quot;</span><span class="p">,</span> <span class="s2">&quot;Overfitting Vs Underfitting&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Training-Validation-Test&quot;</span><span class="p">,</span> <span class="s2">&quot;Bias-Variance Tradeoff&quot;</span><span class="p">,</span> <span class="s2">&quot;Regularization Overview&quot;</span><span class="p">,</span> <span class="s2">&quot;Cross-Validation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Evaluation Metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;Loss Functions&quot;</span><span class="p">,</span> <span class="s2">&quot;Gradient Descent&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Preprocessing&quot;</span><span class="p">,</span> <span class="s2">&quot;Scaling And Normalization&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Data Augmentation&quot;</span><span class="p">,</span> <span class="s2">&quot;Feature Engineering&quot;</span><span class="p">,</span> <span class="s2">&quot;Dimensionality Concepts&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Splits&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Visualization&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Data Cleaning&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Imbalance&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Ethics&quot;</span><span class="p">,</span> <span class="s2">&quot;Perceptron Model&quot;</span><span class="p">,</span> <span class="s2">&quot;Multi-Layer Perceptron&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Activation Functions&quot;</span><span class="p">,</span> <span class="s2">&quot;Forward Propagation&quot;</span><span class="p">,</span> <span class="s2">&quot;Backpropagation&quot;</span><span class="p">,</span> <span class="s2">&quot;Weights And Biases&quot;</span><span class="p">,</span> <span class="s2">&quot;Batch Training&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Mini-Batch Training&quot;</span><span class="p">,</span> <span class="s2">&quot;Stochastic Training&quot;</span><span class="p">,</span> <span class="s2">&quot;Learning Rate&quot;</span><span class="p">,</span> <span class="s2">&quot;Loss Surface&quot;</span><span class="p">,</span> <span class="s2">&quot;Local Minima&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Vanishing Gradients&quot;</span><span class="p">,</span> <span class="s2">&quot;Exploding Gradients&quot;</span><span class="p">,</span> <span class="s2">&quot;Initialization Methods&quot;</span><span class="p">,</span> <span class="s2">&quot;He Initialization&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Xavier Initialization&quot;</span><span class="p">,</span> <span class="s2">&quot;Momentum Optimizer&quot;</span><span class="p">,</span> <span class="s2">&quot;AdaGrad&quot;</span><span class="p">,</span> <span class="s2">&quot;Adam Optimizer&quot;</span><span class="p">,</span> <span class="s2">&quot;Convolution Operation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Filters And Kernels&quot;</span><span class="p">,</span> <span class="s2">&quot;Pooling Layers&quot;</span><span class="p">,</span> <span class="s2">&quot;Stride And Padding&quot;</span><span class="p">,</span> <span class="s2">&quot;Fully Connected Layers&quot;</span><span class="p">,</span> <span class="s2">&quot;Batch Normalization&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CNN Architectures&quot;</span><span class="p">,</span> <span class="s2">&quot;ImageNet&quot;</span><span class="p">,</span> <span class="s2">&quot;Transfer Learning Basics&quot;</span><span class="p">,</span> <span class="s2">&quot;Object Detection&quot;</span><span class="p">,</span> <span class="s2">&quot;Sequence Modeling&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Vanilla RNN&quot;</span><span class="p">,</span> <span class="s2">&quot;LSTM Units&quot;</span><span class="p">,</span> <span class="s2">&quot;GRU Units&quot;</span><span class="p">,</span> <span class="s2">&quot;Backprop Through Time (BPTT)&quot;</span><span class="p">,</span> <span class="s2">&quot;Exploding Gradient Control&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Language Modeling&quot;</span><span class="p">,</span> <span class="s2">&quot;Text Generation&quot;</span><span class="p">,</span> <span class="s2">&quot;Time-Series Forecasting&quot;</span><span class="p">,</span> <span class="s2">&quot;Attention Mechanism&quot;</span><span class="p">,</span> <span class="s2">&quot;Deep Architecture&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Layer Stacking&quot;</span><span class="p">,</span> <span class="s2">&quot;Depth Vs Width&quot;</span><span class="p">,</span> <span class="s2">&quot;Residual Networks (ResNet)&quot;</span><span class="p">,</span> <span class="s2">&quot;Inception Modules&quot;</span><span class="p">,</span> <span class="s2">&quot;DenseNet&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Skip Connections&quot;</span><span class="p">,</span> <span class="s2">&quot;Dropout&quot;</span><span class="p">,</span> <span class="s2">&quot;BatchNorm&quot;</span><span class="p">,</span> <span class="s2">&quot;Weight Decay&quot;</span><span class="p">,</span> <span class="s2">&quot;Capsule Networks&quot;</span><span class="p">,</span> <span class="s2">&quot;Graph Neural Networks (GNNs)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Transformers Intro&quot;</span><span class="p">,</span> <span class="s2">&quot;Vision Transformers (ViT)&quot;</span><span class="p">,</span> <span class="s2">&quot;Self-Attention&quot;</span><span class="p">,</span> <span class="s2">&quot;Positional Encoding&quot;</span><span class="p">,</span> <span class="s2">&quot;BERT Overview&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GPT Overview&quot;</span><span class="p">,</span> <span class="s2">&quot;Sequence-To-Sequence&quot;</span><span class="p">,</span> <span class="s2">&quot;Neural Machine Translation&quot;</span><span class="p">,</span> <span class="s2">&quot;Generative Models&quot;</span><span class="p">,</span> <span class="s2">&quot;Autoencoders (AE)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Variational Autoencoders (VAE)&quot;</span><span class="p">,</span> <span class="s2">&quot;GAN Basics&quot;</span><span class="p">,</span> <span class="s2">&quot;Generator Vs Discriminator&quot;</span><span class="p">,</span> <span class="s2">&quot;Latent Space&quot;</span><span class="p">,</span> <span class="s2">&quot;Conditional GAN&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CycleGAN&quot;</span><span class="p">,</span> <span class="s2">&quot;Style Transfer&quot;</span><span class="p">,</span> <span class="s2">&quot;Text-To-Image&quot;</span><span class="p">,</span> <span class="s2">&quot;Diffusion Models&quot;</span><span class="p">,</span> <span class="s2">&quot;Denoising Diffusion&quot;</span><span class="p">,</span> <span class="s2">&quot;Score Matching&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Likelihood Estimation&quot;</span><span class="p">,</span> <span class="s2">&quot;Energy-Based Models&quot;</span><span class="p">,</span> <span class="s2">&quot;Flow-Based Models&quot;</span><span class="p">,</span> <span class="s2">&quot;Prompt Engineering&quot;</span><span class="p">,</span> <span class="s2">&quot;Text Generation Models&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Large Language Models (LLMs)&quot;</span><span class="p">,</span> <span class="s2">&quot;ChatGPT Concept&quot;</span><span class="p">,</span> <span class="s2">&quot;PCA&quot;</span><span class="p">,</span> <span class="s2">&quot;t-SNE&quot;</span><span class="p">,</span> <span class="s2">&quot;UMAP&quot;</span><span class="p">,</span> <span class="s2">&quot;Autoencoder DR&quot;</span><span class="p">,</span> <span class="s2">&quot;Manifold Hypothesis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Feature Space&quot;</span><span class="p">,</span> <span class="s2">&quot;Principal Components&quot;</span><span class="p">,</span> <span class="s2">&quot;Nonlinear Embeddings&quot;</span><span class="p">,</span> <span class="s2">&quot;High-Dimensional Data&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Visualization Tools&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RL Definition&quot;</span><span class="p">,</span> <span class="s2">&quot;Markov Decision Process (MDP)&quot;</span><span class="p">,</span> <span class="s2">&quot;Value Functions&quot;</span><span class="p">,</span> <span class="s2">&quot;Policy Gradient&quot;</span><span class="p">,</span> <span class="s2">&quot;Q-Learning&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Deep Q-Network (DQN)&quot;</span><span class="p">,</span> <span class="s2">&quot;Actor-Critic&quot;</span><span class="p">,</span> <span class="s2">&quot;Reward Shaping&quot;</span><span class="p">,</span> <span class="s2">&quot;Exploration Vs Exploitation&quot;</span><span class="p">,</span> <span class="s2">&quot;Baseline Algorithms&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Model Interpretability&quot;</span><span class="p">,</span> <span class="s2">&quot;Explainable AI (XAI)&quot;</span><span class="p">,</span> <span class="s2">&quot;SHAP&quot;</span><span class="p">,</span> <span class="s2">&quot;LIME&quot;</span><span class="p">,</span> <span class="s2">&quot;Fairness&quot;</span><span class="p">,</span> <span class="s2">&quot;Bias Mitigation&quot;</span><span class="p">,</span> <span class="s2">&quot;Privacy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Security&quot;</span><span class="p">,</span> <span class="s2">&quot;Adversarial Examples&quot;</span><span class="p">,</span> <span class="s2">&quot;Responsible AI&quot;</span><span class="p">,</span> <span class="s2">&quot;GPU Acceleration&quot;</span><span class="p">,</span> <span class="s2">&quot;TPU Acceleration&quot;</span><span class="p">,</span> <span class="s2">&quot;Memory Management&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Model Compression&quot;</span><span class="p">,</span> <span class="s2">&quot;Quantization&quot;</span><span class="p">,</span> <span class="s2">&quot;Pruning&quot;</span><span class="p">,</span> <span class="s2">&quot;Edge Deployment&quot;</span><span class="p">,</span> <span class="s2">&quot;Cloud Services&quot;</span><span class="p">,</span> <span class="s2">&quot;AutoML&quot;</span><span class="p">,</span> <span class="s2">&quot;MLOps&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Hyperparameter Tuning&quot;</span><span class="p">,</span> <span class="s2">&quot;Grid Search&quot;</span><span class="p">,</span> <span class="s2">&quot;Random Search&quot;</span><span class="p">,</span> <span class="s2">&quot;Bayesian Optimization&quot;</span><span class="p">,</span> <span class="s2">&quot;Early Stopping&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Learning Rate Scheduling&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Parallelism&quot;</span><span class="p">,</span> <span class="s2">&quot;Model Parallelism&quot;</span><span class="p">,</span> <span class="s2">&quot;Checkpointing&quot;</span><span class="p">,</span> <span class="s2">&quot;Version Control&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Accuracy&quot;</span><span class="p">,</span> <span class="s2">&quot;Precision&quot;</span><span class="p">,</span> <span class="s2">&quot;Recall&quot;</span><span class="p">,</span> <span class="s2">&quot;F1 Score&quot;</span><span class="p">,</span> <span class="s2">&quot;AUC-ROC&quot;</span><span class="p">,</span> <span class="s2">&quot;Confusion Matrix&quot;</span><span class="p">,</span> <span class="s2">&quot;Top-1 Vs Top-5 Accuracy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;BLEU Score&quot;</span><span class="p">,</span> <span class="s2">&quot;Perplexity&quot;</span><span class="p">,</span> <span class="s2">&quot;Mean Squared Error (MSE)&quot;</span><span class="p">,</span> <span class="s2">&quot;Computer Vision&quot;</span><span class="p">,</span> <span class="s2">&quot;Natural Language Processing (NLP)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Speech Recognition&quot;</span><span class="p">,</span> <span class="s2">&quot;Medical Imaging&quot;</span><span class="p">,</span> <span class="s2">&quot;Drug Discovery&quot;</span><span class="p">,</span> <span class="s2">&quot;Protein Folding&quot;</span><span class="p">,</span> <span class="s2">&quot;Autonomous Driving&quot;</span><span class="p">,</span> <span class="s2">&quot;Robotics&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Financial Forecasting&quot;</span><span class="p">,</span> <span class="s2">&quot;Recommender Systems&quot;</span><span class="p">,</span> <span class="s2">&quot;Project Scoping&quot;</span><span class="p">,</span> <span class="s2">&quot;Requirement Analysis&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Acquisition&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Data Annotation&quot;</span><span class="p">,</span> <span class="s2">&quot;Resource Allocation&quot;</span><span class="p">,</span> <span class="s2">&quot;Team Collaboration&quot;</span><span class="p">,</span> <span class="s2">&quot;Version Control Workflow&quot;</span><span class="p">,</span> <span class="s2">&quot;Agile Methods&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Code Review&quot;</span><span class="p">,</span> <span class="s2">&quot;Documentation&quot;</span>
+<span class="p">]</span>
+
+<span class="c1"># Create a DataFrame with ConceptID and ConceptLabel</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;ConceptID&quot;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">concepts</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="s2">&quot;ConceptLabel&quot;</span><span class="p">:</span> <span class="n">concepts</span>
+<span class="p">})</span>
+
+<span class="c1"># Save the DataFrame to a CSV file</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;/mnt/data/EE4940_Core_Concepts.csv&quot;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">file_path</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="result_1">Result</h2>
+<p><a href="03-deep-learning-concepts.csv">Deep Learning Concepts</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02-bloom-taxonomy-description/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Course Description">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Course Description
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-concept-dependencies/" class="md-footer__link md-footer__link--next" aria-label="Next: Concept Dependencies">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Concept Dependencies
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
