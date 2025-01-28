@@ -15,6 +15,8 @@ nav:
     - Concept Enumeration: prompts/03-concept-enumeration.md
     - Concept Dependencies: prompts/04-concept-dependencies.md
     - Concept Taxonomy: prompts/05-concept-taxonomy.md
+    - Glossary of Terms: prompts/06-glossary-of-terms.md
+    - Equations: prompts/07-equations.md
   - MicroSims:
     - Intro: sims/index.md
     - Learning Graph: sims/learning-graph/index.md
