@@ -3,52 +3,52 @@
         {
             "id": 1,
             "label": "AI Definition",
-            "group": 1
+            "group": "found"
         },
         {
             "id": 2,
             "label": "ML Definition",
-            "group": 1
+            "group": "found"
         },
         {
             "id": 3,
             "label": "History Of AI",
-            "group": 1
+            "group": "found"
         },
         {
             "id": 4,
             "label": "Nobel Prizes",
-            "group": 1
+            "group": "found"
         },
         {
             "id": 5,
             "label": "Key Figures",
-            "group": 1
+            "group": "found"
         },
         {
             "id": 6,
             "label": "AI Branches",
-            "group": 1
+            "group": "found"
         },
         {
             "id": 7,
             "label": "Symbolic AI",
-            "group": 1
+            "group": "found"
         },
         {
             "id": 8,
             "label": "Data-Driven AI",
-            "group": 1
+            "group": "found"
         },
         {
             "id": 9,
             "label": "NN Origins",
-            "group": 1
+            "group": "found"
         },
         {
             "id": 10,
             "label": "Biological Inspiration",
-            "group": 1
+            "group": "found"
         },
         {
             "id": 11,
@@ -973,32 +973,32 @@
         {
             "id": 195,
             "label": "Resource Allocation",
-            "group": 10
+            "group": "goal"
         },
         {
             "id": 196,
             "label": "Team Collaboration",
-            "group": 10
+            "group": "goal"
         },
         {
             "id": 197,
             "label": "Version Control Workflow",
-            "group": 10
+            "group": "goal"
         },
         {
             "id": 198,
             "label": "Agile Methods",
-            "group": 10
+            "group": "goal"
         },
         {
             "id": 199,
             "label": "Code Review",
-            "group": 10
+            "group": "goal"
         },
         {
             "id": 200,
             "label": "Documentation",
-            "group": 10
+            "group": "goal"
         }
     ],
     "edges": [
