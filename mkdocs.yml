@@ -11,12 +11,19 @@ nav:
   - Course Description: course-description.md
   - Prompts:
     - Intro: prompts/index.md
+    - Course Description: prompts/02-bloom-taxonomy-description.md
+    - Concept Enumeration: prompts/03-concept-enumeration.md
+    - Concept Dependencies: prompts/04-concept-dependencies.md
+    - Concept Taxonomy: prompts/05-concept-taxonomy.md
   - MicroSims:
     - Intro: sims/index.md
+    - Learning Graph: sims/learning-graph/index.md
   - Checklist: checklist.md
   - Code Highlight Test: code-highlight-test.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
+  - Feedback: feedback.md
+  - License: license.md
   - References: references.md
   - Contact: contact.md
  
