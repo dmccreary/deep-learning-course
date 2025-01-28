@@ -1,0 +1,201 @@
+ConceptID,ConceptLabel
+1,AI Definition
+2,ML Definition
+3,History Of AI
+4,Nobel Prizes
+5,Key Figures
+6,AI Branches
+7,Symbolic AI
+8,Data-Driven AI
+9,NN Origins
+10,Biological Inspiration
+11,Python Setup
+12,Conda Environment
+13,Jupyter Notebooks
+14,NumPy Basics
+15,Pandas Basics
+16,Matplotlib Basics
+17,SciPy Basics
+18,Scikit-Learn Overview
+19,PyTorch Intro
+20,TensorFlow Intro
+21,Supervised Vs Unsupervised
+22,Regression Vs Classification
+23,Overfitting Vs Underfitting
+24,Training-Validation-Test
+25,Bias-Variance Tradeoff
+26,Regularization Overview
+27,Cross-Validation
+28,Evaluation Metrics
+29,Loss Functions
+30,Gradient Descent
+31,Data Preprocessing
+32,Scaling And Normalization
+33,Data Augmentation
+34,Feature Engineering
+35,Dimensionality Concepts
+36,Data Splits
+37,Data Visualization
+38,Data Cleaning
+39,Data Imbalance
+40,Data Ethics
+41,Perceptron Model
+42,Multi-Layer Perceptron
+43,Activation Functions
+44,Forward Propagation
+45,Backpropagation
+46,Weights And Biases
+47,Batch Training
+48,Mini-Batch Training
+49,Stochastic Training
+50,Learning Rate
+51,Loss Surface
+52,Local Minima
+53,Vanishing Gradients
+54,Exploding Gradients
+55,Initialization Methods
+56,He Initialization
+57,Xavier Initialization
+58,Momentum Optimizer
+59,AdaGrad
+60,Adam Optimizer
+61,Convolution Operation
+62,Filters And Kernels
+63,Pooling Layers
+64,Stride And Padding
+65,Fully Connected Layers
+66,Batch Normalization
+67,CNN Architectures
+68,ImageNet
+69,Transfer Learning Basics
+70,Object Detection
+71,Sequence Modeling
+72,Vanilla RNN
+73,LSTM Units
+74,GRU Units
+75,Backprop Through Time (BPTT)
+76,Exploding Gradient Control
+77,Language Modeling
+78,Text Generation
+79,Time-Series Forecasting
+80,Attention Mechanism
+81,Deep Architecture
+82,Layer Stacking
+83,Depth Vs Width
+84,Residual Networks (ResNet)
+85,Inception Modules
+86,DenseNet
+87,Skip Connections
+88,Dropout
+89,BatchNorm
+90,Weight Decay
+91,Capsule Networks
+92,Graph Neural Networks (GNNs)
+93,Transformers Intro
+94,Vision Transformers (ViT)
+95,Self-Attention
+96,Positional Encoding
+97,BERT Overview
+98,GPT Overview
+99,Sequence-To-Sequence
+100,Neural Machine Translation
+101,Generative Models
+102,Autoencoders (AE)
+103,Variational Autoencoders (VAE)
+104,GAN Basics
+105,Generator Vs Discriminator
+106,Latent Space
+107,Conditional GAN
+108,CycleGAN
+109,Style Transfer
+110,Text-To-Image
+111,Diffusion Models
+112,Denoising Diffusion
+113,Score Matching
+114,Likelihood Estimation
+115,Energy-Based Models
+116,Flow-Based Models
+117,Prompt Engineering
+118,Text Generation Models
+119,Large Language Models (LLMs)
+120,ChatGPT Concept
+121,PCA
+122,t-SNE
+123,UMAP
+124,Autoencoder DR
+125,Manifold Hypothesis
+126,Feature Space
+127,Principal Components
+128,Nonlinear Embeddings
+129,High-Dimensional Data
+130,Data Visualization Tools
+131,RL Definition
+132,Markov Decision Process (MDP)
+133,Value Functions
+134,Policy Gradient
+135,Q-Learning
+136,Deep Q-Network (DQN)
+137,Actor-Critic
+138,Reward Shaping
+139,Exploration Vs Exploitation
+140,Baseline Algorithms
+141,Model Interpretability
+142,Explainable AI (XAI)
+143,SHAP
+144,LIME
+145,Fairness
+146,Bias Mitigation
+147,Privacy
+148,Security
+149,Adversarial Examples
+150,Responsible AI
+151,GPU Acceleration
+152,TPU Acceleration
+153,Memory Management
+154,Model Compression
+155,Quantization
+156,Pruning
+157,Edge Deployment
+158,Cloud Services
+159,AutoML
+160,MLOps
+161,Hyperparameter Tuning
+162,Grid Search
+163,Random Search
+164,Bayesian Optimization
+165,Early Stopping
+166,Learning Rate Scheduling
+167,Data Parallelism
+168,Model Parallelism
+169,Checkpointing
+170,Version Control
+171,Accuracy
+172,Precision
+173,Recall
+174,F1 Score
+175,AUC-ROC
+176,Confusion Matrix
+177,Top-1 Vs Top-5 Accuracy
+178,BLEU Score
+179,Perplexity
+180,Mean Squared Error (MSE)
+181,Computer Vision
+182,Natural Language Processing (NLP)
+183,Speech Recognition
+184,Medical Imaging
+185,Drug Discovery
+186,Protein Folding
+187,Autonomous Driving
+188,Robotics
+189,Financial Forecasting
+190,Recommender Systems
+191,Project Scoping
+192,Requirement Analysis
+193,Data Acquisition
+194,Data Annotation
+195,Resource Allocation
+196,Team Collaboration
+197,Version Control Workflow
+198,Agile Methods
+199,Code Review
+200,Documentation
