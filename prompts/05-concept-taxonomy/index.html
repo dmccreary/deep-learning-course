@@ -1,0 +1,978 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An example of an intelligent textbook for teaching deep learning. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/deep-learning-course/prompts/05-concept-taxonomy/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Concept Taxonomy - Deep Learning Course with AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#concept-taxonomy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Deep Learning Course with AI" class="md-header__button md-logo" aria-label="Deep Learning Course with AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Deep Learning Course with AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Concept Taxonomy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/deep-learning-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Deep Learning Course with AI" class="md-nav__button md-logo" aria-label="Deep Learning Course with AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Deep Learning Course with AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/deep-learning-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checklist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-highlight-test.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code Highlight Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-foundational-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Foundational Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-terms-and-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Terms and Definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-python-tools-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Python Tools &amp; Libraries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-data-preparation-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Data Preparation &amp; Engineering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-training-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Training &amp; Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-neural-network-architectures" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Neural Network Architectures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-advanced-specialized-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Advanced &amp; Specialized Topics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-real-world-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Real-World Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-mlops-project-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. MLOps &amp; Project Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Goals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-on-overlaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes on Overlaps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-csv-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final CSV File
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/deep-learning-course/blob/master/docs/prompts/05-concept-taxonomy.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="concept-taxonomy">Concept Taxonomy</h1>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Given the list of concepts, your next task is to
+organize these concepts into a taxonomy by grouping them into
+appropriate categories. Each category should include concepts
+that share similar characteristics, functions, or applications.</p>
+<p>Suggest 10-12 categories for the taxonomy and assign each concept
+to one or more categories. Ensure that the categories cover
+a range of concept types, including abstract ideas, practical
+applications, Python libraries, common misunderstandings, and real-world examples.</p>
+<p>Avoid redundancy and ensure that each category is distinct.</p>
+<p>Your first category is "Foundational Concepts", your second is "Terms and Definitions".   A final category might be "Goals".</p>
+</div>
+<h2 id="workflow">Workflow</h2>
+<p>ChatGPT o1 thought about course taxonomy and categories for 3m 36s</p>
+<p><strong>Crafting a taxonomy</strong></p>
+<p>I'm organizing 200 concepts into 10-12 categories, including foundational concepts, terms and definitions, and goals. Ensuring a variety of concept types without redundancy.</p>
+<p><strong>Shaping the categories</strong></p>
+<p>I'm organizing the taxonomy with 10-12 categories, focusing on topics like foundational concepts, key tools, data engineering, core ML, model architectures, optimization, advanced topics, and real-world examples.</p>
+<p><strong>Clarifying "Goals"</strong></p>
+<p>Hmm, I'm thinking about whether "Goals" means measuring success, project scoping, or responsible AI like interpretability. Each concept will fit into one of the 10 categories.</p>
+<p><strong>Shaping the framework</strong></p>
+<p>I'm honing in on Python tools, data engineering, Neural Network Architectures, Reinforcement Learning, and integration with interpretation, ethics, fairness, MLOps, and project workflow.</p>
+<p><strong>Mapping the categories</strong></p>
+<p>I'm working through merging "Interpretation, Ethics, &amp; Fairness" with "Goals," but it seems intricate and possibly ineffective. It's interesting to see these elements might be better handled separately.</p>
+<p><strong>Refining the taxonomy</strong></p>
+<p>I'm merging "Sequence &amp; Natural Language" with "Advanced &amp; Specialized Topics," and integrating "Reinforcement Learning" into the revised category. This results in a sleeker, more coherent framework.</p>
+<p><strong>Finalizing the categories</strong></p>
+<p>I'm looking at a streamlined taxonomy with 11 categories, including Foundational Concepts, Python Tools, Data Engineering, Advanced Topics, and Real-World Applications. Assigning concepts to these categories now.</p>
+<p><strong>Voucher assignment</strong></p>
+<p>Deciding whether to include "Nobel Prizes" in "Foundational Concepts" or "History of AI" is tricky. I'll weigh the typical context for each category to make a balanced decision.</p>
+<p><strong>Piecing together the foundation</strong></p>
+<p>I'm carefully grouping concepts like AI and ML definitions, AI history, Nobel Prizes, key figures, AI branches, and neural networks into foundational concepts.</p>
+<p><strong>Mapping out key concepts</strong></p>
+<p>I'm digging into foundational concepts like AI and ML definitions, AI history, Nobel Prizes, key figures, AI branches, and neural network origins, ensuring a balanced and comprehensive approach.</p>
+<p><strong>Clarifying definitions</strong></p>
+<p>I'm thinking through terms for "Terms and Definitions," focusing on clear, concise definitions like Supervised vs. Unsupervised learning, Regression vs. Classification, and evaluation metrics.</p>
+<p><strong>Mapping concepts</strong></p>
+<p>Pulling together Python tools, data engineering, neural network architectures, and advanced topics like transformers and generative models. Assigning terms systematically to refine clarity and avoid redundancy.</p>
+<p><strong>Refining category alignment</strong></p>
+<p>Consider placing "Attention Mechanism" under "Neural Network Architectures." "Reinforcement Learning" and "Advanced Recognition Techniques" seem to fit well inside "Advanced &amp; Specialized Topics."</p>
+<p><strong>Merging concepts</strong></p>
+<p>I'm contemplating combining "Reinforcement Learning" with "Advanced &amp; Specialized Topics," and "Project Scoping" seems to fit better in "MLOps &amp; Project Workflow" or as "Goals."</p>
+<p><strong>Mapping real applications</strong></p>
+<p>I'm organizing concepts on ethical AI, MLOps, and project workflow, including resource allocation, version control, and agile methods. Next up: integrating "Project Scoping" and refining "Goals."</p>
+<p><strong>Clarifying project metrics</strong></p>
+<p>I'm thinking about including "Evaluation Metrics" and "Project Scoping" under "Goals," refining their roles to ensure they align cohesively within the broader context.</p>
+<p><strong>Integrating distinct elements</strong></p>
+<p>I'm honing the "Goals" category with evaluation metrics, precision, recall, and other metrics. For dimensionality reduction and data visualization tools, they seem to fit better in "Data Preparation &amp; Engineering" or "Training &amp; Optimization."</p>
+<p><strong>Mapping concepts</strong></p>
+<p>I'm integrating dimensionality reduction and data visualization tools into "Data Preparation &amp; Engineering," and placing "Prompt Engineering" in "Advanced &amp; Specialized Topics" or "Sequence &amp; Natural Language."</p>
+<p><strong>Mapping as I go</strong></p>
+<p>Integrating concepts like "Prompt Engineering" into "Advanced &amp; Specialized Topics" and aligning "Attention Mechanism" with "Neural Network Architectures." Also, I'm finalizing the assignment of various ML and data concepts.</p>
+<p><strong>Mapping out assignments</strong></p>
+<p>There's a clear progression: integrating "Data Ethics" into "Interpretation, Ethics, &amp; Fairness," placing "ImageNet" in "Neural Network Architectures," and categorizing "Text Generation" with "Advanced &amp; Specialized Topics."</p>
+<p><strong>Organizing concepts</strong></p>
+<p>I'm grouping "Language Modeling" and "Text Generation" into "Advanced &amp; Specialized Topics," and aligning "Attention Mechanism" with "Neural Network Architectures". Robotics fits best in "Real-World Applications."</p>
+<p><strong>Organizing and refining</strong></p>
+<p>Assigning concepts like "Loss Surface" and "Data Annotation" to "Training &amp; Optimization" and "Data Prep &amp; MLOps" respectively. "Robotics" fits well in "Real-World Applications."</p>
+<p><strong>Finalizing concepts</strong></p>
+<p>I'm wrapping up by mapping "ChatGPT Concept" and "Adversarial Examples" to "Advanced &amp; Specialized Topics" and "Interpretation, Ethics, &amp; Fairness," ensuring each concept is logically categorized.</p>
+<p><strong>Finalizing mappings</strong></p>
+<p>Assigning concepts like "Quantization," "Pruning," and "Edge Deployment" to "Advanced &amp; Specialized Topics," and ensuring all concepts fit logically within the intended categories.</p>
+<p><strong>Finalizing concepts</strong></p>
+<p>I'm completing the mapping of advanced concepts like "DQN," "Actor-Critic," and "Reward Shaping" to "Advanced &amp; Specialized Topics," and ensuring all terms are logically categorized.</p>
+<p><strong>Piecing together assignments</strong></p>
+<p>I'm ensuring "SciPy" fits into "Python Tools," aligning "Precision," "Recall," "F1," and "AUC-ROC" with "Goals," and placing "Data Splits" and "Data Visualization Tools" under "Data Prep &amp; Engineering."</p>
+<p><strong>Aligning the framework</strong></p>
+<p>Aligning "GPU Acceleration" and "TPU Acceleration" with "Advanced &amp; Specialized Topics," "Project Scoping" and "Version Control Workflow" with "MLOps &amp; Project Workflow."</p>
+<p><strong>Refining concept categories</strong></p>
+<p>I'm evolving "Adam Optimizer" and "Hyperparameter Tuning" within "Training &amp; Optimization." "Data Visualization" and "PCA" fit snugly under "Data Prep &amp; Engineering."</p>
+<p><strong>Finalizing taxonomy</strong></p>
+<p>OK, let me see. I'm ensuring each concept lands in the right category, refining concepts like "Weight Decay" and "Evaluation Metrics." I'm setting a clear, concise list of 11 categories.</p>
+<p><strong>Mapping out preferences</strong></p>
+<p>I'm factoring in the need for brevity and the user's desire for a range of concept types. Considering a summarized 11-category list with multi-category assignments, focusing on practical applications and Python libraries.</p>
+<h2 id="result">Result</h2>
+<p>Below is an <strong>example taxonomy</strong> of the 200 concepts, grouped into <strong>11 distinct categories</strong>. Each concept may appear in more than one category if it makes sense pedagogically (e.g., a concept can be both a "term/definition" and also relevant to "training &amp; optimization").</p>
+<p>In practice, you might refine these groupings further or redistribute concepts according to your specific course design. The primary goals are (1) to ensure that each concept is accounted for at least once, (2) to keep categories mutually distinct, and (3) to cover a wide range of types (abstract ideas, practical tools, potential pitfalls, real-world use cases, etc.).</p>
+<h3 id="1-foundational-concepts">1. Foundational Concepts</h3>
+<p>These are broad, high-level ideas or historical touchpoints on which other topics build.</p>
+<ul>
+<li><strong>(1) AI Definition</strong></li>
+<li><strong>(2) ML Definition</strong></li>
+<li><strong>(3) History Of AI</strong></li>
+<li><strong>(4) Nobel Prizes</strong></li>
+<li><strong>(5) Key Figures</strong></li>
+<li><strong>(6) AI Branches</strong></li>
+<li><strong>(7) Symbolic AI</strong></li>
+<li><strong>(8) Data-Driven AI</strong></li>
+<li><strong>(9) NN Origins</strong></li>
+<li><strong>(10) Biological Inspiration</strong></li>
+</ul>
+<h3 id="2-terms-and-definitions">2. Terms and Definitions</h3>
+<p>Key terminology and conceptual distinctions often introduced early to clarify the field's language.</p>
+<ul>
+<li><strong>(21) Supervised Vs Unsupervised</strong></li>
+<li><strong>(22) Regression Vs Classification</strong></li>
+<li><strong>(23) Overfitting Vs Underfitting</strong></li>
+<li><strong>(25) Bias-Variance Tradeoff</strong></li>
+<li><strong>(35) Dimensionality Concepts</strong></li>
+<li><strong>(39) Data Imbalance</strong></li>
+<li><strong>(51) Loss Surface</strong></li>
+<li><strong>(52) Local Minima</strong></li>
+<li><strong>(62) Filters And Kernels</strong></li>
+<li><strong>(100) Neural Machine Translation</strong></li>
+<li><strong>(118) Text Generation Models</strong></li>
+<li><strong>(131) RL Definition</strong></li>
+<li><strong>(139) Exploration Vs Exploitation</strong></li>
+</ul>
+<p><em>(Note that some of these also appear under other categories if they are central to training, optimization, or advanced topics.)</em></p>
+<h3 id="3-python-tools-libraries">3. Python Tools &amp; Libraries</h3>
+<p>Practical software tools used throughout the course for coding, data manipulation, and experimentation.</p>
+<ul>
+<li><strong>(11) Python Setup</strong></li>
+<li><strong>(12) Conda Environment</strong></li>
+<li><strong>(13) Jupyter Notebooks</strong></li>
+<li><strong>(14) NumPy Basics</strong></li>
+<li><strong>(15) Pandas Basics</strong></li>
+<li><strong>(16) Matplotlib Basics</strong></li>
+<li><strong>(17) SciPy Basics</strong></li>
+<li><strong>(18) Scikit-Learn Overview</strong></li>
+<li><strong>(19) PyTorch Intro</strong></li>
+<li><strong>(20) TensorFlow Intro</strong></li>
+</ul>
+<h3 id="4-data-preparation-engineering">4. Data Preparation &amp; Engineering</h3>
+<p>Concepts and techniques for acquiring, cleaning, organizing, and transforming data before (and during) model development.</p>
+<ul>
+<li><strong>(31) Data Preprocessing</strong></li>
+<li><strong>(32) Scaling And Normalization</strong></li>
+<li><strong>(33) Data Augmentation</strong></li>
+<li><strong>(34) Feature Engineering</strong></li>
+<li><strong>(36) Data Splits</strong></li>
+<li><strong>(37) Data Visualization</strong></li>
+<li><strong>(38) Data Cleaning</strong></li>
+<li><strong>(40) Data Ethics</strong> (also appears in Ethics/Ethical Use)</li>
+<li><strong>(121) PCA</strong></li>
+<li><strong>(122) t-SNE</strong></li>
+<li><strong>(123) UMAP</strong></li>
+<li><strong>(124) Autoencoder DR</strong></li>
+<li><strong>(125) Manifold Hypothesis</strong></li>
+<li><strong>(126) Feature Space</strong></li>
+<li><strong>(127) Principal Components</strong></li>
+<li><strong>(128) Nonlinear Embeddings</strong></li>
+<li><strong>(129) High-Dimensional Data</strong></li>
+<li><strong>(130) Data Visualization Tools</strong></li>
+<li><strong>(193) Data Acquisition</strong></li>
+<li><strong>(194) Data Annotation</strong></li>
+</ul>
+<h3 id="5-training-optimization">5. Training &amp; Optimization</h3>
+<p>How models learn, common pitfalls, and methods to optimize performance.</p>
+<ul>
+<li><strong>(23) Overfitting Vs Underfitting</strong></li>
+<li><strong>(24) Training-Validation-Test</strong></li>
+<li><strong>(25) Bias-Variance Tradeoff</strong></li>
+<li><strong>(26) Regularization Overview</strong></li>
+<li><strong>(27) Cross-Validation</strong></li>
+<li><strong>(29) Loss Functions</strong></li>
+<li><strong>(30) Gradient Descent</strong></li>
+<li><strong>(43) Activation Functions</strong></li>
+<li><strong>(44) Forward Propagation</strong></li>
+<li><strong>(45) Backpropagation</strong></li>
+<li><strong>(46) Weights And Biases</strong></li>
+<li><strong>(47) Batch Training</strong></li>
+<li><strong>(48) Mini-Batch Training</strong></li>
+<li><strong>(49) Stochastic Training</strong></li>
+<li><strong>(50) Learning Rate</strong></li>
+<li><strong>(52) Local Minima</strong></li>
+<li><strong>(53) Vanishing Gradients</strong></li>
+<li><strong>(54) Exploding Gradients</strong></li>
+<li><strong>(58) Momentum Optimizer</strong></li>
+<li><strong>(59) AdaGrad</strong></li>
+<li><strong>(60) Adam Optimizer</strong></li>
+<li><strong>(76) Exploding Gradient Control</strong></li>
+<li><strong>(90) Weight Decay</strong></li>
+<li><strong>(161) Hyperparameter Tuning</strong></li>
+<li><strong>(162) Grid Search</strong></li>
+<li><strong>(163) Random Search</strong></li>
+<li><strong>(164) Bayesian Optimization</strong></li>
+<li><strong>(165) Early Stopping</strong></li>
+<li><strong>(166) Learning Rate Scheduling</strong></li>
+</ul>
+<h3 id="6-neural-network-architectures">6. Neural Network Architectures</h3>
+<p>Core structures and design choices in building various types of deep neural networks.</p>
+<ul>
+<li><strong>(41) Perceptron Model</strong></li>
+<li><strong>(42) Multi-Layer Perceptron</strong></li>
+<li><strong>(55) Initialization Methods</strong></li>
+<li><strong>(56) He Initialization</strong></li>
+<li><strong>(57) Xavier Initialization</strong></li>
+<li><strong>(61) Convolution Operation</strong></li>
+<li><strong>(63) Pooling Layers</strong></li>
+<li><strong>(64) Stride And Padding</strong></li>
+<li><strong>(65) Fully Connected Layers</strong></li>
+<li><strong>(66) Batch Normalization</strong></li>
+<li><strong>(67) CNN Architectures</strong></li>
+<li><strong>(68) ImageNet</strong></li>
+<li><strong>(69) Transfer Learning Basics</strong></li>
+<li><strong>(70) Object Detection</strong> (also a real-world CV application)</li>
+<li><strong>(71) Sequence Modeling</strong></li>
+<li><strong>(72) Vanilla RNN</strong></li>
+<li><strong>(73) LSTM Units</strong></li>
+<li><strong>(74) GRU Units</strong></li>
+<li><strong>(75) Backprop Through Time (BPTT)</strong></li>
+<li><strong>(79) Time-Series Forecasting</strong></li>
+<li><strong>(80) Attention Mechanism</strong></li>
+<li><strong>(81) Deep Architecture</strong></li>
+<li><strong>(82) Layer Stacking</strong></li>
+<li><strong>(83) Depth Vs Width</strong></li>
+<li><strong>(84) Residual Networks (ResNet)</strong></li>
+<li><strong>(85) Inception Modules</strong></li>
+<li><strong>(86) DenseNet</strong></li>
+<li><strong>(87) Skip Connections</strong></li>
+<li><strong>(88) Dropout</strong></li>
+<li><strong>(89) BatchNorm</strong> (duplicate of 66's concept family)</li>
+<li><strong>(91) Capsule Networks</strong></li>
+<li><strong>(92) Graph Neural Networks (GNNs)</strong></li>
+<li><strong>(93) Transformers Intro</strong></li>
+<li><strong>(94) Vision Transformers (ViT)</strong></li>
+<li><strong>(95) Self-Attention</strong></li>
+<li><strong>(96) Positional Encoding</strong></li>
+<li><strong>(97) BERT Overview</strong></li>
+<li><strong>(98) GPT Overview</strong></li>
+<li><strong>(99) Sequence-To-Sequence</strong></li>
+<li><strong>(101) Generative Models</strong></li>
+<li><strong>(102) Autoencoders (AE)</strong></li>
+<li><strong>(103) Variational Autoencoders (VAE)</strong></li>
+<li><strong>(104) GAN Basics</strong></li>
+<li><strong>(105) Generator Vs Discriminator</strong></li>
+<li><strong>(106) Latent Space</strong></li>
+<li><strong>(107) Conditional GAN</strong></li>
+<li><strong>(108) CycleGAN</strong></li>
+<li><strong>(109) Style Transfer</strong></li>
+<li><strong>(110) Text-To-Image</strong></li>
+<li><strong>(111) Diffusion Models</strong></li>
+<li><strong>(112) Denoising Diffusion</strong></li>
+<li><strong>(113) Score Matching</strong></li>
+<li><strong>(114) Likelihood Estimation</strong></li>
+<li><strong>(115) Energy-Based Models</strong></li>
+<li><strong>(116) Flow-Based Models</strong></li>
+</ul>
+<h3 id="7-advanced-specialized-topics">7. Advanced &amp; Specialized Topics</h3>
+<p>Cutting-edge methods, hardware accelerators, reinforcement learning, and larger-scale automation.</p>
+<ul>
+<li><strong>(71) Sequence Modeling</strong> (repeated if focusing on advanced sequences)</li>
+<li><strong>(77) Language Modeling</strong></li>
+<li><strong>(78) Text Generation</strong></li>
+<li><strong>(117) Prompt Engineering</strong></li>
+<li><strong>(119) Large Language Models (LLMs)</strong></li>
+<li><strong>(120) ChatGPT Concept</strong></li>
+<li><strong>(131) RL Definition</strong></li>
+<li><strong>(132) Markov Decision Process (MDP)</strong></li>
+<li><strong>(133) Value Functions</strong></li>
+<li><strong>(134) Policy Gradient</strong></li>
+<li><strong>(135) Q-Learning</strong></li>
+<li><strong>(136) Deep Q-Network (DQN)</strong></li>
+<li><strong>(137) Actor-Critic</strong></li>
+<li><strong>(138) Reward Shaping</strong></li>
+<li><strong>(140) Baseline Algorithms</strong></li>
+<li><strong>(151) GPU Acceleration</strong></li>
+<li><strong>(152) TPU Acceleration</strong></li>
+<li><strong>(153) Memory Management</strong></li>
+<li><strong>(154) Model Compression</strong></li>
+<li><strong>(155) Quantization</strong></li>
+<li><strong>(156) Pruning</strong></li>
+<li><strong>(157) Edge Deployment</strong></li>
+<li><strong>(158) Cloud Services</strong></li>
+<li><strong>(159) AutoML</strong></li>
+<li><strong>(167) Data Parallelism</strong></li>
+<li><strong>(168) Model Parallelism</strong></li>
+<li><strong>(169) Checkpointing</strong></li>
+</ul>
+<h3 id="8-real-world-applications">8. Real-World Applications</h3>
+<p>Domains and example uses that illustrate how AI/ML solutions are deployed.</p>
+<ul>
+<li><strong>(70) Object Detection</strong> (also in CNNs)</li>
+<li><strong>(181) Computer Vision</strong></li>
+<li><strong>(182) Natural Language Processing (NLP)</strong></li>
+<li><strong>(183) Speech Recognition</strong></li>
+<li><strong>(184) Medical Imaging</strong></li>
+<li><strong>(185) Drug Discovery</strong></li>
+<li><strong>(186) Protein Folding</strong></li>
+<li><strong>(187) Autonomous Driving</strong></li>
+<li><strong>(188) Robotics</strong></li>
+<li><strong>(189) Financial Forecasting</strong></li>
+<li>
+<p><strong>(190) Recommender Systems</strong></p>
+</li>
+<li>
+<p>Interpretation, Ethics, &amp; Fairness</p>
+</li>
+</ul>
+<p>Ensuring AI systems are transparent, fair, secure, and used responsibly.</p>
+<ul>
+<li><strong>(40) Data Ethics</strong></li>
+<li><strong>(141) Model Interpretability</strong></li>
+<li><strong>(142) Explainable AI (XAI)</strong></li>
+<li><strong>(143) SHAP</strong></li>
+<li><strong>(144) LIME</strong></li>
+<li><strong>(145) Fairness</strong></li>
+<li><strong>(146) Bias Mitigation</strong></li>
+<li><strong>(147) Privacy</strong></li>
+<li><strong>(148) Security</strong></li>
+<li><strong>(149) Adversarial Examples</strong></li>
+<li><strong>(150) Responsible AI</strong></li>
+</ul>
+<h3 id="10-mlops-project-workflow">10. MLOps &amp; Project Workflow</h3>
+<p>Practical, organizational, and life-cycle aspects of putting ML/DL models into production and managing teams.</p>
+<ul>
+<li><strong>(160) MLOps</strong></li>
+<li><strong>(170) Version Control</strong></li>
+<li><strong>(191) Project Scoping</strong></li>
+<li><strong>(192) Requirement Analysis</strong></li>
+<li><strong>(193) Data Acquisition</strong> (also in Data Prep)</li>
+<li><strong>(194) Data Annotation</strong> (also in Data Prep)</li>
+<li><strong>(195) Resource Allocation</strong></li>
+<li><strong>(196) Team Collaboration</strong></li>
+<li><strong>(197) Version Control Workflow</strong></li>
+<li><strong>(198) Agile Methods</strong></li>
+<li><strong>(199) Code Review</strong></li>
+<li><strong>(200) Documentation</strong></li>
+</ul>
+<h3 id="11-goals">11. Goals</h3>
+<p>Metrics and broader objectives that guide model selection, validation, and success criteria.</p>
+<ul>
+<li><strong>(28) Evaluation Metrics</strong></li>
+<li><strong>(171) Accuracy</strong></li>
+<li><strong>(172) Precision</strong></li>
+<li><strong>(173) Recall</strong></li>
+<li><strong>(174) F1 Score</strong></li>
+<li><strong>(175) AUC-ROC</strong></li>
+<li><strong>(176) Confusion Matrix</strong></li>
+<li><strong>(177) Top-1 Vs Top-5 Accuracy</strong></li>
+<li><strong>(178) BLEU Score</strong></li>
+<li><strong>(179) Perplexity</strong></li>
+<li><strong>(180) Mean Squared Error (MSE)</strong></li>
+</ul>
+<h3 id="notes-on-overlaps">Notes on Overlaps</h3>
+<ul>
+<li>Some items (e.g., "Overfitting Vs Underfitting") appear in both <strong>Terms and Definitions</strong> and <strong>Training &amp; Optimization</strong>, because they are foundational distinctions <em>and</em> deeply tied to optimization.</li>
+<li>"Object Detection," "Data Ethics," "Data Acquisition," and several others also appear in more than one category when relevant.</li>
+</ul>
+<p>This multi-category approach reflects the reality that many deep learning concepts straddle theoretical and practical lines and can belong in more than one "bucket." Depending on your course or textbook structure, you may wish to split them differently or provide cross-references.</p>
+<h2 id="final-csv-file">Final CSV File</h2>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>That was excellent.  Now please regenerate the CSV file, but this time please add a new column for TaxonomyID.  Use the numbers for each category as the TaxonomyID.</p>
+<p>The format of the new file is:</p>
+<ol>
+<li>Column 1: ConceptID</li>
+<li>Column 2: ConceptLabel</li>
+<li>Column 3: Dependencies</li>
+<li>Column 4: TaxonomyID</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
