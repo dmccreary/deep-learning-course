@@ -485,6 +485,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Modern Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-default-choice-relu" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Default Choice: ReLU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-common-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Common Alternatives:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specific-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specific Use Cases:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -532,6 +565,8 @@
       
         
           
+        
+      
         
       
         
@@ -597,6 +632,10 @@
           
         
       
+        
+          
+        
+      
     
     
     
@@ -641,26 +680,6 @@
   
   <span class="md-ellipsis">
     Checklist
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../code-highlight-test.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Code Highlight Test
   </span>
   
 
@@ -909,6 +928,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Modern Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-default-choice-relu" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Default Choice: ReLU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-common-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Common Alternatives:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specific-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specific Use Cases:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -955,11 +1007,8 @@
 <h1 id="activation-functions-in-deep-learning">Activation Functions in Deep Learning</h1>
 <h2 id="introduction">Introduction</h2>
 <p>Activation functions are mathematical equations that determine the output of a neural network. They are crucial components that introduce non-linearity into the network, allowing it to learn complex patterns and relationships in data. Without activation functions, neural networks would simply be a series of linear transformations, severely limiting their ability to solve complex problems.</p>
-<p><img alt="" src="../activation-functions-figure-1.png" /></p>
-<!--
- INSERT FIGURE 1: Basic neuron diagram showing input, weighted sum, activation function, and output]
- -->
-
+<p><img alt="" src="../activation-functions-figure-1.png" />
+FIGURE 1: Basic neuron diagram showing input, weighted sum, activation function, and output</p>
 <h2 id="core-concepts">Core Concepts</h2>
 <p>The activation function takes the weighted sum of inputs and biases, then transforms this value into an output signal. This transformation serves several critical purposes:</p>
 <ol>
@@ -1058,28 +1107,24 @@ f(x) = α(e^x - 1) if x ≤ 0
 - Hardware requirements</p>
 <h2 id="modern-usage-patterns">Modern Usage Patterns</h2>
 <p>In contemporary deep learning practice, activation functions are typically chosen as follows:</p>
-<ol>
-<li><strong>Default Choice: ReLU</strong></li>
+<h3 id="1-default-choice-relu">1. <strong>Default Choice: ReLU</strong></h3>
+<ul>
 <li>Used in ~80% of deep learning applications</li>
 <li>Standard for most convolutional neural networks</li>
-<li>
-<p>Excellent balance of performance and efficiency</p>
-</li>
-<li>
-<p><strong>Common Alternatives:</strong></p>
-</li>
+<li>Excellent balance of performance and efficiency</li>
+</ul>
+<h3 id="2-common-alternatives">2. <strong>Common Alternatives:</strong></h3>
+<ul>
 <li>Leaky ReLU: When dying ReLU is a concern</li>
 <li>ELU: When negative values need better handling</li>
-<li>
-<p>Tanh: In RNNs and some specialized architectures</p>
-</li>
-<li>
-<p><strong>Specific Use Cases:</strong></p>
-</li>
+<li>Tanh: In RNNs and some specialized architectures</li>
+</ul>
+<h3 id="3-specific-use-cases">3. <strong>Specific Use Cases:</strong></h3>
+<ul>
 <li>Sigmoid: Final layer of binary classification</li>
 <li>Softmax: Final layer of multi-class classification</li>
 <li>Linear: Final layer of regression tasks</li>
-</ol>
+</ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>The choice of activation function can significantly impact both model performance and computational efficiency. While ReLU dominates modern architectures due to its simplicity and effectiveness, understanding the full range of options allows practitioners to make informed decisions based on their specific use cases and constraints.</p>
 <p>For large-scale deep learning projects, the computational efficiency of ReLU makes it particularly attractive, as the activation function computation can represent a significant portion of the overall computational budget. However, practitioners should remain aware of potential issues like the dying ReLU problem and be prepared to switch to alternatives when necessary.</p>

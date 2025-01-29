@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning Concepts Wordcloud</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.2.2/wordcloud2.min.js"></script>
+    <style>
+        .container {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        #wordcloud-canvas {
+            width: 1200px;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: aliceblue;
+        }
+        .caption {
+            text-align: center;
+            color: #666;
+            margin-top: 10px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="wordcloud-canvas" width="2000" height="1200"></canvas>
+        <p class="caption">Click on any concept to view its definition in the glossary</p>
+    </div>
+
+    <script>
+        const concepts = [
+            ['Deep Learning', 80],
+            ['Neural Network', 60],
+            ['Backpropagation', 60],
+            ['Gradient Descent', 60],
+            ['Loss Functions', 60],
+            ['Activation Functions', 55],
+            ['Supervised Learning', 55],
+            ['CNN Architectures', 55],
+            ['Learning Rate', 55],
+            ['Transformers', 50],
+            ['LSTM Units', 50],
+            ['Optimization', 50],
+            ['Regularization', 50],
+            ['Feature Engineering', 45],
+            ['Batch Normalization', 45],
+            ['Transfer Learning', 45],
+            ['Data Preprocessing', 44],
+            ['Model Evaluation', 43],
+            ['Overfitting', 50],
+            ['Attention Mechanism', 49],
+            ['GPU Acceleration', 48],
+            ['Computer Vision', 47],
+            ['NLP', 46],
+            ['Reinforcement Learning', 45],
+            ['GAN Basics', 44],
+            ['Cross-Validation', 43],
+            ['Hyperparameter Tuning', 42],
+            ['Data Augmentation', 41],
+            ['Model Architecture', 40],
+            ['Machine Learning', 60],
+            ['PyTorch', 50],
+            ['TensorFlow', 50],
+            ['Weights and Biases', 48],
+            ['Convolutional Neural Networks', 50],
+            ['Recurrent Neural Networks', 50],
+            ['Training Process', 52],
+            ['Optimization Algorithms', 54],
+            ['Loss Landscape', 46],
+            ['Gradient Flow', 45],
+            ['Model Parallelism', 44],
+            ['Neural Architecture', 53],
+            ['Deep Networks', 51],
+            ['Residual Connections', 49],
+            ['Attention Layers', 47],
+            ['Embedding Layers', 46],
+            ['Softmax Function', 43],
+            ['Dropout Layers', 42],
+            ['Mini-Batch Training', 41]
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('wordcloud-canvas');
+            
+            WordCloud(canvas, {
+                list: concepts,
+                weightFactor: 1.3,
+                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                color: function(word, weight) {
+                    const hue = Math.random() * 255;
+                    const saturation = 60 + Math.random() * 20;
+                    const lightness = 25 + Math.random() * 20;
+                    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+                },
+                rotateRatio: 0.3,
+                rotationSteps: 2,
+                drawOutOfBound: false,
+                shrinkToFit: true,
+                backgroundColor: 'aliceblue',
+                gridSize: 8,
+                click: function(item) {
+                    const slug = item[0].toLowerCase().replace(/\s+/g, '-');
+                    window.location.href = `../../glossary/#${slug}`;
+                },
+                hover: function(item) {
+                    canvas.style.cursor = 'pointer';
+                },
+                minSize: 5,
+                clearCanvas: true,
+                shape: 'rectangular'
+            });
+        });
+    </script>
+</body>
+</html>
