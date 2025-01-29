@@ -10,6 +10,9 @@ nav:
   - Home: index.md
   - About: about.md
   - Course Description: course-description.md
+  - Chapters:
+    - Introduction: chapters/index.md
+    - Activation Functions: chapters/activation-functions.md
   - Prompts:
     - Intro: prompts/index.md
     - Course Description: prompts/02-bloom-taxonomy-description.md

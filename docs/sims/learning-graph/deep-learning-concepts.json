@@ -583,7 +583,7 @@
         {
             "id": 117,
             "label": "Prompt Engineering",
-            "group": 7
+            "group": "goal"
         },
         {
             "id": 118,
