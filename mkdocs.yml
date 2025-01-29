@@ -22,6 +22,8 @@ nav:
     - Glossary of Terms: prompts/06-glossary-of-terms.md
     - Equations: prompts/07-equations.md
     - Word Cloud: prompts/08-word-cloud.md
+    - Suggested Simulations: prompts/09-suggested-simulations.md
+    - TensorFlow Playground: prompts/11-tensorflow-playground.md
     - Activation Functions: prompts/10-activation-functions.md
   - MicroSims:
     - Intro: sims/index.md
