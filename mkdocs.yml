@@ -8,6 +8,7 @@ edit_uri: 'blob/master/docs'
 
 nav:
   - Home: index.md
+  - About: about.md
   - Course Description: course-description.md
   - Prompts:
     - Intro: prompts/index.md
@@ -17,6 +18,7 @@ nav:
     - Concept Taxonomy: prompts/05-concept-taxonomy.md
     - Glossary of Terms: prompts/06-glossary-of-terms.md
     - Equations: prompts/07-equations.md
+    - Word Cloud: prompts/08-word-cloud.md
   - MicroSims:
     - Intro: sims/index.md
     - Learning Graph: sims/learning-graph/index.md
