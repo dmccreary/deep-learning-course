@@ -60,7 +60,7 @@ theme:
     - content.action.edit
 plugins:
   - search
-#  - social
+  - social
 markdown_extensions:
   - admonition
   - pymdownx.details
