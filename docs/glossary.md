@@ -44,6 +44,12 @@ Various subfields of Artificial Intelligence, including symbolic AI, data-driven
 The study and development of machines capable of performing tasks that typically require human intelligence.  
 **Example:** AI encompasses problem-solving, perception, language understanding, and learning processes.
 
+#### Attention
+
+The area of a subject that has a high weight when classifying the subject.
+
+The paper "Attention is All You Need" was the name of the landmark paper on Transformers.
+
 #### AutoML
 Automated Machine Learning techniques that handle tasks such as model selection, hyperparameter tuning, and feature engineering with minimal human intervention.  
 **Example:** Tools like Google AutoML or AutoKeras can automatically try multiple pipelines and present the best-performing model.
@@ -208,7 +214,7 @@ Graphical representation of data to reveal patterns, trends, or outliers.
 Software libraries and platforms that facilitate the creation of charts, graphs, and interactive plots.  
 **Example:** Matplotlib, Seaborn, and Plotly are used in notebooks to illustrate key data insights.
 
-#### Deep Architecture
+#### Deep Learning
 Neural network designs featuring multiple hidden layers, enabling hierarchical feature extraction.  
 **Example:** A typical deep architecture might have a dozen or more layers in a CNN.
 
@@ -496,11 +502,14 @@ A fully connected feedforward network with one or more hidden layers.
 AI techniques enabling machines to understand, interpret, and generate human language.  
 **Example:** Chatbots, machine translation, and sentiment analysis are common NLP applications.
 
+#### Neural Network
+A network of calculations designed to mimic the neurons in the human brain.
+
 #### Neural Machine Translation
 An approach to automated translation that uses deep neural networks, often encoder-decoder architectures.  
 **Example:** Systems like Google Translate or DeepL rely on neural machine translation to handle multiple languages.
 
-#### NN Origins
+#### Neural Network Origins
 The historical foundation of neural networks, tracing back to early perceptron models and Hebbian learning.  
 **Example:** The perceptron’s creation in the 1950s laid groundwork for modern deep learning.
 
@@ -731,6 +740,10 @@ Standard data splitting strategy: a training set for model fitting, a validation
 #### Transfer Learning Basics
 Techniques for leveraging pre-trained models on new tasks with limited additional data.  
 **Example:** Using a pre-trained ResNet on ImageNet as a feature extractor for a custom dataset.
+
+#### Transformers
+
+An architecture for training deep neural networks that can be parallelized by GPUs.
 
 #### TPU Acceleration
 Using Tensor Processing Units (custom ASICs by Google) to speed up large-scale model training.  

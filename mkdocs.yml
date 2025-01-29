@@ -22,11 +22,12 @@ nav:
     - Glossary of Terms: prompts/06-glossary-of-terms.md
     - Equations: prompts/07-equations.md
     - Word Cloud: prompts/08-word-cloud.md
+    - Activation Functions: prompts/10-activation-functions.md
   - MicroSims:
     - Intro: sims/index.md
     - Learning Graph: sims/learning-graph/index.md
+    - Wordcloud: sims/wordcloud/index.md
   - Checklist: checklist.md
-  - Code Highlight Test: code-highlight-test.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
   - Feedback: feedback.md

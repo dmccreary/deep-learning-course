@@ -5,9 +5,7 @@
 Activation functions are mathematical equations that determine the output of a neural network. They are crucial components that introduce non-linearity into the network, allowing it to learn complex patterns and relationships in data. Without activation functions, neural networks would simply be a series of linear transformations, severely limiting their ability to solve complex problems.
 
 ![](./activation-functions-figure-1.png)
-<!--
- INSERT FIGURE 1: Basic neuron diagram showing input, weighted sum, activation function, and output]
- -->
+FIGURE 1: Basic neuron diagram showing input, weighted sum, activation function, and output
 
 ## Core Concepts
 
@@ -143,20 +141,23 @@ For a model with millions or billions of parameters, these differences can signi
 
 In contemporary deep learning practice, activation functions are typically chosen as follows:
 
-1. **Default Choice: ReLU**
-   - Used in ~80% of deep learning applications
-   - Standard for most convolutional neural networks
-   - Excellent balance of performance and efficiency
+### 1. **Default Choice: ReLU**
 
-2. **Common Alternatives:**
-   - Leaky ReLU: When dying ReLU is a concern
-   - ELU: When negative values need better handling
-   - Tanh: In RNNs and some specialized architectures
+- Used in ~80% of deep learning applications
+- Standard for most convolutional neural networks
+- Excellent balance of performance and efficiency
 
-3. **Specific Use Cases:**
-   - Sigmoid: Final layer of binary classification
-   - Softmax: Final layer of multi-class classification
-   - Linear: Final layer of regression tasks
+### 2. **Common Alternatives:**
+
+- Leaky ReLU: When dying ReLU is a concern
+- ELU: When negative values need better handling
+- Tanh: In RNNs and some specialized architectures
+
+### 3. **Specific Use Cases:**
+
+- Sigmoid: Final layer of binary classification
+- Softmax: Final layer of multi-class classification
+- Linear: Final layer of regression tasks
 
 ## Conclusion
 

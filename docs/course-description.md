@@ -1,15 +1,16 @@
 # Course Description
 
-**Organization:** University of Minnesota Department of Electrical Engineering and Computer Design (EECD)
-**Course Identifier:** EE 4940
-**Course Title:** : Introduction to Deep Learning
+**Organization:** University of Minnesota Department of Electrical Engineering and Computer Design (EECD)</br>
+**Course Identifier:** EE 4940</br>
+**Course Title:** : Introduction to Deep Learning</br>
 **Offering Date:** Spring 2025
 
 ## Course Instructor
+
 Sang-Hyun Oh, Professor of ECE, graduate faculty in neuroscience, physics, biomedical eng.
-Email: sang@umn.edu
-Office: 5-119 Keller Hall
-Teaching Assistant: Ike Goetzman (PhD candidate in ECE; email: goetz219@umn.edu)
+**Email:** sang@umn.edu</br>
+**Office:** 5-119 Keller Hall</br>
+**Teaching Assistant:** Ike Goetzman (PhD candidate in ECE; email: goetz219@umn.edu)
 Lecture (Jan 22 – May 5, 2024): Monday/Wednesday 11:15am-12:30pm @ Appleby Hall 3
 
 ## Course Summary
@@ -21,7 +22,7 @@ Hinton for pioneering contributions to neural networks that enable machine learn
 
 ## Course Overview
 
-EE 4940: Introduction to Deep Learning aims to provide students with both fundamental and applied perspectives on these advances. Beginning with an overview of AI, the course introduces deep neural networks (DNNs) through practical, hands-on examples and guides students through specialized neural network architectures, including
+**EE 4940:** Introduction to Deep Learning aims to provide students with both fundamental and applied perspectives on these advances. Beginning with an overview of AI, the course introduces deep neural networks (DNNs) through practical, hands-on examples and guides students through specialized neural network architectures, including
 
 - convolutional neural networks (CNNs) for diagnostic applications and 
 - recurrent neural networks (RNNs) for time series analysis.
@@ -97,12 +98,8 @@ Maxwell’s equations
 
 ## Homework Assignments and “Mini-projects”:
 
-- Regularly-scheduled weekly or biweekly homework assignments and 4 multi-week “mini-projects.” The former will be designed to exercise basic concepts and modest extensions of the technical or computational tools introduced in class; the latter will be crafted to allow
-students to take a “deeper dive” by applying techniques developed in the course to data sets arising in various aspects of ECE and life sciences.
-- You are allowed (in fact, encouraged) to work with others when solving the homework and mini project problems. However, solutions submitted for grading should be formulated by
-each student independently! Late homework and mini-project submissions will be accepted, but without a legitimate (e.g., illness-based) justification, will result in a maximum grade of
-80% for that assignment. Specifically, unjustified late assignments will be graded according to the same rubric as on-time assignments, but the corresponding score will be multiplied by
-0.8 when entered into the gradebook.
+- Regularly-scheduled weekly or biweekly homework assignments and 4 multi-week “mini-projects.” The former will be designed to exercise basic concepts and modest extensions of the technical or computational tools introduced in class; the latter will be crafted to allow students to take a “deeper dive” by applying techniques developed in the course to data sets arising in various aspects of ECE and life sciences.
+- You are allowed (in fact, encouraged) to work with others when solving the homework and mini project problems. However, solutions submitted for grading should be formulated by each student independently! Late homework and mini-project submissions will be accepted, but without a legitimate (e.g., illness-based) justification, will result in a maximum grade of 80% for that assignment. Specifically, unjustified late assignments will be graded according to the same rubric as on-time assignments, but the corresponding score will be multiplied by 0.8 when entered into the gradebook.
 
 ## Exams
 
@@ -123,11 +120,9 @@ The grade distributions for the course variations are provided below.
 ## Software Requirements
 
 Through the homework assignments and mini-projects, students will be required to perform a number of computer exercises to become familiar with the computational and practical aspects of deep learning.
-This will typically entail utilization of Python, often in concert with existing toolboxes such as NumPy, SciPy, Matplotlib, Scikit-learn, and PyTorch (or TensorFlow), all of which are freely available for
-Windows, Mac, and Linux operating systems.
+This will typically entail utilization of Python, often in concert with existing toolboxes such as NumPy, SciPy, Matplotlib, Scikit-learn, and PyTorch (or TensorFlow), all of which are freely available for Windows, Mac, and Linux operating systems.
 
-As a perhaps preferred alternative, students may wish to perform all (Python) programming computations using a free cloud-based account (i.e., Google Colab), which will be discussed and established at the beginning of the semester. Large-scale deep learning computations necessary for the
-final “mini-project” will utilize these resources.
+As a perhaps preferred alternative, students may wish to perform all (Python) programming computations using a free cloud-based account (i.e., Google Colab), which will be discussed and established at the beginning of the semester. Large-scale deep learning computations necessary for the final “mini-project” will utilize these resources.
 
 !!! Note
     The Required University Policy Statements were provided in the original PDF of the course description.  They have been removed to allow the generative AI tools to focus on the concept enumeration.
