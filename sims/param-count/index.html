@@ -549,6 +549,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Model Parameter Count
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -558,6 +569,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -752,6 +791,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -790,6 +846,40 @@ Add two slider controls in the controls region that change the number of layers 
 Add two text items that show the number of bias weights and the total number of parameters in the model.
 Display the equation for calculating the total number of parameters.</p>
 </div>
+<h2 id="explanation">Explanation</h2>
+<p>I'll help you calculate the correct formula and create a visualization. Let me analyze the current code and make necessary corrections.</p>
+<p>Let's first calculate the correct formula:</p>
+<p>Now I'll create a React component that visualizes this network:</p>
+<p>Let me explain the formula for calculating the total parameters in a fully connected neural network:</p>
+<ol>
+<li>For weights:</li>
+<li>Each connection between two layers needs a weight parameter</li>
+<li>For each pair of adjacent layers: (nodes in previous layer × nodes in current layer)</li>
+<li>Since input layer doesn't have incoming connections, we multiply by (numLayers - 1)</li>
+<li>
+<p>Total weight parameters = neuronsPerLayer × neuronsPerLayer × (numLayers - 1)</p>
+</li>
+<li>
+<p>For biases:</p>
+</li>
+<li>Each neuron (except in input layer) has one bias parameter</li>
+<li>
+<p>Total bias parameters = neuronsPerLayer × (numLayers - 1)</p>
+</li>
+<li>
+<p>Total parameters = Total weight parameters + Total bias parameters</p>
+</li>
+</ol>
+<p>For example, in a network with 3 layers (including input) and 4 neurons per layer:
+- Weight parameters: 4 × 4 × (3-1) = 32
+- Bias parameters: 4 × (3-1) = 8
+- Total parameters: 32 + 8 = 40</p>
+<p>I've created an interactive visualization where you can:
+1. Adjust the number of layers (2-7)
+2. Adjust the neurons per layer (2-10)
+3. See the network structure
+4. Get a breakdown of weight parameters, bias parameters, and total parameters</p>
+<p>Would you like me to add any additional features to the visualization?</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
 <span class="normal">  2</span>
 <span class="normal">  3</span>
