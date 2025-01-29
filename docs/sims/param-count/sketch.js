@@ -2,7 +2,9 @@
 let containerWidth;  // Will be set based on container size
 let containerHeight = 450;  // Fixed height (400 for drawing + 50 for controls)
 let drawHeight = 400;
+let drawYCenter = drawHeight / 2 - 40; // leave room for labels
 let controlHeight = 50;
+let margin = 20;
 let sliderLeftMargin = 220;
 let numLayersSlider;
 let numNeuronsSlider;
@@ -17,12 +19,14 @@ function setup() {
     var mainElement = document.querySelector('main');
     canvas.parent(mainElement);
     
-    numLayersSlider = createSlider(2, 7, 3);
+    // number of layers
+    numLayersSlider = createSlider(2, 7, 3, 1);
     numLayersSlider.position(sliderLeftMargin, drawHeight + 6);
     numLayersSlider.size(containerWidth - sliderLeftMargin - 25);
     numLayersSlider.input(updateNetwork);
     
-    numNeuronsSlider = createSlider(2, 10, 4);
+    // number of neurons per layer
+    numNeuronsSlider = createSlider(2, 8, 4, 1);
     numNeuronsSlider.position(sliderLeftMargin, drawHeight + 26);
     numNeuronsSlider.size(containerWidth - sliderLeftMargin - 25);
     numNeuronsSlider.input(updateNetwork);
@@ -71,19 +75,31 @@ function updateNetwork() {
         if (i === 0) label = "Input";
         else if (i === layerPositions.length - 1) label = "Output";
         
-        drawNodes(layerPositions[i], drawHeight / 2 - 50, numNeurons, label);
+        drawNodes(layerPositions[i], drawYCenter, numNeurons, label);
     }
     
     for (let i = 0; i < layerPositions.length - 1; i++) {
         connectLayers(
-            layerPositions[i], drawHeight / 2- 50, numNeurons,
-            layerPositions[i + 1], drawHeight / 2- 50, numNeurons
+            layerPositions[i], drawYCenter, numNeurons,
+            layerPositions[i + 1], drawYCenter, numNeurons
         );
         parameterCount += numNeurons * numNeurons; // Adding weights
     }
     
-    parameterCount += (numLayers - 1) * numNeurons; // Adding biases
+    // Add biases for all but the input layer
+    biasParameters = (numLayers - 1) * numNeurons;
+    // Total weight parameters = neuronsPerLayer × neuronsPerLayer × (numLayers - 1)
+    weightParameters = numNeurons * numNeurons * (numLayers - 1);
+    // Sum the bias
+    totalParameterCount = biasParameters + weightParameters; 
     
+    // Draw the title
+    noStroke();
+    fill('black');
+    textSize(16);
+    textAlign(CENTER);
+    text('Calculating Parameters for a Fully Connected Neural Network' , containerWidth / 2, margin);
+
     // Show labels and parameter count
     noStroke();
     fill('black');
@@ -93,9 +109,9 @@ function updateNetwork() {
     text('Number of Neurons/Layer: ' + numNeurons, 5, numNeuronsSlider.y + 5);
     
     textAlign(LEFT);
-    text('Bias Weights: ' + numNeurons, 10, drawHeight - 20);
-    textAlign(CENTER, CENTER);
-    text('Total Parameter Count: ' + parameterCount, containerWidth / 2, drawHeight - 20);
+    text('Bias Parameters: ' + biasParameters, 10, drawHeight - 20);
+    text('Weight Parameters: ' + weightParameters, 180, drawHeight - 20);
+    text('Total Parameter Count: ' + totalParameterCount, 370, drawHeight - 20);
 }
 
 function drawNodes(x, y, numNodes, label) {
