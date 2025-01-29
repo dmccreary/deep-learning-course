@@ -12,13 +12,13 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/deep-learning-course/prompts/06-glossary-of-terms/">
+        <link rel="canonical" href="https://dmccreary.github.io/deep-learning-course/chapters/activation-functions/">
       
       
-        <link rel="prev" href="../05-concept-taxonomy/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../07-equations/">
+        <link rel="next" href="../../prompts/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Glossary of Terms - Deep Learning Course with AI</title>
+        <title>Activation Functions - Deep Learning Course with AI</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#generating-a-glossary" class="md-skip">
+        <a href="#activation-functions-in-deep-learning" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Glossary of Terms
+              Activation Functions
             
           </span>
         </div>
@@ -286,53 +286,6 @@
       
   
   
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../chapters/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Chapters
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -342,18 +295,6 @@
       
         
           
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
         
       
         
@@ -367,7 +308,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -376,110 +317,26 @@
               
   
   <span class="md-ellipsis">
-    Prompts
+    Chapters
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Prompts
+            Chapters
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-bloom-taxonomy-description/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Course Description
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-concept-enumeration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Concept Enumeration
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-concept-dependencies/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Concept Dependencies
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05-concept-taxonomy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Concept Taxonomy
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -502,7 +359,7 @@
           
   
   <span class="md-ellipsis">
-    Glossary of Terms
+    Activation Functions
   </span>
   
 
@@ -513,7 +370,7 @@
         
   
   <span class="md-ellipsis">
-    Glossary of Terms
+    Activation Functions
   </span>
   
 
@@ -535,9 +392,114 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#result" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Result
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-activation-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Activation Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Activation Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sigmoid-logistic-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Sigmoid (Logistic Function)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-hyperbolic-tangent-tanh" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Hyperbolic Tangent (tanh)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-rectified-linear-unit-relu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Rectified Linear Unit (ReLU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-leaky-relu" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Leaky ReLU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-exponential-linear-unit-elu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Exponential Linear Unit (ELU)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computational-efficiency-and-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational Efficiency and Scale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modern Usage Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Questions
     </span>
   </a>
   
@@ -552,50 +514,67 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../07-equations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Equations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../08-word-cloud/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Word Cloud
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
       
     </li>
   
@@ -837,9 +816,114 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#result" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Result
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-activation-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Activation Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Activation Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sigmoid-logistic-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Sigmoid (Logistic Function)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-hyperbolic-tangent-tanh" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Hyperbolic Tangent (tanh)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-rectified-linear-unit-relu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Rectified Linear Unit (ReLU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-leaky-relu" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Leaky ReLU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-exponential-linear-unit-elu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Exponential Linear Unit (ELU)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computational-efficiency-and-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational Efficiency and Scale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modern Usage Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Questions
     </span>
   </a>
   
@@ -860,7 +944,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/deep-learning-course/blob/master/docs/prompts/06-glossary-of-terms.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/deep-learning-course/blob/master/docs/chapters/activation-functions.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -868,14 +952,146 @@
   
 
 
-<h1 id="generating-a-glossary">Generating a Glossary</h1>
-<div class="admonition prompt">
-<p class="admonition-title">Prompt</p>
-<p>Next we need a glossary of terms.  For each of the 200 concepts, please create a ISO 11179 definition that is precise, concise, distinct and non-circular.  When appropriate, give an example of how this term is used in the course.  Return each concept label in Markdown level 4 and the definition for the term in the body text.  Use <strong>Example:</strong> before the example.</p>
-<p>Return the entire glossary of terms in a single markdown file.  Place
-"# Glossary of Terms" at the top of the file.  Return the terms in alphabetical order.</p>
-<h2 id="result">Result</h2>
-</div>
+<h1 id="activation-functions-in-deep-learning">Activation Functions in Deep Learning</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Activation functions are mathematical equations that determine the output of a neural network. They are crucial components that introduce non-linearity into the network, allowing it to learn complex patterns and relationships in data. Without activation functions, neural networks would simply be a series of linear transformations, severely limiting their ability to solve complex problems.</p>
+<p><img alt="" src="../activation-functions-figure-1.png" /></p>
+<!--
+ INSERT FIGURE 1: Basic neuron diagram showing input, weighted sum, activation function, and output]
+ -->
+
+<h2 id="core-concepts">Core Concepts</h2>
+<p>The activation function takes the weighted sum of inputs and biases, then transforms this value into an output signal. This transformation serves several critical purposes:</p>
+<ol>
+<li>Non-linearity: Enables the network to approximate complex functions</li>
+<li>Output bounding: Many activation functions constrain outputs to specific ranges</li>
+<li>Gradient properties: Influences how effectively the network can learn through backpropagation</li>
+</ol>
+<h2 id="common-activation-functions">Common Activation Functions</h2>
+<h3 id="1-sigmoid-logistic-function">1. Sigmoid (Logistic Function)</h3>
+<div class="arithmatex">\[
+f(x) = 1 / (1 + e^(-x))
+\]</div>
+<p><img alt="" src="../activation-functions-figure-2.png" /></p>
+<p><strong>Pros:</strong>
+- Outputs bounded between 0 and 1
+- Smooth gradient
+- Clear probability interpretation
+- Historically significant</p>
+<p><strong>Cons:</strong>
+- Suffers from vanishing gradient problem
+- Output not zero-centered
+- Computationally expensive (exponential function)
+- Saturates and kills gradients</p>
+<p><strong>Computational Cost:</strong> High (requires exponential calculation)</p>
+<h3 id="2-hyperbolic-tangent-tanh">2. Hyperbolic Tangent (tanh)</h3>
+<div class="arithmatex">\[
+f(x) = (e^x - e^(-x)) / (e^x + e^(-x))
+\]</div>
+<p><img alt="" src="../activation-functions-figure-3.png" /></p>
+<p><strong>Pros:</strong>
+- Zero-centered outputs (-1 to 1)
+- Stronger gradients than sigmoid
+- Often works better than sigmoid in practice</p>
+<p><strong>Cons:</strong>
+- Still suffers from vanishing gradient
+- Computationally expensive
+- Saturates</p>
+<p><strong>Computational Cost:</strong> High (requires exponential calculations)</p>
+<h3 id="3-rectified-linear-unit-relu">3. Rectified Linear Unit (ReLU)</h3>
+<div class="arithmatex">\[
+f(x) = max(0, x)
+\]</div>
+<p><img alt="" src="../activation-functions-figure-4.png" /></p>
+<p><strong>Pros:</strong>
+- Computationally efficient
+- No vanishing gradient for positive values
+- Sparse activation (natural regularization)
+- Faster convergence
+- Biologically inspired</p>
+<p><strong>Cons:</strong>
+- "Dying ReLU" problem
+- Not zero-centered
+- Unbounded positive activation</p>
+<p><strong>Computational Cost:</strong> Very Low (simple max operation)</p>
+<h3 id="4-leaky-relu">4. Leaky ReLU</h3>
+<div class="arithmatex">\[
+f(x) = max(αx, x), where α is typically 0.01
+\]</div>
+<p><img alt="" src="../activation-functions-figure-5.png" /></p>
+<p><strong>Pros:</strong>
+- Prevents dying ReLU problem
+- All benefits of ReLU
+- Allows for negative gradients</p>
+<p><strong>Cons:</strong>
+- Results not consistent across problems
+- Additional hyperparameter (α)
+- Not zero-centered</p>
+<p><strong>Computational Cost:</strong> Very Low (simple max operation with scalar multiplication)</p>
+<h3 id="5-exponential-linear-unit-elu">5. Exponential Linear Unit (ELU)</h3>
+<div class="arithmatex">\[
+f(x) = x if x &gt; 0
+f(x) = α(e^x - 1) if x ≤ 0
+\]</div>
+<p><img alt="" src="../activation-functions-figure-6.png" /></p>
+<p><strong>Pros:</strong>
+- Reduces bias shift
+- Natural gradient
+- Robust to noise
+- Better handling of negative values</p>
+<p><strong>Cons:</strong>
+- Computationally more expensive than ReLU
+- Additional hyperparameter (α)
+- Slightly more complex derivative</p>
+<p><strong>Computational Cost:</strong> Moderate (exponential calculation only for negative values)</p>
+<h2 id="computational-efficiency-and-scale">Computational Efficiency and Scale</h2>
+<p>When building large-scale deep learning models, the computational efficiency of activation functions becomes crucial. Here's a comparison of relative computational costs:</p>
+<ol>
+<li>ReLU/Leaky ReLU: ~1x (baseline)</li>
+<li>ELU: ~2-3x</li>
+<li>Sigmoid/Tanh: ~4-5x</li>
+</ol>
+<p>For a model with millions or billions of parameters, these differences can significantly impact:
+- Training time
+- Inference latency
+- Energy consumption
+- Hardware requirements</p>
+<h2 id="modern-usage-patterns">Modern Usage Patterns</h2>
+<p>In contemporary deep learning practice, activation functions are typically chosen as follows:</p>
+<ol>
+<li><strong>Default Choice: ReLU</strong></li>
+<li>Used in ~80% of deep learning applications</li>
+<li>Standard for most convolutional neural networks</li>
+<li>
+<p>Excellent balance of performance and efficiency</p>
+</li>
+<li>
+<p><strong>Common Alternatives:</strong></p>
+</li>
+<li>Leaky ReLU: When dying ReLU is a concern</li>
+<li>ELU: When negative values need better handling</li>
+<li>
+<p>Tanh: In RNNs and some specialized architectures</p>
+</li>
+<li>
+<p><strong>Specific Use Cases:</strong></p>
+</li>
+<li>Sigmoid: Final layer of binary classification</li>
+<li>Softmax: Final layer of multi-class classification</li>
+<li>Linear: Final layer of regression tasks</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>The choice of activation function can significantly impact both model performance and computational efficiency. While ReLU dominates modern architectures due to its simplicity and effectiveness, understanding the full range of options allows practitioners to make informed decisions based on their specific use cases and constraints.</p>
+<p>For large-scale deep learning projects, the computational efficiency of ReLU makes it particularly attractive, as the activation function computation can represent a significant portion of the overall computational budget. However, practitioners should remain aware of potential issues like the dying ReLU problem and be prepared to switch to alternatives when necessary.</p>
+<p><img alt="" src="../activation-functions-figure-7.png" />
+FIGURE 7: Comparative visualization of all activation functions discussed]</p>
+<h2 id="practice-questions">Practice Questions</h2>
+<ol>
+<li>Why can't neural networks only use linear transformations without activation functions?</li>
+<li>What makes ReLU computationally efficient compared to sigmoid and tanh?</li>
+<li>In what scenarios might you choose ELU over ReLU despite its higher computational cost?</li>
+<li>How does the choice of activation function impact the training of very deep networks?</li>
+</ol>
 
 
 
@@ -911,7 +1127,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../05-concept-taxonomy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Concept Taxonomy">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -921,20 +1137,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Concept Taxonomy
+                Introduction
               </div>
             </div>
           </a>
         
         
           
-          <a href="../07-equations/" class="md-footer__link md-footer__link--next" aria-label="Next: Equations">
+          <a href="../../prompts/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Equations
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">
