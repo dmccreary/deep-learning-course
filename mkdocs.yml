@@ -29,6 +29,7 @@ nav:
     - Intro: sims/index.md
     - Learning Graph: sims/learning-graph/index.md
     - Wordcloud: sims/wordcloud/index.md
+    - Model Parameter Count: sims/param-count/index.md
   - Checklist: checklist.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
@@ -44,8 +45,8 @@ theme:
   logo: img/logo.png
   favicon: img/favicon.ico
   palette:
-    primary: 'blue'
-    accent: 'orange'
+    primary: custom
+    accent: 'gold'
   include_sidebar: true
   features:
     - content.code.copy
