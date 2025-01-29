@@ -1,27 +1,3 @@
-# Neural Network Parameter Count MicroSim
-
-<iframe src="./neural-network-parameter-count.html" height="450px" width="700px" scrolling="no" style="overflow: hidden;"></iframe>
-
-[Run the Neural Network Parameter Count MicroSim](./neural-network-parameter-count.html){ .md-button .md-button--primary }
-
-[Edit this MicroSim](https://editor.p5js.org/dmccreary/sketches/4mfLxv2-Y)
-
-
-!!! prompt
-    Generate a p5.js file that draws a simple neural network.
-    Use circles to draw the nodes and lines to draw the weights.
-    Use the responsive design template in the project area.
-    The input layer is on the left.  The output layer is on the right.
-    The layer on the left should be labeled "Input".
-    The layer on the right should be labeled "Output"
-    Add two slider controls in the controls region that change the number of layers and the number of neurons in a layer.
-    Add two text items that show the number of bias weights and the total number of parameters in the model.
-    Display the equation for calculating the total number of parameters.
-
-
-
-
-```js
 // Demo of parameters in neural networks with a responsive design
 let containerWidth;  // Will be set based on container size
 let containerHeight = 450;  // Fixed height (400 for drawing + 50 for controls)
@@ -95,13 +71,13 @@ function updateNetwork() {
         if (i === 0) label = "Input";
         else if (i === layerPositions.length - 1) label = "Output";
         
-        drawNodes(layerPositions[i], drawHeight / 2, numNeurons, label);
+        drawNodes(layerPositions[i], drawHeight / 2 - 50, numNeurons, label);
     }
     
     for (let i = 0; i < layerPositions.length - 1; i++) {
         connectLayers(
-            layerPositions[i], drawHeight / 2, numNeurons,
-            layerPositions[i + 1], drawHeight / 2, numNeurons
+            layerPositions[i], drawHeight / 2- 50, numNeurons,
+            layerPositions[i + 1], drawHeight / 2- 50, numNeurons
         );
         parameterCount += numNeurons * numNeurons; // Adding weights
     }
@@ -151,4 +127,3 @@ function connectLayers(x1, y1, numNodes1, x2, y2, numNodes2) {
         }
     }
 }
-```

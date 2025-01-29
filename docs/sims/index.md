@@ -11,3 +11,7 @@
 ## Model Parameter Count
 
 [Param Count](./param-count/index.md)
+
+## Responsive Template
+
+[Responsive Template](./templates/index.md)

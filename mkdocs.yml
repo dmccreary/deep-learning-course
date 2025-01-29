@@ -30,6 +30,7 @@ nav:
     - Learning Graph: sims/learning-graph/index.md
     - Wordcloud: sims/wordcloud/index.md
     - Model Parameter Count: sims/param-count/index.md
+    - Templates: sims/templates/index.md
   - Checklist: checklist.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
