@@ -18,7 +18,7 @@
         <link rel="prev" href="../wordcloud/">
       
       
-        <link rel="next" href="../../checklist/">
+        <link rel="next" href="../templates/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#neural-network" class="md-skip">
+        <a href="#neural-network-parameter-count-microsim" class="md-skip">
           Skip to content
         </a>
       
@@ -447,6 +447,10 @@
           
         
       
+        
+          
+        
+      
     
     
     
@@ -555,6 +559,27 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -748,181 +773,279 @@
   
 
 
-<h1 id="neural-network">Neural Network</h1>
-<p>Generate a p5.js file that draws a three layer neural network. 
-The input is on the left.  The output is on the right.
+<h1 id="neural-network-parameter-count-microsim">Neural Network Parameter Count MicroSim</h1>
+<iframe src="./neural-network-parameter-count.html" height="450px" width="700px" scrolling="no" style="overflow: hidden;"></iframe>
+
+<p><a class="md-button md-button--primary" href="neural-network-parameter-count.html">Run the Neural Network Parameter Count MicroSim</a></p>
+<p><a href="https://editor.p5js.org/dmccreary/sketches/4mfLxv2-Y">Edit this MicroSim</a></p>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Generate a p5.js file that draws a simple neural network.
+Use circles to draw the nodes and lines to draw the weights.
+Use the responsive design template in the project area.
+The input layer is on the left.  The output layer is on the right.
 The layer on the left should be labeled "Input".
-add slider controls that change the number of layers and the number of neurons in a layer</p>
-<p><a href="https://chat.openai.com/share/10acccc0-b4b0-4232-8ae6-9e5a77195dcb">Link to Chat Transcript</a></p>
-<p><a class="md-button md-button--primary" href="neural-network.html">Link to Demo</a></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Demo of parameters in neural networks</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">800</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span>
+The layer on the right should be labeled "Output"
+Add two slider controls in the controls region that change the number of layers and the number of neurons in a layer.
+Add two text items that show the number of bias weights and the total number of parameters in the model.
+Display the equation for calculating the total number of parameters.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Demo of parameters in neural networks with a responsive design</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">containerWidth</span><span class="p">;</span><span class="w">  </span><span class="c1">// Will be set based on container size</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">containerHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">450</span><span class="p">;</span><span class="w">  </span><span class="c1">// Fixed height (400 for drawing + 50 for controls)</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">controlHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">sliderLeftMargin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">220</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">numLayersSlider</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">numNeuronsSlider</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">parameterCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">labelValueWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">240</span><span class="p">;</span>
-
 <span class="kd">let</span><span class="w"> </span><span class="nx">numLayers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w">  </span><span class="c1">// Default number of layers (including Input and Output)</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">numNeurons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// Default number of neurons in each layer</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="s1">&#39;canvas-container&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">updateCanvasSize</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">containerWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">containerHeight</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">mainElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;main&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="nx">mainElement</span><span class="p">);</span>
 
-<span class="w">  </span><span class="nx">numLayersSlider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlider</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="nx">labelValueWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">50</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">labelValueWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;px&#39;</span><span class="p">)</span>
-<span class="w">  </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">input</span><span class="p">(</span><span class="nx">updateNetwork</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">numLayersSlider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlider</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="nx">sliderLeftMargin</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">6</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">size</span><span class="p">(</span><span class="nx">containerWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">sliderLeftMargin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">25</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">input</span><span class="p">(</span><span class="nx">updateNetwork</span><span class="p">);</span>
 
+<span class="w">    </span><span class="nx">numNeuronsSlider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlider</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">numNeuronsSlider</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="nx">sliderLeftMargin</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">26</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">numNeuronsSlider</span><span class="p">.</span><span class="nx">size</span><span class="p">(</span><span class="nx">containerWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">sliderLeftMargin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">25</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">numNeuronsSlider</span><span class="p">.</span><span class="nx">input</span><span class="p">(</span><span class="nx">updateNetwork</span><span class="p">);</span>
 
-<span class="w">  </span><span class="nx">numNeuronsSlider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createSlider</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">numNeuronsSlider</span><span class="p">.</span><span class="nx">position</span><span class="p">(</span><span class="nx">labelValueWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">25</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">numNeuronsSlider</span><span class="p">.</span><span class="nx">input</span><span class="p">(</span><span class="nx">updateNetwork</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">updateNetwork</span><span class="p">();</span>
+<span class="p">}</span>
 
-<span class="w">  </span><span class="nx">updateNetwork</span><span class="p">();</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">updateCanvasSize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;main&#39;</span><span class="p">).</span><span class="nx">getBoundingClientRect</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">containerWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">container</span><span class="p">.</span><span class="nx">width</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">windowResized</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">updateCanvasSize</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">resizeCanvas</span><span class="p">(</span><span class="nx">containerWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">containerHeight</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Update slider positions and sizes</span>
+<span class="w">    </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">size</span><span class="p">(</span><span class="nx">containerWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">sliderLeftMargin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">25</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">numNeuronsSlider</span><span class="p">.</span><span class="nx">size</span><span class="p">(</span><span class="nx">containerWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">sliderLeftMargin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">25</span><span class="p">);</span>
+
+<span class="w">    </span><span class="nx">updateNetwork</span><span class="p">();</span>
 <span class="p">}</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">updateNetwork</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">background</span><span class="p">(</span><span class="mf">240</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// make the background of the drawing region a very light blue</span>
+<span class="w">    </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;aliceblue&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;silver&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">containerWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="p">);</span>
 
-<span class="w">  </span><span class="nx">numLayers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
-<span class="w">  </span><span class="nx">numNeurons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numNeuronsSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="p">,</span><span class="w"> </span><span class="nx">containerWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">controlHeight</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">layerPositions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">({</span><span class="nx">length</span><span class="o">:</span><span class="w"> </span><span class="nx">numLayers</span><span class="p">},</span><span class="w"> </span><span class="p">(</span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">map</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">numLayers</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">width</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">numLayers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">numNeurons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numNeuronsSlider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
 
-<span class="w">  </span><span class="nx">parameterCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">layerPositions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">length</span><span class="o">:</span><span class="w"> </span><span class="nx">numLayers</span><span class="p">},</span><span class="w"> </span>
+<span class="w">        </span><span class="p">(</span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">map</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">numLayers</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">containerWidth</span>
+<span class="w">    </span><span class="p">);</span>
 
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">layerPositions</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hidden&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Input&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">layerPositions</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Output&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">parameterCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 
-<span class="w">    </span><span class="nx">drawNodes</span><span class="p">(</span><span class="nx">layerPositions</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">layerPositions</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hidden&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Input&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">layerPositions</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Output&quot;</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">layerPositions</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">connectLayers</span><span class="p">(</span><span class="nx">layerPositions</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">,</span><span class="w"> </span><span class="nx">layerPositions</span><span class="p">[</span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">parameterCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">numNeurons</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">;</span><span class="w"> </span><span class="c1">// Adding weights</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">drawNodes</span><span class="p">(</span><span class="nx">layerPositions</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">  </span><span class="nx">parameterCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="nx">numLayers</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">;</span><span class="w"> </span><span class="c1">// Adding biases</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">layerPositions</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">connectLayers</span><span class="p">(</span>
+<span class="w">            </span><span class="nx">layerPositions</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">layerPositions</span><span class="p">[</span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">numNeurons</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">        </span><span class="nx">parameterCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">numNeurons</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">;</span><span class="w"> </span><span class="c1">// Adding weights</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">  </span><span class="c1">// Show labels and parameter count</span>
-<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">16</span><span class="p">);</span>
-<span class="w">  </span><span class="c1">// textAlign(LEFT, CENTER);</span>
-<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Number of Layers: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">numLayers</span><span class="p">,</span><span class="w"> </span><span class="mf">70</span><span class="p">,</span><span class="w"> </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Number of Neurons/Layer: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">,</span><span class="w"> </span><span class="mf">70</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="nx">numNeuronsSlider</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">parameterCount</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="nx">numLayers</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">;</span><span class="w"> </span><span class="c1">// Adding biases</span>
 
-<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Total Parameter Count: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">parameterCount</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">20</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Show labels and parameter count</span>
+<span class="w">    </span><span class="nx">noStroke</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">16</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">LEFT</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Number of Layers: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">numLayers</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="nx">numLayersSlider</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Number of Neurons/Layer: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="nx">numNeuronsSlider</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+
+<span class="w">    </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">LEFT</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Bias Weights: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">numNeurons</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">20</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;Total Parameter Count: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">parameterCount</span><span class="p">,</span><span class="w"> </span><span class="nx">containerWidth</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">20</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">drawNodes</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">numNodes</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">gap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">startY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="nx">numNodes</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">numNodes</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">ellipse</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">startY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">16</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">text</span><span class="p">(</span><span class="nx">label</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="nx">numNodes</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">strokeWeight</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">gap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">startY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="nx">numNodes</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">numNodes</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">ellipse</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">startY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">noStroke</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">textSize</span><span class="p">(</span><span class="mf">16</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">text</span><span class="p">(</span><span class="nx">label</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="nx">numNodes</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">connectLayers</span><span class="p">(</span><span class="nx">x1</span><span class="p">,</span><span class="w"> </span><span class="nx">y1</span><span class="p">,</span><span class="w"> </span><span class="nx">numNodes1</span><span class="p">,</span><span class="w"> </span><span class="nx">x2</span><span class="p">,</span><span class="w"> </span><span class="nx">y2</span><span class="p">,</span><span class="w"> </span><span class="nx">numNodes2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">gap1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">gap2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">startY1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="nx">numNodes1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">startY2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="nx">numNodes2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">numNodes1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">numNodes2</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">line</span><span class="p">(</span><span class="nx">x1</span><span class="p">,</span><span class="w"> </span><span class="nx">startY1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap1</span><span class="p">,</span><span class="w"> </span><span class="nx">x2</span><span class="p">,</span><span class="w"> </span><span class="nx">startY2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap2</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">strokeWeight</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">gap1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">gap2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">startY1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="nx">numNodes1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">startY2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">((</span><span class="nx">numNodes2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">numNodes1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">numNodes2</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">line</span><span class="p">(</span><span class="nx">x1</span><span class="p">,</span><span class="w"> </span><span class="nx">startY1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap1</span><span class="p">,</span><span class="w"> </span><span class="nx">x2</span><span class="p">,</span><span class="w"> </span><span class="nx">startY2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">gap2</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 
@@ -980,13 +1103,13 @@ add slider controls that change the number of layers and the number of neurons i
         
         
           
-          <a href="../../checklist/" class="md-footer__link md-footer__link--next" aria-label="Next: Checklist">
+          <a href="../templates/" class="md-footer__link md-footer__link--next" aria-label="Next: Templates">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Checklist
+                Templates
               </div>
             </div>
             <div class="md-footer__button md-icon">
