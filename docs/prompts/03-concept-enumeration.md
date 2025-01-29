@@ -61,6 +61,8 @@ I'm covering GPU and TPU acceleration, memory management, model compression, and
 ## Result
 
 Thought about deep learning curriculum concepts for 1m 42s
+
+```
 AI Definition
 ML Definition
 History Of AI
@@ -261,6 +263,7 @@ Version Control Workflow
 Agile Methods
 Code Review
 Documentation
+```
 
 ## Getting the CSV
 
