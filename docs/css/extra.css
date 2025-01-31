@@ -5,10 +5,32 @@
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
     height: 50px;
     width: 50px;
-}
 
+}/* Maroon Primary Color */
 :root {
     --md-primary-fg-color: #800000;
     --md-primary-fg-color--light: #a04545;
     --md-primary-fg-color--dark: #600000;
+  }
+
+/* Styling for the Copy Button */
+.admonition.prompt {
+    position: relative;
+  }
+  
+  .admonition.prompt .copy-button {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background-color: #0056d6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem 0.3rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+  }
+  
+  .admonition.prompt .copy-button:hover {
+    background-color: #0041a4; /* Darker blue on hover */
   }

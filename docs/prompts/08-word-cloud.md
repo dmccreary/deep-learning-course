@@ -14,5 +14,7 @@
     concepts in the course.  The more important concepts
     should have a higher score.
 
-    Then the JavaScript wordcloud-2 libary to generate
-    the wordcloud for this list of 50 concepts.  For each concept, allow the user to click on the link and have the link go to the ../../glossary.md#[ConceptLabel] link.
+    Then use the JavaScript wordcloud-2 library to generate
+    the wordcloud for this list of 50 concepts.  
+    For each concept, allow the user to click on the link and 
+    have the link go to the ../../glossary.md#[ConceptLabel] link.
