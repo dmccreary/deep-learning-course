@@ -2,7 +2,7 @@
 
 How quickly a model returns text is a key metric.  Here is a sample
 program that calculates the number of tokens per second for Deepseek-r1:7b
-running in an Ollama framework.  This test was run on my
+running in an [Ollama](../glossary.md#ollama) framework.  This test was run on my
 local GPU which is a NVIDIA RTX 2080 Ti with 12GB RAM running CUDA 12.6.  The
 size of the model was 4.7GB which fits well within the 12GB ram of the GPU.
 

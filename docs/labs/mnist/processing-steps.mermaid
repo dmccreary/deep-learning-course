@@ -1,0 +1,38 @@
+flowchart LR
+    %% Increase default font size
+    classDef default font-size:14px
+
+    %% Define custom classes with larger fonts
+    classDef bigLabel font-size:16px,font-weight:bold
+    
+    subgraph Input[" Input Data "]
+        A[Original Image<br/><br/>28x28 pixels<br/>Values: 0-255]
+    end
+
+    subgraph Preprocessing[" Preprocessing Steps "]
+        B[Normalization<br/><br/>Values: 0-1]
+        C[Flattening<br/><br/>1D vector]
+        D[One-Hot Encoding<br/><br/>for labels]
+    end
+
+    subgraph Output[" Output Format "]
+        E[Flattened Vector<br/><br/>784 features]
+        F[Label Vector<br/><br/>10 classes]
+    end
+
+    A -->|"Divide by 255"| B
+    B -->|"Reshape (28x28 → 784)"| C
+    C --> E
+    A -->|"Convert label (0-9)"| D
+    D --> F
+
+    %% Higher contrast color combinations
+    style A fill:#FFE6E6,stroke:#333,stroke-width:2px,color:#000
+    style B fill:#E6E6FF,stroke:#333,stroke-width:2px,color:#000
+    style C fill:#E6E6FF,stroke:#333,stroke-width:2px,color:#000
+    style D fill:#E6E6FF,stroke:#333,stroke-width:2px,color:#000
+    style E fill:#E6FFE6,stroke:#333,stroke-width:2px,color:#000
+    style F fill:#E6FFE6,stroke:#333,stroke-width:2px,color:#000
+
+    %% Apply custom class to subgraph titles
+    class Input,Preprocessing,Output bigLabel

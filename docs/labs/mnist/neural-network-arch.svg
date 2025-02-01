@@ -1,0 +1,82 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#ffffff"/>
+    
+    <!-- Layer Labels -->
+    <text x="60" y="200" font-size="14" fill="#333" text-anchor="middle">Input Layer</text>
+    <text x="270" y="200" font-size="14" fill="#333" text-anchor="middle">Hidden Layer 1</text>
+    <text x="480" y="200" font-size="14" fill="#333" text-anchor="middle">Hidden Layer 2</text>
+    <text x="690" y="200" font-size="14" fill="#333" text-anchor="middle">Output Layer</text>
+    
+    <!-- Neuron Counts -->
+    <text x="60" y="220" font-size="12" fill="#666" text-anchor="middle">(784 neurons)</text>
+    <text x="270" y="220" font-size="12" fill="#666" text-anchor="middle">(128 neurons)</text>
+    <text x="480" y="220" font-size="12" fill="#666" text-anchor="middle">(64 neurons)</text>
+    <text x="690" y="220" font-size="12" fill="#666" text-anchor="middle">(10 neurons)</text>
+    
+    <!-- Activation Functions -->
+    <text x="270" y="240" font-size="12" fill="#0066cc" text-anchor="middle">ReLU</text>
+    <text x="480" y="240" font-size="12" fill="#0066cc" text-anchor="middle">ReLU</text>
+    <text x="690" y="240" font-size="12" fill="#0066cc" text-anchor="middle">Softmax</text>
+
+    <!-- Input Layer Neurons -->
+    <circle cx="60" cy="100" r="5" fill="#4CAF50"/>
+    <circle cx="60" cy="120" r="5" fill="#4CAF50"/>
+    <circle cx="60" cy="140" r="2" fill="#4CAF50"/>
+    <circle cx="60" cy="160" r="2" fill="#4CAF50"/>
+    <circle cx="60" cy="180" r="2" fill="#4CAF50"/>
+    
+    <!-- Hidden Layer 1 Neurons -->
+    <circle cx="270" cy="80" r="5" fill="#2196F3"/>
+    <circle cx="270" cy="100" r="5" fill="#2196F3"/>
+    <circle cx="270" cy="120" r="5" fill="#2196F3"/>
+    <circle cx="270" cy="140" r="2" fill="#2196F3"/>
+    <circle cx="270" cy="160" r="2" fill="#2196F3"/>
+    <circle cx="270" cy="180" r="2" fill="#2196F3"/>
+    
+    <!-- Hidden Layer 2 Neurons -->
+    <circle cx="480" cy="90" r="5" fill="#9C27B0"/>
+    <circle cx="480" cy="110" r="5" fill="#9C27B0"/>
+    <circle cx="480" cy="130" r="5" fill="#9C27B0"/>
+    <circle cx="480" cy="150" r="2" fill="#9C27B0"/>
+    <circle cx="480" cy="170" r="2" fill="#9C27B0"/>
+    
+    <!-- Output Layer Neurons -->
+    <circle cx="690" cy="60" r="5" fill="#FF5722"/>
+    <circle cx="690" cy="90" r="5" fill="#FF5722"/>
+    <circle cx="690" cy="120" r="5" fill="#FF5722"/>
+    <circle cx="690" cy="150" r="5" fill="#FF5722"/>
+    <circle cx="690" cy="180" r="5" fill="#FF5722"/>
+    
+    <!-- Connections between layers (subset shown for clarity) -->
+    <!-- Input to Hidden 1 -->
+    <path d="M65,100 C170,80 170,80 265,80" stroke="#ccc" stroke-width="0.5" fill="none"/>
+    <path d="M65,100 C170,100 170,100 265,100" stroke="#ccc" stroke-width="0.5" fill="none"/>
+    <path d="M65,120 C170,100 170,100 265,100" stroke="#ccc" stroke-width="0.5" fill="none"/>
+    <path d="M65,140 C170,120 170,120 265,120" stroke="#ccc" stroke-width="0.5" fill="none"/>
+    
+    <!-- Hidden 1 to Hidden 2 -->
+    <path d="M275,80 C380,90 380,90 475,90" stroke="#ccc" stroke-width="0.5" fill="none"/>
+    <path d="M275,100 C380,110 380,110 475,110" stroke="#ccc" stroke-width="0.5" fill="none"/>
+    <path d="M275,120 C380,130 380,130 475,130" stroke="#ccc" stroke-width="0.5" fill="none"/>
+    
+    <!-- Hidden 2 to Output -->
+    <path d="M485,90 C590,60 590,60 685,60" stroke="#ccc" stroke-width="0.5" fill="none"/>
+    <path d="M485,110 C590,90 590,90 685,90" stroke="#ccc" stroke-width="0.5" fill="none"/>
+    <path d="M485,130 C590,120 590,120 685,120" stroke="#ccc" stroke-width="0.5" fill="none"/>
+    
+    <!-- Dimension Information -->
+    <text x="165" y="340" font-size="12" fill="#666" text-anchor="middle">Input: 28x28 = 784</text>
+    <text x="375" y="340" font-size="12" fill="#666" text-anchor="middle">Dense: 128</text>
+    <text x="585" y="340" font-size="12" fill="#666" text-anchor="middle">Dense: 64</text>
+    <text x="690" y="340" font-size="12" fill="#666" text-anchor="middle">Output: 10</text>
+    
+    <!-- Title -->
+    <text x="400" y="30" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">MNIST Neural Network Architecture</text>
+    
+    <!-- Legend -->
+    <rect x="60" y="360" width="680" height="30" fill="#f8f9fa" rx="5"/>
+    <text x="400" y="380" font-size="12" fill="#666" text-anchor="middle">
+        Each layer is fully connected. Only a subset of connections shown for clarity.
+    </text>
+</svg>

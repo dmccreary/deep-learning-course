@@ -533,6 +533,17 @@ Core functionalities of the NumPy library for handling n-dimensional arrays and 
 Identifying and localizing objects within images or video frames, typically returning bounding boxes and class labels.  
 **Example:** A YOLO-based model scanning real-time video to detect pedestrians and vehicles.
 
+#### Ollama
+A community-driven project that democratizes access to powerful LLMs developed by various organizations.
+
+Ollama was founded by Michael Chiang and Jeffrey Morgan in Palo Alto, CA, and is an independent startup that participated in the W21 batch of Y Combinator.
+
+Ollama is not directly associated with Meta or the development of the Llama models.
+
+Ollama makes it easy to run LLMs on local hardware such as a consumer-grade GPU.  Installation can be done with two simple UNIX shell commands.
+
+* [Ollama website](https://ollama.com/)
+
 #### Overfitting Vs Underfitting
 Overfitting occurs when a model learns spurious details in the training data, while underfitting fails to capture underlying trends.  
 **Example:** A deep network might overfit a small dataset; a simple linear model might underfit a complex dataset.
