@@ -500,18 +500,24 @@
       "start": "2023-01-01"
     },
     {
-        "id": 101,
+        "id": 200,
         "content": "2024 - OpenAI releases o1 - a first reasoning model",
         "start": "2024-09-01"
       },
     {
-        "id": 102,
-        "content": "2025 - DeepSeek-R1 released by mainland China backed investment group",
+        "id": 201,
+        "content": "2024 - DeepSeek-R1 released by mainland China backed investment group",
         "start": "2025-01-01"
       }
       ,
     {
-        "id": 103,
+        "id": 202,
+        "content": "2025 - <a href='https://medium.com/@omkamal/ollama-the-landscape-for-a-powerful-llm-from-meta-ai-6792d7dad718'>Ollama released allowing small models to run on local GPUs</a>",
+        "start": "2025-05-22"
+      }
+      ,
+    {
+        "id": 203,
         "content": "2025 - The University of Minnesota ECD department teachers a Deep Learning course",
         "start": "2025-01-22"
       }
