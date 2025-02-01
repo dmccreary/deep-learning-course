@@ -2,7 +2,32 @@
 
 How quickly a model returns text is a key metric.  Here is a sample
 program that calculates the number of tokens per second for Deepseek-r1
-running in an Ollama framework.
+running in an Ollama framework.  This test was run on my
+local GPU which is a NVIDIA GTX 3090 with 12GB RAM.
+
+To time the performance of a model we do the following
+
+1. Record the time before the model runs with 
+
+```python
+start_time = time.time()
+```
+
+2. Record the end time and calculate the elapsed time
+
+```python
+end_time = time.time()
+elapsed_time = end_time - start_time
+```
+
+3. Count the total number of tokens in the result and calculate the tokens per second
+
+```python
+token_count = len(result.split())
+tokens_per_second = token_count / elapsed_time if elapsed_time > 0 else 0
+```
+
+## Complete Program
 
 ```python
 import time
