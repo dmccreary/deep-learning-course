@@ -72,25 +72,30 @@ Build a simple neural network with:
 3. Hidden layer 2 (64 neurons, ReLU activation)
 4. Output layer (10 neurons, softmax activation)
 
-[FIGURE DESCRIPTION: Network architecture diagram showing layers, connections, and dimensions]
+![](./nerual-network-layers.png)
+Network architecture diagram showing layers, connections, and dimensions]
 
 ### Step 4: Model Training
+
 1. Configure training parameters:
-   - Loss function: Categorical crossentropy
-   - Optimizer: Adam
-   - Learning rate: 0.001
-   - Batch size: 32
-   - Epochs: 10
+
+- Loss function: Categorical crossentropy
+- Optimizer: Adam
+- Learning rate: 0.001
+- Batch size: 32
+- Epochs: 10
 
 2. Train the model while monitoring:
-   - Training accuracy
-   - Validation accuracy
-   - Training loss
-   - Validation loss
+
+- Training accuracy
+- Validation accuracy
+- Training loss
+- Validation loss
 
 [FIGURE DESCRIPTION: Two line plots showing training/validation accuracy and loss over epochs]
 
 ### Step 5: Model Evaluation
+
 1. Evaluate model on test set
 2. Generate confusion matrix
 3. Calculate key metrics:
