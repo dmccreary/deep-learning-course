@@ -318,6 +318,10 @@ Generative models that transform noise into data samples via a series of inverti
 The process of passing input data through a neural network to get an output prediction.  
 **Example:** In a feedforward network, data flows from the input layer through hidden layers to the output.
 
+#### Frozen in Time
+The term used to describe that the knowledge base that a LLM is trained on
+has a cutoff date which can often omit current events in the past year.
+
 #### Fully Connected Layers
 Layers where every neuron is connected to every neuron in the next layer, typically appearing after convolution blocks.  
 **Example:** After convolution and pooling, the extracted features might go into a fully connected classifier.

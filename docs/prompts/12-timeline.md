@@ -106,7 +106,7 @@ I'm organizing AI milestones for each year, ensuring concise and consistent entr
 ## Reading Timeline Data from a JSON File
 
 !!! prompt
-  Rewrite the program to read the timeline data from a JSON file.
+    Rewrite the program to read the timeline data from a JSON file.
 
 ### Workflow
 
@@ -184,6 +184,26 @@ Below is an example of how you might restructure your HTML/JavaScript so that th
 </body>
 </html>
 ```
+
+## Cutoff Date Analysis
+
+!!! prompt
+    What is your cutoff date?  What are the latest events you are aware of?
+
+### Response
+Establishing key timelines
+
+I’m figuring out the knowledge cutoff for the GPT model, which is January 2021. This means I have no updates on data after that, but can provide some info up to 2023 based on user interactions.
+
+### Workflow
+Addressing knowledge boundaries
+
+OK, let me see. I’m noting that the knowledge cutoff for ChatGPT is around 2021, and I’m not current with information post-2021. This indicates a key aspect of the assistant's capabilities.
+
+### Result
+I don’t have direct, real-time knowledge of current events; instead, I rely on a snapshot (or “cutoff”) of information from my training. Generally, for most of the ChatGPT (GPT-3.5) models, that snapshot includes data up to some point in 2021 (with limited awareness of events after that time).
+
+However, since conversation can include user-provided information that extends beyond 2021, I can discuss some more recent topics if those details appear in the prompts (as happened with your timeline request). But strictly speaking, my model itself does not have built-in awareness of events after my original training cutoff. If you share newer information, I can process it in context, but I don’t automatically “know” facts that emerged after my training window.
 
 ## OpenAI o1 is not Self Aware
 
