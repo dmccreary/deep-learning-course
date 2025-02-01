@@ -201,7 +201,8 @@ Of course, this list is not exhaustive, but it should give you a solid starting 
 
 How's that?
 
-Statistics:
-Token Count: 687
-Time Elapsed: 13.33 seconds
-Tokens per Second: 51.55
+### Inference Statistics
+
+**Token Count:** 687<br/>
+**Time Elapsed:** 13.33 seconds<br/>
+**Tokens per Second:** 51.55<br/>
