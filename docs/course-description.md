@@ -1,23 +1,23 @@
 # Course Description
 
-**Organization:** University of Minnesota Department of Electrical Engineering and Computer Design (EECD)</br>
-**Course Identifier:** EE 4940</br>
-**Course Title:** : Introduction to Deep Learning</br>
+**Organization:** University of Minnesota Department of Electrical and Computer Engineering (ECE)</br>
+**Course Identifier:** [EE 4940](https://umtc.catalog.prod.coursedog.com/courses/7953821)</br>
+**Sequence Name:** Special Topics in Electrical and Computer Engineering (1-4 Cr.)</br>
+**Offering Course Title:** : Introduction to Deep Learning</br>
 **Offering Date:** Spring 2025
 
-## Course Instructor
+## Course Instructor, TA and Format
 
 Sang-Hyun Oh, Professor of ECE, graduate faculty in neuroscience, physics, biomedical eng.
 **Email:** sang@umn.edu</br>
 **Office:** 5-119 Keller Hall</br>
-**Teaching Assistant:** Ike Goetzman (PhD candidate in ECE; email: goetz219@umn.edu)
-Lecture (Jan 22 – May 5, 2024): Monday/Wednesday 11:15am-12:30pm @ Appleby Hall 3
+**Teaching Assistant:** Ike Goetzman (PhD candidate in ECE; email: goetz219@umn.edu)</br>
+**Format:** Lecture (Jan 22 – May 5, 2024): Monday/Wednesday 11:15am-12:30pm @ Appleby Hall 3</br>
 
 ## Course Summary
 Machine learning, especially deep learning based on neural networks, has shown transformative impacts across life sciences, engineering, and medicine, as recently highlighted by the 2024 Nobel Prizes: 
 
-- The Physics Nobel was awarded to John Hopfield and Geoffrey
-Hinton for pioneering contributions to neural networks that enable machine learning
+- The Physics Nobel was awarded to John Hopfield and Geoffrey Hinton for pioneering contributions to neural networks that enable machine learning
 - Demis Hassabis, John Jumper, and David Baker received the Chemistry Nobel for advancing computational protein design.
 
 ## Course Overview
@@ -33,8 +33,7 @@ The course concludes with dimensionality reduction techniques, followed by advan
 
 Emphasis will be on practical experience with Python-based coding over mathematical theory.
 
-By the end of the course, students will have gained familiarity with Python-driven deep learning, hands-on skills,
-and a working knowledge of deep learning’s potential for a wide range of problems.
+By the end of the course, students will have gained familiarity with Python-driven deep learning, hands-on skills, and a working knowledge of deep learning’s potential for a wide range of problems.
 
 ## Course Prerequisites
 
