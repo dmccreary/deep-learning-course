@@ -1,26 +1,27 @@
 # Calculating Tokens Per Second
 
 How quickly a model returns text is a key metric.  Here is a sample
-program that calculates the number of tokens per second for Deepseek-r1
+program that calculates the number of tokens per second for Deepseek-r1:7b
 running in an Ollama framework.  This test was run on my
-local GPU which is a NVIDIA GTX 3090 with 12GB RAM.
+local GPU which is a NVIDIA RTX 2080 Ti with 12GB RAM running CUDA 12.6.  The
+size of the model was 4.7GB which fits well within the 12GB ram of the GPU.
 
 To time the performance of a model we do the following
 
-1. Record the time before the model runs with 
+### 1. Record the time before the model runs with 
 
 ```python
 start_time = time.time()
 ```
 
-2. Record the end time and calculate the elapsed time
+### 2. Record the end time and calculate the elapsed time
 
 ```python
 end_time = time.time()
 elapsed_time = end_time - start_time
 ```
 
-3. Count the total number of tokens in the result and calculate the tokens per second
+### 3. Count the total number of tokens in the result and calculate the tokens per second
 
 ```python
 token_count = len(result.split())
@@ -206,3 +207,8 @@ How's that?
 **Token Count:** 687<br/>
 **Time Elapsed:** 13.33 seconds<br/>
 **Tokens per Second:** 51.55<br/>
+
+!!! note
+    Depending on your model's tokenization, you might need a more precise token counter   (e.g., using the `tiktoken` library for models like GPT).
+
+ 
