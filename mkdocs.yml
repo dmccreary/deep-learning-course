@@ -29,11 +29,13 @@ nav:
     - Suggested Simulations: prompts/09-suggested-simulations.md
     - TensorFlow Playground: prompts/11-tensorflow-playground.md
     - Activation Functions: prompts/10-activation-functions.md
+    - Timeline: prompts/12-timeline.md
   - MicroSims:
     - Intro: sims/index.md
     - Learning Graph: sims/learning-graph/index.md
     - Wordcloud: sims/wordcloud/index.md
     - Model Parameter Count: sims/param-count/index.md
+    - Timeline: sims/timeline/index.md
     - Templates: sims/templates/index.md
   - Checklist: checklist.md
   - Glossary: glossary.md
