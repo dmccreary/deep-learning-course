@@ -330,4 +330,4 @@ file_path
 
 ## Result
 
-[Deep Learning Concepts](03-deep-learning-concepts.csv)
+[Deep Learning Concepts](./deep-learning-concepts.csv)
