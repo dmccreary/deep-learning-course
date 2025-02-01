@@ -469,6 +469,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1-record-the-time-before-the-model-runs-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Record the time before the model runs with
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-record-the-end-time-and-calculate-the-elapsed-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Record the end time and calculate the elapsed time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-count-the-total-number-of-tokens-in-the-result-and-calculate-the-tokens-per-second" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Count the total number of tokens in the result and calculate the tokens per second
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#complete-program" class="md-nav__link">
     <span class="md-ellipsis">
       Complete Program
@@ -900,6 +927,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1-record-the-time-before-the-model-runs-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Record the time before the model runs with
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-record-the-end-time-and-calculate-the-elapsed-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Record the end time and calculate the elapsed time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-count-the-total-number-of-tokens-in-the-result-and-calculate-the-tokens-per-second" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Count the total number of tokens in the result and calculate the tokens per second
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#complete-program" class="md-nav__link">
     <span class="md-ellipsis">
       Complete Program
@@ -1047,25 +1101,20 @@
 
 <h1 id="calculating-tokens-per-second">Calculating Tokens Per Second</h1>
 <p>How quickly a model returns text is a key metric.  Here is a sample
-program that calculates the number of tokens per second for Deepseek-r1
+program that calculates the number of tokens per second for Deepseek-r1:7b
 running in an Ollama framework.  This test was run on my
-local GPU which is a NVIDIA GTX 3090 with 12GB RAM.</p>
+local GPU which is a NVIDIA RTX 2080 Ti with 12GB RAM running CUDA 12.6.  The
+size of the model was 4.7GB which fits well within the 12GB ram of the GPU.</p>
 <p>To time the performance of a model we do the following</p>
-<ol>
-<li>Record the time before the model runs with </li>
-</ol>
+<h3 id="1-record-the-time-before-the-model-runs-with">1. Record the time before the model runs with</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>Record the end time and calculate the elapsed time</li>
-</ol>
+<h3 id="2-record-the-end-time-and-calculate-the-elapsed-time">2. Record the end time and calculate the elapsed time</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="n">elapsed_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>Count the total number of tokens in the result and calculate the tokens per second</li>
-</ol>
+<h3 id="3-count-the-total-number-of-tokens-in-the-result-and-calculate-the-tokens-per-second">3. Count the total number of tokens in the result and calculate the tokens per second</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">token_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
 <span class="n">tokens_per_second</span> <span class="o">=</span> <span class="n">token_count</span> <span class="o">/</span> <span class="n">elapsed_time</span> <span class="k">if</span> <span class="n">elapsed_time</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
@@ -1269,6 +1318,10 @@ local GPU which is a NVIDIA GTX 3090 with 12GB RAM.</p>
 <p><strong>Token Count:</strong> 687<br/>
 <strong>Time Elapsed:</strong> 13.33 seconds<br/>
 <strong>Tokens per Second:</strong> 51.55<br/></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on your model's tokenization, you might need a more precise token counter   (e.g., using the <code>tiktoken</code> library for models like GPT).</p>
+</div>
 
 
 
