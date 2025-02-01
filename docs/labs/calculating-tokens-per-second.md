@@ -6,7 +6,7 @@ running in an Ollama framework.  This test was run on my
 local GPU which is a NVIDIA RTX 2080 Ti with 12GB RAM running CUDA 12.6.  The
 size of the model was 4.7GB which fits well within the 12GB ram of the GPU.
 
-To time the performance of a model we do the following
+To time the performance of a model we do the following:
 
 ### 1. Record the time before the model runs with 
 
@@ -211,4 +211,55 @@ How's that?
 !!! note
     Depending on your model's tokenization, you might need a more precise token counter   (e.g., using the `tiktoken` library for models like GPT).
 
- 
+## Model Metadata
+
+Knowing about the structure of a model is key to understanding its performance.
+
+Here is the information that ollama provided about deepseek-r1:
+
+```sh
+$ ollama show deepseek-r1
+  Model                          
+  	arch            	qwen2 	         
+  	parameters      	7.6B  	         
+  	quantization    	Q4_K_M	         
+  	context length  	131072	         
+  	embedding length	3584  	         
+```
+
+Let's do a deep dive into each of these model metadata fields.
+
+### 1.  **arch (Architecture):**
+
+-   **What it means:** This parameter indicates the underlying neural network architecture on which the model is based.
+-   **In this case:** The model uses the **qwen2** architecture. This tells you which design or blueprint the model follows (e.g., similar to transformer-based architectures like GPT or BERT), which influences how it processes input data and generates responses.
+
+### 2.  **parameters (Number of Parameters):**
+
+- **What it means:** This shows the total number of learnable weights (and biases) in the model. The size of this number is often used as a rough proxy for the model's capacity to learn and represent complex patterns.
+-  **In this case:** The model has **7.6B** (7.6 billion) parameters. More parameters generally mean a higher capacity model, though they also require more memory and computational resources during inference.
+
+### 3.  **quantization:**
+
+- **What it means:** Quantization refers to reducing the numerical precision of the model's parameters. This process converts high-precision weights (e.g., 32-bit floats) into lower-precision representations (e.g., 4-bit integers) to reduce model size and speed up computations with a minimal loss in accuracy.
+-  **In this case:** The value **Q4\_K\_M** indicates that a 4-bit quantization scheme is used. The "Q4" part tells you that the weights are represented with 4-bit precision, and "K\_M" likely refers to the specific quantization method or variant implemented. This balance helps the model run more efficiently while retaining as much performance as possible.
+
+### 4.  **context length:**
+
+- **What it means:** This parameter defines the maximum number of tokens the model can process in a single input prompt (or conversation). In transformer-based models, the context length determines how much text the model can consider at one time.
+- **In this case:** The model can handle a context of up to **131072** tokens. This is an exceptionally long context compared to most language models, which typically support only a few thousand tokens. It enables the model to process very large documents or maintain extended conversations.
+
+5.  **embedding length:**
+
+- **What it means:** This is the size (or dimensionality) of the vector used to represent each token in the model's internal computations. In other words, every token in the input is mapped to a vector of this length, which the model uses to capture semantic and syntactic information.
+- **In this case:** An embedding length of **3584** means that each token is converted into a 3584-dimensional vector. A higher embedding dimension can allow for richer representations but also increases the model's computational complexity.
+
+### Summary
+
+- **Architecture (arch):** Defines the model's design (here, **qwen2**).
+- **Parameters:** Indicates the model's size in terms of learnable weights (**7.6B** parameters).
+- **Quantization:** Shows how the model's weights are stored (using **4-bit precision** with the specific scheme **Q4\_K\_M**).
+- **Context Length:** The maximum number of tokens the model can process at once (**131072** tokens).
+- **Embedding Length:** The dimensionality of token representations within the model (**3584**).
+
+Each of these parameters provides insight into the model's design, capacity, efficiency, and the scale at which it can process input data.
