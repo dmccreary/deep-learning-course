@@ -618,6 +618,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#model-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-arch-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. arch (Architecture):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-parameters-number-of-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. parameters (Number of Parameters):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. quantization:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-context-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. context length:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1076,6 +1136,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#model-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-arch-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. arch (Architecture):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-parameters-number-of-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. parameters (Number of Parameters):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. quantization:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-context-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. context length:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1105,7 +1225,7 @@ program that calculates the number of tokens per second for Deepseek-r1:7b
 running in an Ollama framework.  This test was run on my
 local GPU which is a NVIDIA RTX 2080 Ti with 12GB RAM running CUDA 12.6.  The
 size of the model was 4.7GB which fits well within the 12GB ram of the GPU.</p>
-<p>To time the performance of a model we do the following</p>
+<p>To time the performance of a model we do the following:</p>
 <h3 id="1-record-the-time-before-the-model-runs-with">1. Record the time before the model runs with</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
@@ -1322,6 +1442,62 @@ size of the model was 4.7GB which fits well within the 12GB ram of the GPU.</p>
 <p class="admonition-title">Note</p>
 <p>Depending on your model's tokenization, you might need a more precise token counter   (e.g., using the <code>tiktoken</code> library for models like GPT).</p>
 </div>
+<h2 id="model-metadata">Model Metadata</h2>
+<p>Knowing about the structure of a model is key to understanding its performance.</p>
+<p>Here is the information that ollama provided about deepseek-r1:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>ollama<span class="w"> </span>show<span class="w"> </span>deepseek-r1
+<span class="w">  </span>Model<span class="w">                          </span>
+<span class="w">    </span>arch<span class="w">                </span>qwen2<span class="w">            </span>
+<span class="w">    </span>parameters<span class="w">          </span><span class="m">7</span>.6B<span class="w">             </span>
+<span class="w">    </span>quantization<span class="w">        </span>Q4_K_M<span class="w">           </span>
+<span class="w">    </span>context<span class="w"> </span>length<span class="w">      </span><span class="m">131072</span><span class="w">           </span>
+<span class="w">    </span>embedding<span class="w"> </span>length<span class="w">    </span><span class="m">3584</span><span class="w">             </span>
+</code></pre></div></td></tr></table></div>
+<p>Let's do a deep dive into each of these model metadata fields.</p>
+<h3 id="1-arch-architecture">1.  <strong>arch (Architecture):</strong></h3>
+<ul>
+<li><strong>What it means:</strong> This parameter indicates the underlying neural network architecture on which the model is based.</li>
+<li><strong>In this case:</strong> The model uses the <strong>qwen2</strong> architecture. This tells you which design or blueprint the model follows (e.g., similar to transformer-based architectures like GPT or BERT), which influences how it processes input data and generates responses.</li>
+</ul>
+<h3 id="2-parameters-number-of-parameters">2.  <strong>parameters (Number of Parameters):</strong></h3>
+<ul>
+<li><strong>What it means:</strong> This shows the total number of learnable weights (and biases) in the model. The size of this number is often used as a rough proxy for the model's capacity to learn and represent complex patterns.</li>
+<li><strong>In this case:</strong> The model has <strong>7.6B</strong> (7.6 billion) parameters. More parameters generally mean a higher capacity model, though they also require more memory and computational resources during inference.</li>
+</ul>
+<h3 id="3-quantization">3.  <strong>quantization:</strong></h3>
+<ul>
+<li><strong>What it means:</strong> Quantization refers to reducing the numerical precision of the model's parameters. This process converts high-precision weights (e.g., 32-bit floats) into lower-precision representations (e.g., 4-bit integers) to reduce model size and speed up computations with a minimal loss in accuracy.</li>
+<li><strong>In this case:</strong> The value <strong>Q4_K_M</strong> indicates that a 4-bit quantization scheme is used. The "Q4" part tells you that the weights are represented with 4-bit precision, and "K_M" likely refers to the specific quantization method or variant implemented. This balance helps the model run more efficiently while retaining as much performance as possible.</li>
+</ul>
+<h3 id="4-context-length">4.  <strong>context length:</strong></h3>
+<ul>
+<li><strong>What it means:</strong> This parameter defines the maximum number of tokens the model can process in a single input prompt (or conversation). In transformer-based models, the context length determines how much text the model can consider at one time.</li>
+<li>
+<p><strong>In this case:</strong> The model can handle a context of up to <strong>131072</strong> tokens. This is an exceptionally long context compared to most language models, which typically support only a few thousand tokens. It enables the model to process very large documents or maintain extended conversations.</p>
+</li>
+<li>
+<p><strong>embedding length:</strong></p>
+</li>
+<li>
+<p><strong>What it means:</strong> This is the size (or dimensionality) of the vector used to represent each token in the model's internal computations. In other words, every token in the input is mapped to a vector of this length, which the model uses to capture semantic and syntactic information.</p>
+</li>
+<li><strong>In this case:</strong> An embedding length of <strong>3584</strong> means that each token is converted into a 3584-dimensional vector. A higher embedding dimension can allow for richer representations but also increases the model's computational complexity.</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Architecture (arch):</strong> Defines the model's design (here, <strong>qwen2</strong>).</li>
+<li><strong>Parameters:</strong> Indicates the model's size in terms of learnable weights (<strong>7.6B</strong> parameters).</li>
+<li><strong>Quantization:</strong> Shows how the model's weights are stored (using <strong>4-bit precision</strong> with the specific scheme <strong>Q4_K_M</strong>).</li>
+<li><strong>Context Length:</strong> The maximum number of tokens the model can process at once (<strong>131072</strong> tokens).</li>
+<li><strong>Embedding Length:</strong> The dimensionality of token representations within the model (<strong>3584</strong>).</li>
+</ul>
+<p>Each of these parameters provides insight into the model's design, capacity, efficiency, and the scale at which it can process input data.</p>
 
 
 
