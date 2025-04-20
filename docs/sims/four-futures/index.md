@@ -10,9 +10,9 @@
   style="overflow: hidden;"></iframe>
 ```
 
-[Run the MicroSim](./main.html){ .md-button .md-button--primary }
+[Run the Four Futures MicroSim](./main.html){ .md-button .md-button--primary }
 
-[Edit the MicroSim]()
+[Edit the Four Futures MicroSim](https://editor.p5js.org/dmccreary/sketches/AwFjmodK9)
 
 !!! prompt
     Create a p5.js MicroSim that generates a line chart.

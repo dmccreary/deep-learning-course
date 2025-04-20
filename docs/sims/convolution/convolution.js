@@ -108,8 +108,6 @@ function createRadioButtons() {
   radioAvg.option('avg', 'Average');
   radioAvg.position(sliderLeftMargin + 140, drawHeight + yOffset);
   radioAvg.changed(operationChanged);
-  
-
 }
 
 function operationChanged() {
@@ -135,7 +133,6 @@ function windowResized() {
   
   // Update slider size
   windowPositionSlider.size(containerWidth - sliderLeftMargin - 25);
-  
 }
 
 function draw() {
@@ -156,39 +153,19 @@ function draw() {
   noStroke();
   textSize(24);
   textAlign(CENTER, TOP);
-  text("CNN Sliding Window & Output Matrix", canvasWidth/2, margin/2);
+  text("Convolution Sliding Window & Output Matrix", canvasWidth/2, margin/2);
   
-  // Begin layout of the three matrices
-  // Step 1: calculate the width of each of the three regions
-  // Step 2: calculate the cell size in each region based on width and matrix size
-  // Step 3 calculate the X offset by subtracting half the matrix with from the region center
+  // Divide canvas into three equal columns
+  let colWidth = containerWidth / 3;
   
   // Fixed height for matrices regardless of container width
   let fixedCellHeight = (drawHeight - 4*margin) / matrixSize;
   
-  // Update layout calculations for three columns
-  // Keep the proportions as the canvas is resized
-  // make the large left column be 1/2 the width of the canvas
-  let leftColWidth   = containerWidth *  .60 ;
-  let leftStartX = margin;
-  let leftColMiddle = leftStartX + leftColWidth / 2;
+  // Calculate cell sizes for each matrix
+  let inputCellSize = fixedCellHeight;
+  let windowCellSize = (colWidth - 2*margin) / windowSize;
+  let outputCellSize = fixedCellHeight * 1.35;
   
-  // make the middle be about 1/6th 
-  let middleColWidth = containerWidth * .2 ;
-  let middleColX = leftColWidth - 6*margin;
-  let middleColumnMiddle = middleColX + middleColWidth / 2;
-  
-  // make the right be what is left
-  let rightColWidth  = containerWidth - leftColWidth - middleColWidth;
-  let rightColX = middleColX + middleColWidth + margin;
-  let rightColumnMiddle = rightColX + rightColWidth/2;
-    
-  
-  // Width is still responsive, but height is fixed
-  // console.log((leftColWidth - 5*margin) / matrixSize, fixedCellHeight);
-  // let cellSize = max((leftColWidth - 5*margin) / matrixSize, fixedCellHeight);
-  let cellSize = fixedCellHeight;
-
   // Center vertically with space for title
   let titleSpace = margin*2;  // Space for title and matrix label
   let startY = titleSpace + margin;
@@ -197,44 +174,45 @@ function draw() {
   let windowRow = floor(windowPosition / (matrixSize - windowSize + 1));
   let windowCol = windowPosition % (matrixSize - windowSize + 1);
   
-  // Window in second middle column
-  let windowCellSize = middleColWidth / 3;
-  let windowStartX = middleColX;
+  // Calculate center positions for each matrix
+  // Input matrix (8x8) in first column
+  let inputMatrixWidth = inputCellSize * matrixSize;
+  let inputStartX = (colWidth - inputMatrixWidth) / 2;
   
-  // Output matrix in third column
-  let outputCellSize = fixedCellHeight * 1.35;
+  // Window matrix (3x3) in second column
+  let windowMatrixWidth = windowCellSize * windowSize;
+  let windowStartX = colWidth + (colWidth - windowMatrixWidth) / 2;
   
-  // let outputStartX = 2 * colWidth + (colWidth - outputCellSize * outputMatrixSize) / 2;
-  let outputStartX = leftColWidth + middleColWidth;
+  // Output matrix (6x6) in third column
+  let outputMatrixWidth = outputCellSize * outputMatrixSize;
+  let outputStartX = 2 * colWidth + (colWidth - outputMatrixWidth) / 2;
   
   // Draw section titles
   fill('blue');
   strokeWeight(0);
   textSize(defaultTextSize + 2);
   textAlign(CENTER, BOTTOM);
-  text("Input Matrix (8×8)", leftColMiddle - 150, startY - 10);
-  text("Window (3×3)", middleColumnMiddle, startY - 10);
-  text("Output Matrix (6×6)", rightColumnMiddle + 50, startY - 10);
+  text("Input Matrix (8×8)", colWidth / 2, startY - 10);
+  text("Sliding Window (3×3)", colWidth + colWidth / 2, startY - 10);
+  text("Output Matrix (6×6)", 2 * colWidth + colWidth / 2, startY - 10);
   
-  // Draw the left input matrix
-  // matrix, size, startX, startY, cellSize
-  drawMatrix(inputMatrix, matrixSize, leftStartX, startY, cellSize);
+  // Draw the input matrix
+  drawMatrix(inputMatrix, matrixSize, inputStartX, startY, inputCellSize);
   
   // Draw the sliding window highlight in blue over the input
-  drawSlidingWindow(leftStartX, startY, cellSize, windowRow, windowCol);
+  drawSlidingWindow(inputStartX, startY, inputCellSize, windowRow, windowCol);
   
   // Extract the window contents
   let windowMatrix = extractWindow(windowRow, windowCol);
   
-  // Draw central panel wiht the sliding winodw
-  // matrix, size, startX, startY, cellSize
-  drawMatrix(windowMatrix, windowSize, middleColX, startY, windowCellSize);
+  // Draw central panel with the sliding window
+  drawMatrix(windowMatrix, windowSize, windowStartX, startY, windowCellSize);
   
   // Draw the output matrix
-  drawMatrix(outputMatrix, outputMatrixSize, rightColX, startY, outputCellSize);
+  drawMatrix(outputMatrix, outputMatrixSize, outputStartX, startY, outputCellSize);
   
   // Highlight current position in output matrix
-  highlightOutputPosition(rightColX, startY, outputCellSize, windowRow, windowCol);
+  highlightOutputPosition(outputStartX, startY, outputCellSize, windowRow, windowCol);
   
   // Draw control labels
   fill('black');
@@ -245,7 +223,6 @@ function draw() {
   
   // Animate the sliding window if running
   if (isRunning && millis() - lastMoveTime > animationSpeed) {
-    // let maxPosition = (matrixSize - windowSize) * (matrixSize - windowSize + 1);
     let maxPosition = (matrixSize - windowSize + 1) * (matrixSize - windowSize + 1) - 1;
 
     windowPosition = (windowPosition + 1) % (maxPosition + 1);
@@ -366,8 +343,6 @@ function updateOutputMatrix() {
   // Update output matrix at the corresponding position
   outputMatrix[windowRow][windowCol] = result;
 }
-
-// This function is no longer needed as we reset when operation changes
 
 function updateWindowPosition() {
   windowPosition = windowPositionSlider.value();
