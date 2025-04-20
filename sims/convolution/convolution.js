@@ -48,11 +48,11 @@ function setup() {
     }
   }
   
-  // Initialize output matrix with zeros
+  // Initialize output matrix with empty values (-1 represents empty)
   for (let i = 0; i < outputMatrixSize; i++) {
     outputMatrix[i] = [];
     for (let j = 0; j < outputMatrixSize; j++) {
-      outputMatrix[i][j] = 0;
+      outputMatrix[i][j] = -1; // Use -1 to represent empty cells
     }
   }
   
@@ -76,7 +76,7 @@ function setup() {
   // Create radio buttons for operation type
   createRadioButtons();
   
-  // Initialize output matrix for starting position
+  // Initialize first output value for starting position
   updateOutputMatrix();
   
   describe('A MicroSim showing a 3x3 sliding window moving across an 8x8 matrix, demonstrating CNN convolution concept and displaying the resulting output matrix.', LABEL);
@@ -119,8 +119,8 @@ function operationChanged() {
     currentOperation = 'avg';
   }
   
-  // Update the entire output matrix with the new operation
-  updateAllOutputMatrix();
+  // Reset simulation when operation changes
+  resetSimulation();
 }
 
 function updateCanvasSize() {
@@ -212,9 +212,9 @@ function draw() {
   strokeWeight(0);
   textSize(defaultTextSize + 2);
   textAlign(CENTER, BOTTOM);
-  text("Input Matrix (8×8)", leftColMiddle, startY - 10);
+  text("Input Matrix (8×8)", leftColMiddle - 150, startY - 10);
   text("Window (3×3)", middleColumnMiddle, startY - 10);
-  text("Output Matrix (6×6)", rightColumnMiddle, startY - 10);
+  text("Output Matrix (6×6)", rightColumnMiddle + 50, startY - 10);
   
   // Draw the left input matrix
   // matrix, size, startX, startY, cellSize
@@ -245,7 +245,9 @@ function draw() {
   
   // Animate the sliding window if running
   if (isRunning && millis() - lastMoveTime > animationSpeed) {
-    let maxPosition = (matrixSize - windowSize) * (matrixSize - windowSize + 1);
+    // let maxPosition = (matrixSize - windowSize) * (matrixSize - windowSize + 1);
+    let maxPosition = (matrixSize - windowSize + 1) * (matrixSize - windowSize + 1) - 1;
+
     windowPosition = (windowPosition + 1) % (maxPosition + 1);
     windowPositionSlider.value(windowPosition);
     updateWindowPosition();
@@ -266,7 +268,12 @@ function drawMatrix(matrix, size, startX, startY, cellSize) {
       strokeWeight(1);
       rect(x, y, cellSize, cellSize);
       
-      // Draw cell value
+      // Draw cell value (skip if it's an empty output cell)
+      if (matrix === outputMatrix && matrix[i][j] === -1) {
+        // Skip drawing for empty output cells
+        continue;
+      }
+      
       fill('black');
       noStroke();
       textSize(cellSize * 0.6);
@@ -360,24 +367,7 @@ function updateOutputMatrix() {
   outputMatrix[windowRow][windowCol] = result;
 }
 
-function updateAllOutputMatrix() {
-  // Recalculate entire output matrix when operation changes
-  for (let row = 0; row < outputMatrixSize; row++) {
-    for (let col = 0; col < outputMatrixSize; col++) {
-      // Extract window for this position
-      let windowMatrix = [];
-      for (let i = 0; i < windowSize; i++) {
-        windowMatrix[i] = [];
-        for (let j = 0; j < windowSize; j++) {
-          windowMatrix[i][j] = inputMatrix[row + i][col + j];
-        }
-      }
-      
-      // Calculate and store result
-      outputMatrix[row][col] = calculateConvolution(windowMatrix);
-    }
-  }
-}
+// This function is no longer needed as we reset when operation changes
 
 function updateWindowPosition() {
   windowPosition = windowPositionSlider.value();
@@ -406,13 +396,13 @@ function resetSimulation() {
     }
   }
   
-  // Reset output matrix to all zeros
+  // Reset output matrix to empty values (-1)
   for (let i = 0; i < outputMatrixSize; i++) {
     for (let j = 0; j < outputMatrixSize; j++) {
-      outputMatrix[i][j] = 0;
+      outputMatrix[i][j] = -1;
     }
   }
   
-  // Calculate first output value (for initial window position)
+  // Calculate initial position to avoid empty first cell
   updateOutputMatrix();
 }

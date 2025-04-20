@@ -245,7 +245,9 @@ function draw() {
   
   // Animate the sliding window if running
   if (isRunning && millis() - lastMoveTime > animationSpeed) {
-    let maxPosition = (matrixSize - windowSize) * (matrixSize - windowSize + 1);
+    // let maxPosition = (matrixSize - windowSize) * (matrixSize - windowSize + 1);
+    let maxPosition = (matrixSize - windowSize + 1) * (matrixSize - windowSize + 1) - 1;
+
     windowPosition = (windowPosition + 1) % (maxPosition + 1);
     windowPositionSlider.value(windowPosition);
     updateWindowPosition();

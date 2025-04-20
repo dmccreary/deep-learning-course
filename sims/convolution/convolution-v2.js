@@ -210,7 +210,7 @@ function draw() {
   fill('blue');
   strokeWeight(0);
   textSize(defaultTextSize + 2);
-  textAlign(CENTER, BOTTOM);
+  textAlign(CENTER, CENTER);
   text("Input Matrix (8×8)", leftColMiddle, startY - 10);
   text("Window (3×3)", middleColumnMiddle, startY - 10);
   text("Output Matrix (6×6)", rightColumnMiddle, startY - 10);
@@ -244,7 +244,9 @@ function draw() {
   
   // Animate the sliding window if running
   if (isRunning && millis() - lastMoveTime > animationSpeed) {
-    let maxPosition = (matrixSize - windowSize) * (matrixSize - windowSize + 1);
+    // Fix me
+    // let maxPosition = (matrixSize - windowSize) * (matrixSize - windowSize + 1);
+    let maxSliderPosition = (matrixSize - windowSize + 1) * (matrixSize - windowSize + 1) - 1;
     windowPosition = (windowPosition + 1) % (maxPosition + 1);
     windowPositionSlider.value(windowPosition);
     updateWindowPosition();
