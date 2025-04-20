@@ -2,11 +2,11 @@
 
 # Four AI Futures MicroSim
 
-<iframe src="./main.html" height="400px" scrolling="no"
+<iframe src="./main.html" height="420px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
 ```html
-<iframe src="./main.html" height="400px" scrolling="no"
+<iframe src="./main.html" height="420px" scrolling="no"
   style="overflow: hidden;"></iframe>
 ```
 

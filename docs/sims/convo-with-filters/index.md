@@ -2,18 +2,16 @@
 hide:
   - toc
 ---
-
-# MicroSim Templates
+# Convolution with Filters MicroSim
 
 <iframe src="./main.html" width="600px" height="450px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
 ```html
-<iframe src="https://dmccreary.github.io/deep-learning-course/sims/NAM/main.html" width="600px" height="450px" scrolling="no"
+<iframe src="./main.html" width="600px" height="450px" scrolling="no"
   style="overflow: hidden;"></iframe>
 ```
 
 [Run the MicroSim](./main.html){ .md-button .md-button--primary }
 
-[Edit the MicroSim]()
-
+[Edit the MicroSim](https://editor.p5js.org/dmccreary/sketches/6MyolcXhZ)
