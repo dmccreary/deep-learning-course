@@ -1,4 +1,7 @@
-
+---
+hide:
+  - toc
+---
 # Convolution MicroSim
 
 <iframe src="./main.html" width="600px" height="450px" scrolling="no"

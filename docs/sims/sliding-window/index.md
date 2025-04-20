@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 # CNN Sliding Window MicroSim
 
 <iframe src="./main.html" height="440px" scrolling="no"

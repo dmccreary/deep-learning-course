@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # MicroSim Templates
 
 <iframe src="./main.html" width="600px" height="450px" scrolling="no"
