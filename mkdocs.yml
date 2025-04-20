@@ -37,6 +37,7 @@ nav:
     - Wordcloud: sims/wordcloud/index.md
     - Model Parameter Count: sims/param-count/index.md
     - Sliding Window: sims/sliding-window/index.md
+    - Convolution: sims/convolution/index.md
     - Timeline: sims/timeline/index.md
     - Templates: sims/templates/index.md
   - Checklist: checklist.md
