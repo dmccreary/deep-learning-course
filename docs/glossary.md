@@ -202,6 +202,12 @@ Distributing subsets of the input data across multiple processors or machines to
 Preparatory steps taken on raw data, such as cleaning, normalization, or encoding.  
 **Example:** Converting categorical variables into one-hot vectors or normalizing images to zero mean and unit variance.
 
+#### Data Profile
+
+A summary of key statistical characteristics and quality metrics of a dataset, including distributions, missing values, cardinality, and data types for each feature.
+
+**Example:** An MNIST data profile would reveal that each image is 28x28 pixels (784 features), pixel values range from 0-255, there are 10 distinct label classes with roughly equal distribution (~6000 samples each), and the dataset contains no missing values.  See 
+
 #### Data Splits
 Partitioning data into subsets (e.g., training, validation, test) for model development and evaluation.  
 **Example:** 80% of the data for training, 10% for validation, 10% for testing.
@@ -215,12 +221,23 @@ Software libraries and platforms that facilitate the creation of charts, graphs,
 **Example:** Matplotlib, Seaborn, and Plotly are used in notebooks to illustrate key data insights.
 
 #### Deep Learning
-Neural network designs featuring multiple hidden layers, enabling hierarchical feature extraction.  
-**Example:** A typical deep architecture might have a dozen or more layers in a CNN.
+Neural network designs featuring multiple hidden layers, enabling hierarchical feature extraction.
+
+Deep Learning is a subset of machine learning that focus
+on complex models.  Deep learning is used for tasks such as image classification, object detection, speech recognition, natural language processing and other problems that can't be solved by simpler models.
+
+**Example:** A typical deep learning system might have a dozen or more layers in a CNN.
 
 #### Deep Q-Network (DQN)
 A reinforcement learning approach where a deep neural network approximates the Q-function for action selection.  
 **Example:** DQN was famously applied by DeepMind to play Atari games at a superhuman level.
+
+#### Deepseek
+
+An open-source large-langauge model with reasoning announced in 2025 that has superior performance.
+
+The Deepseek-R1 7B model is used on a local GPU for testing the [tokens-per-second](./labs/calculating-tokens-per-second.md) lab in this course.
+
 
 #### DenseNet
 A CNN architecture where each layer is connected to every other layer in a feed-forward manner.  
@@ -543,6 +560,12 @@ Ollama is not directly associated with Meta or the development of the Llama mode
 Ollama makes it easy to run LLMs on local hardware such as a consumer-grade GPU.  Installation can be done with two simple UNIX shell commands.
 
 * [Ollama website](https://ollama.com/)
+
+#### One-hot Encoded Format
+
+A data preprocessing technique that represents categorical variables as binary vectors where exactly one element is 1 (hot) and all others are 0 (cold).
+
+**Example:** In MNIST digit classification, each target label (0-9) is encoded as a 10-dimensional binary vector: the digit '3' becomes [0,0,0,1,0,0,0,0,0,0], where only the fourth position (index 3) contains a 1.
 
 #### Overfitting Vs Underfitting
 Overfitting occurs when a model learns spurious details in the training data, while underfitting fails to capture underlying trends.  
