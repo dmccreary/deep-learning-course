@@ -522,6 +522,10 @@
           
         
       
+        
+          
+        
+      
     
     
     
@@ -658,6 +662,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../convolution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convolution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../timeline/" class="md-nav__link">
         
   
@@ -689,18 +715,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Templates
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -711,34 +725,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#changes-for-responsive-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Changes for Responsive Design
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -919,23 +905,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#changes-for-responsive-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Changes for Responsive Design
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -959,25 +928,15 @@
 
 
 <h1 id="microsim-templates">MicroSim Templates</h1>
-<p>Give these templates to your generative AI programs as a starting
-point to get a consistent responsive user interface that
-scales well in the mkdocs-material iframe reference.</p>
-<p><a class="md-button md-button--primary" href="circle-radius.html">Circle Radius Responsive Template HTML</a></p>
-<p><a href="sketch.js">Circle Radius Responsive Template JavaScript File</a></p>
-<iframe src="./circle-radius.html" width="600px" height="450px" scrolling="no"
+<iframe src="./main.html" width="600px" height="450px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
-<h2 id="changes-for-responsive-design">Changes for Responsive Design</h2>
-<ul>
-<li>Replaced static width/height with containerWidth/containerHeight</li>
-<li>Added updateCanvasSize() function to get container dimensions</li>
-<li>Added windowResized() handler to update canvas and UI elements</li>
-<li>Modified slider positioning and sizing to be relative to container width</li>
-<li>Updated all drawing calculations to use containerWidth instead of fixed width</li>
-<li>Set a fixed containerHeight while allowing width to be responsive</li>
-<li>Adjusted margins and spacing to work better with different screen sizes</li>
-</ul>
-<p>The visualization will now resize horizontally while maintaining its functionality and proportions.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./main.html&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;600px&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;450px&quot;</span> <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span>
+  <span class="na">style</span><span class="o">=</span><span class="s">&quot;overflow: hidden;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p><a class="md-button md-button--primary" href="main.html">Run the MicroSim</a></p>
+<p><a href="">Edit the MicroSim</a></p>
 
 
 
