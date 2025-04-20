@@ -40,7 +40,7 @@ function setup() {
   redCheckbox.position(checkboxX, checkboxY);
   redCheckbox.style('color', 'red');
   
-  greenCheckbox = createCheckbox('Flaggening', true);
+  greenCheckbox = createCheckbox('Flattening', true);
   greenCheckbox.position(checkboxX + checkboxSpacing, checkboxY);
   greenCheckbox.style('color', 'green');
   
