@@ -1,4 +1,4 @@
-site_name: Deep Learning Course with AI
+site_name: Deep Learning with AI
 site_description: 'An example of an intelligent textbook for teaching deep learning. All content licensed Creative Commons ShareAlike Attribution Noncommercial'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
@@ -14,6 +14,8 @@ nav:
     - Introduction: chapters/index.md
     - Activation Functions: chapters/activation-functions.md
     - Model Parameters: chapters/counting-model-parameters/index.md
+    - CNNs: chapters/cnns/index.md
+    - CNN MicroSim Ideas: chapters/cnns/cnn-microsim-ideas.md
   - Labs:
     - Introduction: labs/index.md
     - MNIST: labs/mnist/index.md
@@ -33,6 +35,7 @@ nav:
     - Timeline: prompts/12-timeline.md
   - MicroSims:
     - Intro: sims/index.md
+    - Four Futures: sims/four-futures/index.md
     - Learning Graph: sims/learning-graph/index.md
     - Wordcloud: sims/wordcloud/index.md
     - Model Parameter Count: sims/param-count/index.md
