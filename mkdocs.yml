@@ -34,6 +34,8 @@ nav:
     - Activation Functions: prompts/10-activation-functions.md
     - Timeline: prompts/12-timeline.md
     - Summarize Folder: prompts/13-summarize-folder/index.md
+    - AlexNet Story: prompts/14-alexnet-story.md
+    - AI Winters Story: prompts/ai-winters.md
   - MicroSims:
     - Intro: sims/index.md
     - Four Futures: sims/four-futures/index.md
@@ -48,7 +50,10 @@ nav:
     - Templates: sims/templates/index.md
   - Stories:
     - Intro: stories/index.md
+    - AI Winters: stories/ai-winters/index.md
     - AlexNet: stories/alexnet/index.md
+                 
+             
   - Checklist: checklist.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
