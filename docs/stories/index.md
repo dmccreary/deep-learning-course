@@ -6,7 +6,7 @@ I then use OpenAI's ChatGPT o4 to generate the images.
 
 ## The AI Winters Story
 
-![](./ai-winters/00-ai-cycles.png){width="200"}
+![](./ai-winters/00-ai-cycles.png){width="300"}
 
 The AI field experienced dramatic cycles of enthusiasm and disappointment known as "AI winters" from the 1950s until 2012. Starting with grand promises from pioneers like McCarthy, Simon, and Minsky in the 1950s-60s, the field faced its first winter in 1973 after the Perceptron limitations were exposed and funding dried up. It rebounded in the 1980s with expert systems, only to crash again by 1987 when these systems proved brittle and impractical. A quieter machine learning era emerged in the 1990s with modest successes like Deep Blue, but it wasn't until 2012 when AlexNet's breakthrough at the ImageNet competition finally broke the boom-bust cycle, ushering in an "eternal spring" for AI that continues today.
 
