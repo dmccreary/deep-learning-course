@@ -33,6 +33,7 @@ nav:
     - TensorFlow Playground: prompts/11-tensorflow-playground.md
     - Activation Functions: prompts/10-activation-functions.md
     - Timeline: prompts/12-timeline.md
+    - Summarize Folder: prompts/13-summarize-folder/index.md
   - MicroSims:
     - Intro: sims/index.md
     - Four Futures: sims/four-futures/index.md
@@ -45,6 +46,9 @@ nav:
     - Convolution Filter Multiply: sims/conv-filter-mult/index.md
     - Timeline: sims/timeline/index.md
     - Templates: sims/templates/index.md
+  - Stories:
+    - Intro: stories/index.md
+    - AlexNet: stories/alexnet/index.md
   - Checklist: checklist.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
