@@ -2,11 +2,11 @@
 
 # Four AI Futures MicroSim
 
-<iframe src="./main.html" height="410px" scrolling="no"
+<iframe src="./main.html" height="400px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
 ```html
-<iframe src="./https://dmccreary.github.io/deep-learning-course/sims/four-futures/main.html" height="410px" scrolling="no"
+<iframe src="./https://dmccreary.github.io/deep-learning-course/sims/four-futures/main.html" height="400px" scrolling="no"
   style="overflow: hidden;"></iframe>
 ```
 
