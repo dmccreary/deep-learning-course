@@ -1,11 +1,10 @@
 # Deep Learning Stories
 
-Here is an example of how Generative AI tools can be used
-to generate graphic-novel like stories.  I used Anthropic Claude 3.7 to generate the narrative text for these
-stories.  In my prompt, I stated *When appropriate, suggest an image that could be inserted into the story to make the story a form of graphic novel.*
+Here are some examples of how Generative AI tools can be used
+to generate graphic-novel like stories.  I used Anthropic Claude 3.7 to generate the narrative text for these stories.  In my prompt, I stated *When appropriate, suggest an image that could be inserted into the story to make the story a form of graphic novel.*
 I then use OpenAI's ChatGPT o4 to generate the images.
 
-## The AI Winters
+## The AI Winters Story
 
 ![](./ai-winters/00-ai-cycles.png){width="200"}
 
@@ -13,7 +12,7 @@ The AI field experienced dramatic cycles of enthusiasm and disappointment known 
 
 [Read The AI Winters Story](./ai-winters/index.md)
 
-## AlexNet
+## The AlexNet Story
 
 ![](./alexnet/01-cover.png){width="200px" }
 
