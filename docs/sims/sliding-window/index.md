@@ -4,7 +4,7 @@ hide:
 ---
 # CNN Sliding Window MicroSim
 
-<iframe src="./main.html" height="440px" scrolling="no"
+<iframe src="https://dmccreary.github.io/deep-learning-course/sims/sliding-window/main.html" height="440px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
 [Run the Sliding Window MicroSim](./main.html){ .md-button .md-button--primary }

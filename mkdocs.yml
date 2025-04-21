@@ -42,6 +42,7 @@ nav:
     - Sliding Window: sims/sliding-window/index.md
     - Convolution: sims/convolution/index.md
     - Convolution With Filters: sims/convo-with-filters/index.md
+    - Convolution Filter Multiply: sims/conv-filter-mult/index.md
     - Timeline: sims/timeline/index.md
     - Templates: sims/templates/index.md
   - Checklist: checklist.md

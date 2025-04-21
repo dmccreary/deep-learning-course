@@ -1,9 +1,10 @@
-// CNN Image Convolution MicroSim
+// CNN Image Convolution MicroSim with Matrix Multiplication Display
 // Demonstrates how convolution works with realistic image data and edge detection filters
+// Includes matrix multiplication visualization
 
 // Canvas dimensions
 let canvasWidth = 400;                      // Initial width that will be updated responsively
-let drawHeight = 400;                       // Height of simulation/drawing area
+let drawHeight = 370;                       // Height of simulation/drawing area
 let controlHeight = 90;                     // Height of controls area (increased for filter selection)
 let canvasHeight = drawHeight + controlHeight; // Total canvas height
 let margin = 25;                            // Margin for visual elements
@@ -109,7 +110,7 @@ function setup() {
   // Initialize first output value for starting position
   updateOutputMatrix();
   
-  describe('A MicroSim demonstrating CNN convolution with realistic image data using various edge detection and image processing filters.', LABEL);
+  describe('A MicroSim demonstrating CNN convolution with realistic image data using various edge detection and image processing filters, including matrix multiplication visualization.', LABEL);
 }
 
 function generateSampleImage() {
@@ -171,17 +172,18 @@ function draw() {
   // Draw title
   fill('black');
   noStroke();
-  textSize(24);
+  textSize(20); // Reduced for 5 panels
   textAlign(CENTER, TOP);
-  text("CNN Image Convolution with Filters", canvasWidth/2, margin/2);
+  text("CNN Image Convolution with Matrix Multiplication", canvasWidth/2, margin/2);
   
-  // Layout calculations
-  let colWidth = containerWidth / 4;
-  let fixedCellHeight = (drawHeight - 5*margin) / matrixSize * 0.9;
+  // Layout calculations for 5 panels
+  let colWidth = containerWidth / 5;
+  let fixedCellHeight = (drawHeight - 5*margin) / matrixSize * 0.8; // Slightly reduced
   let inputCellSize = fixedCellHeight;
   let kernelCellSize = (colWidth - 2*margin) / windowSize;
   let windowCellSize = kernelCellSize;
-  let outputCellSize = fixedCellHeight * 1.35;
+  let matMulCellSize = kernelCellSize;
+  let outputCellSize = fixedCellHeight * 1.2;
   
   let startY = margin*3;
   
@@ -190,20 +192,22 @@ function draw() {
   let windowCol = windowPosition % (matrixSize - windowSize + 1);
   
   // Calculate center positions for each matrix
-  let inputStartX = (colWidth - (inputCellSize * matrixSize)) / 2;
-  let kernelStartX = colWidth + (colWidth - (kernelCellSize * windowSize)) / 2;
-  let windowStartX = 2 * colWidth + (colWidth - (windowCellSize * windowSize)) / 2;
-  let outputStartX = 3 * colWidth + (colWidth - (outputCellSize * outputMatrixSize)) / 2;
+  let inputStartX = (colWidth - (inputCellSize * matrixSize)) / 2 + 10;
+  let kernelStartX = colWidth + (colWidth - (kernelCellSize * windowSize)) / 2 + 20;
+  let windowStartX = 2 * colWidth + (colWidth - (windowCellSize * windowSize)) / 2 + 10;
+  let matMulStartX = 3 * colWidth + (colWidth - (matMulCellSize * windowSize)) / 2;
+  let outputStartX = 4 * colWidth + (colWidth - (outputCellSize * outputMatrixSize)) / 2;
   
   // Draw section titles
   fill('blue');
   strokeWeight(0);
-  textSize(defaultTextSize);
+  textSize(defaultTextSize - 2); // Slightly smaller for more panels
   textAlign(CENTER, BOTTOM);
-  text("Input Image", colWidth / 2, startY - 10);
-  text("Filter/Kernel", colWidth + colWidth / 2, startY - 10);
-  text("Window Values", 2 * colWidth + colWidth / 2, startY - 10);
-  text("Feature Map", 3 * colWidth + colWidth / 2, startY - 10);
+  text("Input Image", colWidth / 2 + 10, startY - 10);
+  text("Filter/Kernel", colWidth + colWidth / 2 + 20, startY - 10);
+  text("Window Values", 2 * colWidth + colWidth / 2 + 10, startY - 10);
+  text("Multiplication", 3 * colWidth + colWidth / 2, startY - 10);
+  text("Feature Map", 4 * colWidth + colWidth / 2, startY - 10);
   
   // Draw the matrices
   drawImageMatrix(inputMatrix, matrixSize, inputStartX, startY, inputCellSize);
@@ -215,6 +219,10 @@ function draw() {
   // Extract and draw the window contents
   let windowMatrix = extractWindow(windowRow, windowCol);
   drawImageMatrix(windowMatrix, windowSize, windowStartX, startY, windowCellSize);
+  
+  // Calculate and draw the matrix multiplication result
+  let multiplicationMatrix = calculateMatrixMultiplication(windowMatrix, filters[currentFilter]);
+  drawMatrixMultiplication(multiplicationMatrix, windowSize, matMulStartX, startY, matMulCellSize);
   
   // Draw the output matrix (feature map)
   drawFeatureMap(outputMatrix, outputMatrixSize, outputStartX, startY, outputCellSize);
@@ -298,6 +306,70 @@ function drawKernel(kernel, size, startX, startY, cellSize) {
   }
 }
 
+function drawMatrixMultiplication(matrix, size, startX, startY, cellSize) {
+  // Draw the element-wise multiplication results
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      let x = startX + j * cellSize;
+      let y = startY + i * cellSize;
+      
+      // Background color for multiplication result
+      let value = matrix[i][j];
+      let bgColor;
+      
+      // Color-code positive and negative values
+      if (value > 0) {
+        bgColor = color(200, 255, 200); // Light green for positive
+      } else if (value < 0) {
+        bgColor = color(255, 200, 200); // Light red for negative
+      } else {
+        bgColor = color(240); // Light gray for zero
+      }
+      
+      fill(bgColor);
+      stroke('gray');
+      strokeWeight(1);
+      rect(x, y, cellSize, cellSize);
+      
+      // Draw multiplication value - properly round for blur filter
+      fill('black');
+      noStroke();
+      textSize(cellSize * 0.5);
+      textAlign(CENTER, CENTER);
+      
+      // Round the display value appropriately
+      let displayValue;
+      if (currentFilter === 'blur') {
+        // For blur filter, round to 1 decimal to show nice values like 5.6
+        displayValue = value.toFixed(1);
+      } else if (value % 1 === 0) {
+        // For whole numbers, display without decimals
+        displayValue = value.toFixed(0);
+      } else {
+        // For other fractional values, show 1 decimal
+        displayValue = value.toFixed(1);
+      }
+      
+      text(displayValue, x + cellSize/2, y + cellSize/2);
+    }
+  }
+  
+  // Draw sum indicator
+  let sum = 0;
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      sum += matrix[i][j];
+    }
+  }
+  
+  // Draw the sum equation below the matrix
+  let textY = startY + size * cellSize + 15;
+  fill('black');
+  textSize(12);
+  textAlign(CENTER, TOP);
+  text("Sum = " + sum.toFixed(1), startX + (size * cellSize) / 2, textY);
+}
+
 function drawFeatureMap(matrix, size, startX, startY, cellSize) {
   // Draw feature map with different visualization
   for (let i = 0; i < size; i++) {
@@ -331,6 +403,20 @@ function drawFeatureMap(matrix, size, startX, startY, cellSize) {
       }
     }
   }
+}
+
+function calculateMatrixMultiplication(windowMatrix, kernel) {
+  // Calculate element-wise multiplication
+  let resultMatrix = [];
+  
+  for (let i = 0; i < windowSize; i++) {
+    resultMatrix[i] = [];
+    for (let j = 0; j < windowSize; j++) {
+      resultMatrix[i][j] = windowMatrix[i][j] * kernel[i][j];
+    }
+  }
+  
+  return resultMatrix;
 }
 
 function calculateConvolution(windowMatrix, kernel) {
