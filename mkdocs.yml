@@ -35,7 +35,7 @@ nav:
     - Timeline: prompts/12-timeline.md
     - Summarize Folder: prompts/13-summarize-folder/index.md
     - AlexNet Story: prompts/14-alexnet-story.md
-    - AI Winters Story: prompts/ai-winters.md
+    - AI Winters Story: prompts/15-ai-winters.md
   - MicroSims:
     - Intro: sims/index.md
     - Four Futures: sims/four-futures/index.md
