@@ -290,3 +290,70 @@ The key insight of the attention mechanism can be understood through our example
 6. **The Result**: These scores determine how much each word's Value impacts the representation of the current word.
 
 This simple mechanism allows transformers to handle references, understand context, and capture long-range dependencies in text, which proved revolutionary for language understanding and generation.
+
+## Formulas and Equations
+
+#### Attention Formula (Scaled Dot-Product Attention)
+
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V 
+$$
+
+where:
+
+-  $Q$ is the query matrix
+-  $K$ is the key matrix
+-  $K^T$ is the transpose of the key matrix
+-  $V$ is the value matrix
+-  $d_k$ is the dimension of the keys (used for scaling)
+-  $\text{softmax}$ is the softmax function applied row-wise
+
+#### Multi-Head Attention
+
+$$
+MultiHead(Q,K,V)\=Concat(head1,...,headh)WO\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h)W^O MultiHead(Q,K,V)\=Concat(head1​,...,headh​)WO
+$$
+
+#### Multi-Head Attention
+
+Attention Formula (Scaled Dot-Product Attention)
+
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+$$
+
+where:
+
+- $Q$ is the query matrix
+- $K$ is the key matrix
+- $K^T$ is the transpose of the key matrix
+- $V$ is the value matrix
+- $d_k$ is the dimension of the keys (used for scaling)
+- \text{softmax} is the softmax function applied row-wise
+
+
+## Multi-Head Attention
+
+$$
+\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h)W^O
+$$
+
+where each head is computed as:
+
+$$
+\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
+$$
+
+and $QW_i^Q$, $KW_i^K$, $VW_i^V$ are parameter matrices for each attention head
+
+- $W^O$ is the output projection matrix
+- $h$ is the number of attention heads
+
+
+The softmax function itself is defined as:
+
+$$
+\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
+$$
+
+This formula is the core of the transformer architecture described in the "Attention Is All You Need" paper, allowing the model to weigh the importance of different words in relation to each other.
