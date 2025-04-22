@@ -847,6 +847,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#formulas-and-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formulas and Equations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formulas and Equations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attention-formula-scaled-dot-product-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attention Formula (Scaled Dot-Product Attention)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-head-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Head Attention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-head-attention_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Head Attention
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-head-attention_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Head Attention
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1142,6 +1193,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#formulas-and-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formulas and Equations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formulas and Equations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attention-formula-scaled-dot-product-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attention Formula (Scaled Dot-Product Attention)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-head-attention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Head Attention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-head-attention_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Head Attention
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-head-attention_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Head Attention
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1392,6 +1494,56 @@ A detailed diagram showing the sentence "The chicken did not cross the road beca
 </li>
 </ol>
 <p>This simple mechanism allows transformers to handle references, understand context, and capture long-range dependencies in text, which proved revolutionary for language understanding and generation.</p>
+<h2 id="formulas-and-equations">Formulas and Equations</h2>
+<h4 id="attention-formula-scaled-dot-product-attention">Attention Formula (Scaled Dot-Product Attention)</h4>
+<div class="arithmatex">\[
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V 
+\]</div>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(Q\)</span> is the query matrix</li>
+<li><span class="arithmatex">\(K\)</span> is the key matrix</li>
+<li><span class="arithmatex">\(K^T\)</span> is the transpose of the key matrix</li>
+<li><span class="arithmatex">\(V\)</span> is the value matrix</li>
+<li><span class="arithmatex">\(d_k\)</span> is the dimension of the keys (used for scaling)</li>
+<li><span class="arithmatex">\(\text{softmax}\)</span> is the softmax function applied row-wise</li>
+</ul>
+<h4 id="multi-head-attention">Multi-Head Attention</h4>
+<div class="arithmatex">\[
+MultiHead(Q,K,V)\=Concat(head1,...,headh)WO\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h)W^O MultiHead(Q,K,V)\=Concat(head1​,...,headh​)WO
+\]</div>
+<h4 id="multi-head-attention_1">Multi-Head Attention</h4>
+<p>Attention Formula (Scaled Dot-Product Attention)</p>
+<div class="arithmatex">\[
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\]</div>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(Q\)</span> is the query matrix</li>
+<li><span class="arithmatex">\(K\)</span> is the key matrix</li>
+<li><span class="arithmatex">\(K^T\)</span> is the transpose of the key matrix</li>
+<li><span class="arithmatex">\(V\)</span> is the value matrix</li>
+<li><span class="arithmatex">\(d_k\)</span> is the dimension of the keys (used for scaling)</li>
+<li>\text{softmax} is the softmax function applied row-wise</li>
+</ul>
+<h2 id="multi-head-attention_2">Multi-Head Attention</h2>
+<div class="arithmatex">\[
+\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h)W^O
+\]</div>
+<p>where each head is computed as:</p>
+<div class="arithmatex">\[
+\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
+\]</div>
+<p>and <span class="arithmatex">\(QW_i^Q\)</span>, <span class="arithmatex">\(KW_i^K\)</span>, <span class="arithmatex">\(VW_i^V\)</span> are parameter matrices for each attention head</p>
+<ul>
+<li><span class="arithmatex">\(W^O\)</span> is the output projection matrix</li>
+<li><span class="arithmatex">\(h\)</span> is the number of attention heads</li>
+</ul>
+<p>The softmax function itself is defined as:</p>
+<div class="arithmatex">\[
+\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
+\]</div>
+<p>This formula is the core of the transformer architecture described in the "Attention Is All You Need" paper, allowing the model to weigh the importance of different words in relation to each other.</p>
 
 
 
