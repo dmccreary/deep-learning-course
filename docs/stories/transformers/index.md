@@ -329,7 +329,7 @@ where:
 - $K^T$ is the transpose of the key matrix
 - $V$ is the value matrix
 - $d_k$ is the dimension of the keys (used for scaling)
-- \text{softmax} is the softmax function applied row-wise
+- $\text{softmax}$ is the softmax function applied row-wise
 
 
 ## Multi-Head Attention
