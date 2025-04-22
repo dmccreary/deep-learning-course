@@ -43,13 +43,13 @@ A split-screen showing eight different researchers in their natural working envi
 
 The team that would revolutionize NLP came together almost by chance – a collection of researchers from Google Brain, Google Research, and the University of Toronto:
 
-Ashish Vaswani and Noam Shazeer from Google Brain were quickly joined by Niki Parmar and Jakob Uszkoreit, who brought expertise in neural network architectures.
+Ashish Vaswani and Noam Shazeer from Google Brain were quickly joined by [Niki Parmar](https://www.linkedin.com/in/nikiparmar/) and [Jakob Uszkoreit](https://www.linkedin.com/in/jakob-uszkoreit-b238b51/), who brought expertise in neural network architectures.
 
-Llion Jones, known for his meticulous attention to detail, joined to help with the implementation. Aidan Gomez, a visiting undergraduate researcher from the University of Toronto, brought fresh perspective and energy.
+[Llion Jones](https://www.linkedin.com/in/llion-jones-9ab3064b/), known for his meticulous attention to detail, joined to help with the implementation. [Aidan Gomez](https://www.linkedin.com/in/aidangomez/), a visiting undergraduate researcher from the University of Toronto, brought fresh perspective and energy.
 
-Łukasz Kaiser, with his background in theoretical computer science and linguistics, provided crucial insights into how language models could be structured.
+[Łukasz Kaiser](https://www.linkedin.com/in/lukaszkaiser/), with his background in theoretical computer science and linguistics, provided crucial insights into how language models could be structured.
 
-Completing the team was Illia Polosukhin, whose practical engineering experience would be vital for making their theoretical ideas work in practice.
+Completing the team was [Illia Polosukhin](https://www.linkedin.com/in/illia-polosukhin-77b6538/), whose practical engineering experience would be vital for making their theoretical ideas work in practice.
 
 Despite being at one of the world's leading AI research labs, they were going against the prevailing wisdom. RNNs and LSTMs were the dominant architectures for sequence modeling, and suggesting to completely remove them seemed almost heretical.
 
@@ -68,7 +68,7 @@ At the heart of their innovation was the self-attention mechanism – a revoluti
 
 "Let me show you why this matters," Ashish explained during a team meeting. He wrote on the whiteboard: "The chicken did not cross the road because **it** was too tired."
 
-"What does 'it' refer to? As humans, we know immediately that 'it' refers to 'the chicken.' But how does a computer know? In previous models, we'd need complex architectures to capture this relationship. With self-attention, each word calculates attention weights with every other word in the sentence."
+"What does **it** refer to? As humans, we know immediately that 'it' refers to 'the chicken.' But how does a computer know? In previous models, we'd need complex architectures to capture this relationship. With self-attention, each word calculates attention weights with every other word in the sentence."
 
 He drew arrows from "it" to every other word, making the arrow to "chicken" much thicker than the others.
 
