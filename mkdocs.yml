@@ -52,7 +52,7 @@ nav:
     - Intro: stories/index.md
     - AI Winters: stories/ai-winters/index.md
     - AlexNet: stories/alexnet/index.md
-                 
+    - Transformers: stories/transformers/index.md
              
   - Checklist: checklist.md
   - Glossary: glossary.md
