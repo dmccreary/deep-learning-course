@@ -1,8 +1,7 @@
-# Transformers
+# Transformers and the Attention Revolution: How a Paper Changed AI Forever
 
-## Prompt
-
-!!! prompt
+<details class="show-prompt">
+  <summary>Show Narrative  Prompt</summary>
     Please create a detailed fun and entertaining story about the publication of the paper "Attention is All You Need" and how the authors had a huge impact on the creation of LLMs.
 
     Our goal is to have you generate the full text of the story, but to turn the story into a graphic novel with many illustrations that explain how transformers work.
@@ -14,29 +13,33 @@
     Give as much detail as possible about the team that wrote the paper and their ability to publish the paper despite being a key innovation at Google. 
 
     When appropriate, suggest an image that could be inserted into the story to make the story a form of graphic novel. Describe each image in detail and be consistent across all the images in the story for style.
-
-# Attention Revolution: How a Paper Changed AI Forever
+</details>
 
 ## Chapter 1: The Spark of an Idea
 
 ![](./01-google-deep-mind.png)
 
-![Panel 1: A nighttime scene at Google Brain's offices in Mountain View, California. Through the windows, we see various researchers working late. Some at whiteboards covered with equations, others at computers with multiple screens displaying neural network diagrams. The art style is reminiscent of a modern graphic novel with clean lines and rich colors, using deep blues and purples for the night sky contrasted with the warm yellow glow from the office windows.]
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>
+    Panel 1: A nighttime scene at Google Brain's offices in Mountain View, California. Through the windows, we see various researchers working late. Some at whiteboards covered with equations, others at computers with multiple screens displaying neural network diagrams. The art style is reminiscent of a modern graphic novel with clean lines and rich colors, using deep blues and purples for the night sky contrasted with the warm yellow glow from the office windows.
+</details>
 
 In the summer of 2016, at Google Brain's offices in Mountain View, California, a small team of researchers was grappling with a fundamental problem: neural machine translation systems were becoming increasingly complex, yet their performance improvements were plateauing.
 
-Ashish Vaswani, a senior software engineer with a quiet demeanor and brilliant analytical mind, had been pondering an elegant solution. What if they removed the recurrent neural networks (RNNs) and convolutional neural networks (CNNs) entirely from the architecture? What if attention – a mechanism that helped models focus on relevant parts of the input – could be the only component they needed?
+[Ashish Vaswani](https://www.linkedin.com/in/ashish-vaswani-99892181/), a senior software engineer with a quiet demeanor and brilliant analytical mind, had been pondering an elegant solution. What if they removed the recurrent neural networks (RNNs) and convolutional neural networks (CNNs) entirely from the architecture? What if attention – a mechanism that helped models focus on relevant parts of the input – could be the only component they needed?
 
-"What if attention is all we need?" he mused to his colleague Noam Shazeer one evening, not realizing he had just coined what would become one of the most famous paper titles in AI history.
+"What if attention is all we need?" he mused to his colleague [Noam Shazeer](https://www.linkedin.com/in/noam-shazeer-3b27288/) one evening, not realizing he had just coined what would become one of the most famous paper titles in AI history.
 
 ## Chapter 2: Assembling the Team
 
-![Panel 2: 
+![](./02-brady-grid.png)
 
-Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>
+Panel 2: Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
 
 A split-screen showing eight different researchers in their natural working environments. Each person has a thought bubble showing different aspects of the transformer architecture (embeddings, positional encoding, self-attention, etc.). The art style maintains consistency with Panel 1 but adds warm highlights to each character to emphasize their individual contributions. The panel is arranged like a Brady Bunch grid, suggesting how these separate minds would come together.
-]
+</details>
 
 The team that would revolutionize NLP came together almost by chance – a collection of researchers from Google Brain, Google Research, and the University of Toronto:
 
@@ -52,11 +55,14 @@ Despite being at one of the world's leading AI research labs, they were going ag
 
 ## Chapter 3: The Breakthrough Mechanism
 
-![Panel 3: 
+![](./03-chicken-sentence.png)
 
-Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>
+  Panel 3: Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
 
-A large, detailed diagram showing the self-attention mechanism. In the center is a key sentence: "The chicken did not cross the road because it was too tired." Visual lines of different thicknesses connect the word "it" to other words, with the thickest line connecting to "chicken," showing how attention helps resolve references. The diagram uses a vibrant, colorful scheme with blues, purples, and yellows to show attention weights. Small mathematical equations float around the edges of the panel, suggesting the formal underpinnings of the concept.]
+A large, detailed diagram showing the self-attention mechanism. In the center is a key sentence: "The chicken did not cross the road because it was too tired." Visual lines of different thicknesses connect the word "it" to other words, with the thickest line connecting to "chicken," showing how attention helps resolve references. The diagram uses a vibrant, colorful scheme with blues, purples, and yellows to show attention weights. Small mathematical equations float around the edges of the panel, suggesting the formal underpinnings of the concept.
+</details>
 
 At the heart of their innovation was the self-attention mechanism – a revolutionary way to process sequences of data like sentences. Unlike previous approaches that processed words in order or used sliding windows, self-attention allowed each word in a sentence to directly "attend" to every other word.
 
@@ -72,13 +78,13 @@ This elegant solution allowed the model to capture long-range dependencies that 
 
 ## Chapter 4: Building in Secret
 
-![Panel 4: 
-
-Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
+![](./04-working-late.png)
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>
+  Panel 4: Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
 
 A sequence of small panels showing the team working in various settings – late nights at the office, discussions over coffee, coding sessions with multiple screens. In the background, a large transformer architecture diagram gradually takes shape, like a blueprint being assembled. The art style should evoke a sense of clandestine development, with shadows and highlights creating a feeling of working on something revolutionary. The color palette shifts to include more reds and oranges, suggesting the building energy and excitement of creation.
-
-]
+</details>
 
 For months, the team worked tirelessly, often staying late into the night. They weren't just building a new model; they were reimagining how neural networks could process language.
 
@@ -96,11 +102,14 @@ Aidan Gomez, despite being the most junior member, proposed the multi-head atten
 
 ## Chapter 5: The Architecture Takes Shape
 
-![Panel 5: 
+![](./05-architecture.png)
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>Panel 5: Architecture Diagram
 
 Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
 
-A detailed, exploded-view diagram of the Transformer architecture, styled like a technical blueprint but with a modern, digital aesthetic. Each component is color-coded: embeddings (blue), positional encoding (green), multi-head attention (purple), feed-forward networks (orange), and output layer (yellow). Small animated-style figures of the researchers are shown pointing to different components, explaining their functions. The background has a subtle grid pattern, emphasizing the technical nature while maintaining the graphic novel aesthetic.]
+A detailed, exploded-view diagram of the Transformer architecture, styled like a technical blueprint but with a modern, digital aesthetic. Each component is color-coded: embeddings (blue), positional encoding (green), multi-head attention (purple), feed-forward networks (orange), and output layer (yellow). Small animated-style figures of the researchers are shown pointing to different components, explaining their functions. The background has a subtle grid pattern, emphasizing the technical nature while maintaining the graphic novel aesthetic.
+</details>
 
 The final architecture they designed was remarkably elegant. At its core were several key innovations:
 
@@ -119,11 +128,14 @@ Niki Parmar demonstrated how the encoder-decoder structure allowed the model to 
 
 ## Chapter 6: The Paper Dilemma
 
-![Panel 6: 
+![](./06-team-coding-late-night.png)
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>Panel 6: 
 
 Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
 
-A tense meeting room scene. On one side of a long table sit the eight researchers, looking determined but nervous. On the other side are Google executives and managers with skeptical expressions. Documents and laptop screens show competing research from other teams. The lighting creates dramatic shadows, and the color palette uses contrasting cool tones for the executives and warmer tones for the research team, symbolizing the conflict. Outside the windows, we see the Google campus.]
+A tense meeting room scene. On one side of a long table sit the eight researchers, looking determined but nervous. On the other side are Google executives and managers with skeptical expressions. Documents and laptop screens show competing research from other teams. The lighting creates dramatic shadows, and the color palette uses contrasting cool tones for the executives and warmer tones for the research team, symbolizing the conflict. Outside the windows, we see the Google campus.
+</details>
 
 By early 2017, the team knew they had something revolutionary. Their model was outperforming state-of-the-art systems in machine translation with a simpler, more elegant architecture. But they faced a dilemma: publishing their findings could give competitors an advantage.
 
@@ -139,12 +151,15 @@ After weeks of internal debate and multiple review meetings, they received condi
 
 ## Chapter 7: NIPS Submission Crunch
 
-![Panel 7: 
+![](./07-publishing-conflict.png)
 
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>Panel 7: 
 
 Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
 
-A montage showing the team in crunch mode. Papers and coffee cups are scattered everywhere. Some team members are slumped over desks, exhausted, while others are frantically typing. Clock faces around the margins show time passing. Computer screens display experimental results and paper drafts. The lighting shifts from daylight to night and back again, suggesting multiple days of intense work. The color palette is intense and slightly oversaturated, conveying the high-pressure environment.]
+A montage showing the team in crunch mode. Papers and coffee cups are scattered everywhere. Some team members are slumped over desks, exhausted, while others are frantically typing. Clock faces around the margins show time passing. Computer screens display experimental results and paper drafts. The lighting shifts from daylight to night and back again, suggesting multiple days of intense work. The color palette is intense and slightly oversaturated, conveying the high-pressure environment.
+</details>
 
 With approval secured, the team now faced a deadline: the submission deadline for NIPS (Neural Information Processing Systems), one of the premier conferences in machine learning, was rapidly approaching.
 
@@ -162,11 +177,15 @@ With minutes to spare before the deadline, they submitted the paper to NIPS 2017
 
 ## Chapter 8: The World Notices
 
-![Panel 8: 
+![](./08-world-map.png)
+
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>Panel 8: 
 
 Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
 
-A world map with glowing points of light appearing across research centers globally, connected by lines forming a network. Inset panels show researchers at different institutions reading the paper with expressions of surprise and excitement. Speech bubbles contain reactions like "This changes everything!" and "We need to implement this immediately!" The background transitions from dark to light, suggesting the dawn of a new era. The glowing network resembles transformer attention patterns, subtly reinforcing the concept.]
+A world map with glowing points of light appearing across research centers globally, connected by lines forming a network. Inset panels show researchers at different institutions reading the paper with expressions of surprise and excitement. Speech bubbles contain reactions like "This changes everything!" and "We need to implement this immediately!" The background transitions from dark to light, suggesting the dawn of a new era. The glowing network resembles transformer attention patterns, subtly reinforcing the concept.
+</details>
 
 When "Attention Is All You Need" was published as a preprint on arXiv in June 2017, the reaction was immediate and electric. Research labs and tech companies around the world dropped what they were doing to implement and build upon the Transformer architecture.
 
@@ -180,11 +199,15 @@ What made the paper so influential wasn't just the architecture itself but its t
 
 ## Chapter 9: The Birth of LLMs
 
-![Panel 9: 
+![](./09-transformer.png)
+
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>Panel 9: 
 
 Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
 
-A chronological progression showing the evolution of transformer-based models, presented as a family tree. Starting with the original Transformer at the top, branches split to show BERT, GPT, T5, and other key models. Each model is represented by a distinct icon with size proportional to its parameter count. As the timeline moves downward, the models grow dramatically larger. Small annotations show key capabilities gained at each stage. The overall design resembles both a technological evolution chart and a natural growth pattern, reinforcing how these models evolved organically from the original idea.]
+A chronological progression showing the evolution of transformer-based models, presented as a family tree. Starting with the original Transformer at the top, branches split to show BERT, GPT, T5, and other key models. Each model is represented by a distinct icon with size proportional to its parameter count. As the timeline moves downward, the models grow dramatically larger. Small annotations show key capabilities gained at each stage. The overall design resembles both a technological evolution chart and a natural growth pattern, reinforcing how these models evolved organically from the original idea. (Panel 9)
+</details>
 
 The years following the Transformer paper saw an explosion of innovation. The architecture proved to be remarkably scalable – as models got bigger, their capabilities improved in unexpected ways.
 
@@ -206,7 +229,12 @@ By 2022, transformer-based Large Language Models (LLMs) like PaLM, LaMDA, and la
 
 ## Chapter 10: The Attention Legacy
 
-![Panel 10: A futuristic scene showing applications of transformer technology in everyday life. The panel is divided into multiple areas showing diverse uses: medical diagnosis, creative writing, scientific discovery, education, and more. In the center, the original attention equation floats like a unifying principle connecting everything. The eight original researchers are shown in the foreground, older now, looking at this landscape with expressions of pride and amazement. The style combines realism with conceptual elements, and the color palette is bright and optimistic, suggesting a positive technological future built on their foundation.]
+![](./10-attention-equation.png)
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
+
+    Panel 10: A futuristic scene showing applications of transformer technology in everyday life. The panel is divided into multiple areas showing diverse uses: medical diagnosis, creative writing, scientific discovery, education, and more. In the center, the original attention equation floats like a unifying principle connecting everything. The eight original researchers are shown in the foreground, older now, looking at this landscape with expressions of pride and amazement. The style combines realism with conceptual elements, and the color palette is bright and optimistic, suggesting a positive technological future built on their foundation.
+</details>
 
 By 2025, the Transformer architecture had transformed not just natural language processing but artificial intelligence as a whole. The original eight authors found themselves cited in tens of thousands of papers, their work forming the foundation for an entirely new generation of AI systems.
 
@@ -226,10 +254,14 @@ In the end, attention wasn't all they needed – they also needed courage to cha
 
 ## Appendix: Understanding Attention: A Visual Explanation**
 
-[Attention Explained: 
+![](./11-appendix.png)
+<details class="show-prompt">
+  <summary>Show Image Prompt</summary>
+  Panel 11: 
 Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.
 
-A detailed diagram showing the sentence "The chicken did not cross the road because it was too [tired/wide]." The word "it" is highlighted and connects to other words with lines of varying thickness. Two versions are shown side by side - in one, "it" connects strongly to "chicken" (when "tired" is used), and in the other, "it" connects strongly to "road" (when "wide" is used). Arrows and zoomed-in sections show how the attention mechanism calculates scores between words. Mathematical formulas for calculating attention weights appear in simplified, visually appealing formats around the edges. The color scheme matches the main story's palette.]
+A detailed diagram showing the sentence "The chicken did not cross the road because it was too [tired/wide]." The word "it" is highlighted and connects to other words with lines of varying thickness. Two versions are shown side by side - in one, "it" connects strongly to "chicken" (when "tired" is used), and in the other, "it" connects strongly to "road" (when "wide" is used). Arrows and zoomed-in sections show how the attention mechanism calculates scores between words. Mathematical formulas for calculating attention weights appear in simplified, visually appealing formats around the edges. The color scheme matches the main story's palette.
+</details>
 
 The key insight of the attention mechanism can be understood through our example sentence:
 
