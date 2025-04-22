@@ -20,3 +20,10 @@ This graphic novel sequence tells the origin story of deep learning's revolution
 
 [Read the Alexnet Story](./alexnet/index.md)
 
+## Transformers and Attention
+
+![](./transformers/01-google-deep-mind.png){width="300"}
+
+"Attention Revolution: How a Paper Changed AI Forever" tells the story of how a team of eight researchers at Google (Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan Gomez, Łukasz Kaiser, and Illia Polosukhin) revolutionized AI in 2017 with their paper "Attention Is All You Need." Working largely as a side project, they developed the transformer architecture that replaced traditional RNNs and CNNs with a revolutionary self-attention mechanism, allowing words to directly relate to each other regardless of distance. Despite internal concerns about giving away competitive advantages, they published their findings, which quickly became the foundation for modern language models like BERT, GPT, and later large language models. The paper's key innovation—the attention mechanism—proved remarkably versatile and scalable, enabling AI to better understand context and references (like knowing "it" refers to "chicken" in "The chicken did not cross the road because it was too tired"), ultimately transforming not just natural language processing but the entire field of artificial intelligence.
+
+[Read the Attention Revolution](./transformers/index.md)
