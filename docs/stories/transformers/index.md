@@ -28,7 +28,7 @@ In the summer of 2016, at Google Brain's offices in Mountain View, California, a
 
 [Ashish Vaswani](https://www.linkedin.com/in/ashish-vaswani-99892181/), a senior software engineer with a quiet demeanor and brilliant analytical mind, had been pondering an elegant solution. What if they removed the recurrent neural networks (RNNs) and convolutional neural networks (CNNs) entirely from the architecture? What if attention – a mechanism that helped models focus on relevant parts of the input – could be the only component they needed?
 
-"What if attention is all we need?" he mused to his colleague [Noam Shazeer](https://www.linkedin.com/in/noam-shazeer-3b27288/) one evening, not realizing he had just coined what would become one of the most famous paper titles in AI history.
+"What if attention is all we need?" he mused to his colleague [Noam Shazeer](https://www.linkedin.com/in/noam-shazeer-3b27288/) one evening, not realizing he had just coined what would become one of the most famous [paper titles](https://arxiv.org/abs/1706.03762) in AI history.
 
 ## Chapter 2: Assembling the Team
 
