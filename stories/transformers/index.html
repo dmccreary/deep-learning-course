@@ -1,0 +1,1252 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An example of an intelligent textbook for teaching deep learning. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/deep-learning-course/stories/transformers/">
+      
+      
+        <link rel="prev" href="../alexnet/">
+      
+      
+        <link rel="next" href="../../checklist/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Transformers - Deep Learning with AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Transformers - Deep Learning with AI" >
+      
+        <meta  property="og:description"  content="An example of an intelligent textbook for teaching deep learning. All content licensed Creative Commons ShareAlike Attribution Noncommercial" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/deep-learning-course/assets/images/social/stories/transformers/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/deep-learning-course/stories/transformers/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Transformers - Deep Learning with AI" >
+      
+        <meta  name="twitter:description"  content="An example of an intelligent textbook for teaching deep learning. All content licensed Creative Commons ShareAlike Attribution Noncommercial" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/deep-learning-course/assets/images/social/stories/transformers/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="gold">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transformers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Deep Learning with AI" class="md-header__button md-logo" aria-label="Deep Learning with AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Deep Learning with AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Transformers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/deep-learning-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Deep Learning with AI" class="md-nav__button md-logo" aria-label="Deep Learning with AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Deep Learning with AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/deep-learning-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../labs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Labs
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Stories
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Stories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-winters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Winters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alexnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AlexNet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Transformers
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Transformers
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checklist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/deep-learning-course/blob/master/docs/stories/transformers/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="transformers">Transformers</h1>
+<h2 id="prompt">Prompt</h2>
+<div class="admonition prompt">
+<p class="admonition-title">Prompt</p>
+<p>Please create a detailed fun and entertaining story about the publication of the paper "Attention is All You Need" and how the authors had a huge impact on the creation of LLMs.</p>
+<p>Our goal is to have you generate the full text of the story, but to turn the story into a graphic novel with many illustrations that explain how transformers work.</p>
+<p>As an example of attention, use the following sentence:</p>
+<p>The chicken did not cross the road because it was too [tired|wide].</p>
+<p>Give as much detail as possible about the team that wrote the paper and their ability to publish the paper despite being a key innovation at Google. </p>
+<p>When appropriate, suggest an image that could be inserted into the story to make the story a form of graphic novel. Describe each image in detail and be consistent across all the images in the story for style.</p>
+</div>
+<h1 id="attention-revolution-how-a-paper-changed-ai-forever">Attention Revolution: How a Paper Changed AI Forever</h1>
+<h2 id="chapter-1-the-spark-of-an-idea">Chapter 1: The Spark of an Idea</h2>
+<p><img alt="" src="01-google-deep-mind.png" /></p>
+<p>![Panel 1: A nighttime scene at Google Brain's offices in Mountain View, California. Through the windows, we see various researchers working late. Some at whiteboards covered with equations, others at computers with multiple screens displaying neural network diagrams. The art style is reminiscent of a modern graphic novel with clean lines and rich colors, using deep blues and purples for the night sky contrasted with the warm yellow glow from the office windows.]</p>
+<p>In the summer of 2016, at Google Brain's offices in Mountain View, California, a small team of researchers was grappling with a fundamental problem: neural machine translation systems were becoming increasingly complex, yet their performance improvements were plateauing.</p>
+<p>Ashish Vaswani, a senior software engineer with a quiet demeanor and brilliant analytical mind, had been pondering an elegant solution. What if they removed the recurrent neural networks (RNNs) and convolutional neural networks (CNNs) entirely from the architecture? What if attention – a mechanism that helped models focus on relevant parts of the input – could be the only component they needed?</p>
+<p>"What if attention is all we need?" he mused to his colleague Noam Shazeer one evening, not realizing he had just coined what would become one of the most famous paper titles in AI history.</p>
+<h2 id="chapter-2-assembling-the-team">Chapter 2: Assembling the Team</h2>
+<p>![Panel 2: </p>
+<p>Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.</p>
+<p>A split-screen showing eight different researchers in their natural working environments. Each person has a thought bubble showing different aspects of the transformer architecture (embeddings, positional encoding, self-attention, etc.). The art style maintains consistency with Panel 1 but adds warm highlights to each character to emphasize their individual contributions. The panel is arranged like a Brady Bunch grid, suggesting how these separate minds would come together.
+]</p>
+<p>The team that would revolutionize NLP came together almost by chance – a collection of researchers from Google Brain, Google Research, and the University of Toronto:</p>
+<p>Ashish Vaswani and Noam Shazeer from Google Brain were quickly joined by Niki Parmar and Jakob Uszkoreit, who brought expertise in neural network architectures.</p>
+<p>Llion Jones, known for his meticulous attention to detail, joined to help with the implementation. Aidan Gomez, a visiting undergraduate researcher from the University of Toronto, brought fresh perspective and energy.</p>
+<p>Łukasz Kaiser, with his background in theoretical computer science and linguistics, provided crucial insights into how language models could be structured.</p>
+<p>Completing the team was Illia Polosukhin, whose practical engineering experience would be vital for making their theoretical ideas work in practice.</p>
+<p>Despite being at one of the world's leading AI research labs, they were going against the prevailing wisdom. RNNs and LSTMs were the dominant architectures for sequence modeling, and suggesting to completely remove them seemed almost heretical.</p>
+<h2 id="chapter-3-the-breakthrough-mechanism">Chapter 3: The Breakthrough Mechanism</h2>
+<p>![Panel 3: </p>
+<p>Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.</p>
+<p>A large, detailed diagram showing the self-attention mechanism. In the center is a key sentence: "The chicken did not cross the road because it was too tired." Visual lines of different thicknesses connect the word "it" to other words, with the thickest line connecting to "chicken," showing how attention helps resolve references. The diagram uses a vibrant, colorful scheme with blues, purples, and yellows to show attention weights. Small mathematical equations float around the edges of the panel, suggesting the formal underpinnings of the concept.]</p>
+<p>At the heart of their innovation was the self-attention mechanism – a revolutionary way to process sequences of data like sentences. Unlike previous approaches that processed words in order or used sliding windows, self-attention allowed each word in a sentence to directly "attend" to every other word.</p>
+<p>"Let me show you why this matters," Ashish explained during a team meeting. He wrote on the whiteboard: "The chicken did not cross the road because <strong>it</strong> was too tired."</p>
+<p>"What does 'it' refer to? As humans, we know immediately that 'it' refers to 'the chicken.' But how does a computer know? In previous models, we'd need complex architectures to capture this relationship. With self-attention, each word calculates attention weights with every other word in the sentence."</p>
+<p>He drew arrows from "it" to every other word, making the arrow to "chicken" much thicker than the others.</p>
+<p>"See? The model learns to pay attention to relevant context. If we change the sentence to 'The chicken did not cross the road because <strong>it</strong> was too wide,' the attention pattern would shift, with 'it' now attending more to 'road' instead of 'chicken'."</p>
+<p>This elegant solution allowed the model to capture long-range dependencies that had been challenging for previous architectures.</p>
+<h2 id="chapter-4-building-in-secret">Chapter 4: Building in Secret</h2>
+<p>![Panel 4: </p>
+<p>Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.</p>
+<p>A sequence of small panels showing the team working in various settings – late nights at the office, discussions over coffee, coding sessions with multiple screens. In the background, a large transformer architecture diagram gradually takes shape, like a blueprint being assembled. The art style should evoke a sense of clandestine development, with shadows and highlights creating a feeling of working on something revolutionary. The color palette shifts to include more reds and oranges, suggesting the building energy and excitement of creation.</p>
+<p>]</p>
+<p>For months, the team worked tirelessly, often staying late into the night. They weren't just building a new model; they were reimagining how neural networks could process language.</p>
+<p>"We need to be thorough," Łukasz insisted. "If we're going to challenge the status quo, our results need to be undeniable."</p>
+<p>The work wasn't officially sanctioned as a major project, and the team members often contributed during their "20% time" – Google's policy that allowed employees to spend one-fifth of their work week on projects of personal interest.</p>
+<p>They faced numerous challenges. The model was complex and required significant computational resources. Training was unstable at first, with the network either converging too slowly or diverging entirely.</p>
+<p>Llion Jones spent weeks debugging gradient issues, while Noam Shazeer optimized the implementation to work efficiently on Google's TPUs (Tensor Processing Units).</p>
+<p>Aidan Gomez, despite being the most junior member, proposed the multi-head attention mechanism – allowing the model to attend to information from different representation subspaces simultaneously.</p>
+<p>"It's like having multiple perspectives on the same information," he explained. "If single-head attention is like looking at something with one eye, multi-head attention gives you depth perception."</p>
+<h2 id="chapter-5-the-architecture-takes-shape">Chapter 5: The Architecture Takes Shape</h2>
+<p>![Panel 5: </p>
+<p>Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.</p>
+<p>A detailed, exploded-view diagram of the Transformer architecture, styled like a technical blueprint but with a modern, digital aesthetic. Each component is color-coded: embeddings (blue), positional encoding (green), multi-head attention (purple), feed-forward networks (orange), and output layer (yellow). Small animated-style figures of the researchers are shown pointing to different components, explaining their functions. The background has a subtle grid pattern, emphasizing the technical nature while maintaining the graphic novel aesthetic.]</p>
+<p>The final architecture they designed was remarkably elegant. At its core were several key innovations:</p>
+<ol>
+<li><strong>Input Embeddings</strong>: Converting words into vectors</li>
+<li><strong>Positional Encoding</strong>: Adding information about word position</li>
+<li><strong>Multi-Head Self-Attention</strong>: Allowing words to attend to other words</li>
+<li><strong>Feed-Forward Networks</strong>: Processing the attended information</li>
+<li><strong>Residual Connections</strong>: Helping information flow through the network</li>
+<li><strong>Layer Normalization</strong>: Stabilizing the training process</li>
+</ol>
+<p>"Positional encoding was a breakthrough," Jakob explained. "In RNNs, the order of words is implicit in the processing. But since our attention mechanism processes all words simultaneously, we needed a way to incorporate position information."</p>
+<p>Their solution was ingenious – they added sinusoidal position embeddings to the word embeddings, creating a unique pattern for each position that the model could learn to interpret.</p>
+<p>Niki Parmar demonstrated how the encoder-decoder structure allowed the model to be used for various tasks: "The encoder processes the input sequence, and the decoder generates the output sequence. This works for translation, summarization, question answering – potentially any language task."</p>
+<h2 id="chapter-6-the-paper-dilemma">Chapter 6: The Paper Dilemma</h2>
+<p>![Panel 6: </p>
+<p>Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.</p>
+<p>A tense meeting room scene. On one side of a long table sit the eight researchers, looking determined but nervous. On the other side are Google executives and managers with skeptical expressions. Documents and laptop screens show competing research from other teams. The lighting creates dramatic shadows, and the color palette uses contrasting cool tones for the executives and warmer tones for the research team, symbolizing the conflict. Outside the windows, we see the Google campus.]</p>
+<p>By early 2017, the team knew they had something revolutionary. Their model was outperforming state-of-the-art systems in machine translation with a simpler, more elegant architecture. But they faced a dilemma: publishing their findings could give competitors an advantage.</p>
+<p>"This is groundbreaking work," said one research director during a review meeting. "But do we want to give away this technology to our competitors?"</p>
+<p>Google, like other tech giants, struggled with balancing open science and competitive advantage. The AI research community valued open publication, but companies had business interests to protect.</p>
+<p>The team argued passionately for publication. "This will advance the entire field," Illia contended. "And Google will be recognized as the pioneer."</p>
+<p>Łukasz pointed out another reality: "If we don't publish, someone else will discover this eventually. Better to lead than follow."</p>
+<p>After weeks of internal debate and multiple review meetings, they received conditional approval to publish – but they would need to navigate the publication process carefully.</p>
+<h2 id="chapter-7-nips-submission-crunch">Chapter 7: NIPS Submission Crunch</h2>
+<p>![Panel 7: </p>
+<p>Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.</p>
+<p>A montage showing the team in crunch mode. Papers and coffee cups are scattered everywhere. Some team members are slumped over desks, exhausted, while others are frantically typing. Clock faces around the margins show time passing. Computer screens display experimental results and paper drafts. The lighting shifts from daylight to night and back again, suggesting multiple days of intense work. The color palette is intense and slightly oversaturated, conveying the high-pressure environment.]</p>
+<p>With approval secured, the team now faced a deadline: the submission deadline for NIPS (Neural Information Processing Systems), one of the premier conferences in machine learning, was rapidly approaching.</p>
+<p>"We have three weeks," Ashish announced. "We need to run all the experiments, finalize the architecture, and write the paper."</p>
+<p>The team entered crunch mode. Days blurred into nights as they worked to perfect their submission. Additional experiments were run to answer potential reviewer questions. The paper went through dozens of drafts.</p>
+<p>"We need a catchy title," Noam suggested during a late-night writing session.</p>
+<p>"Well, our whole premise is that attention mechanisms alone are sufficient," Ashish replied. "So... 'Attention Is All You Need'?"</p>
+<p>The room fell silent for a moment, then erupted in laughter and agreement. It was perfect – concise, bold, and slightly provocative, just like their approach.</p>
+<p>With minutes to spare before the deadline, they submitted the paper to NIPS 2017.</p>
+<h2 id="chapter-8-the-world-notices">Chapter 8: The World Notices</h2>
+<p>![Panel 8: </p>
+<p>Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.</p>
+<p>A world map with glowing points of light appearing across research centers globally, connected by lines forming a network. Inset panels show researchers at different institutions reading the paper with expressions of surprise and excitement. Speech bubbles contain reactions like "This changes everything!" and "We need to implement this immediately!" The background transitions from dark to light, suggesting the dawn of a new era. The glowing network resembles transformer attention patterns, subtly reinforcing the concept.]</p>
+<p>When "Attention Is All You Need" was published as a preprint on arXiv in June 2017, the reaction was immediate and electric. Research labs and tech companies around the world dropped what they were doing to implement and build upon the Transformer architecture.</p>
+<p>"I've never seen anything like this," Jakob marveled as he tracked the paper's citations, which were growing exponentially. "Labs everywhere are adopting our approach."</p>
+<p>Within months, the Transformer had become the foundation for new state-of-the-art results in almost every NLP task. Its efficient parallel computation meant it could be scaled to previously unimaginable sizes.</p>
+<p>At OpenAI, researchers were already thinking about how to adapt the Transformer architecture for generative pre-training. At Google itself, another team was developing BERT, which would use the Transformer encoder to revolutionize language understanding.</p>
+<p>What made the paper so influential wasn't just the architecture itself but its timing and accessibility. The code was released openly, allowing researchers everywhere to start experimenting immediately. The paper was clear and well-written, making the complex ideas accessible to a wide audience.</p>
+<h2 id="chapter-9-the-birth-of-llms">Chapter 9: The Birth of LLMs</h2>
+<p>![Panel 9: </p>
+<p>Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.</p>
+<p>A chronological progression showing the evolution of transformer-based models, presented as a family tree. Starting with the original Transformer at the top, branches split to show BERT, GPT, T5, and other key models. Each model is represented by a distinct icon with size proportional to its parameter count. As the timeline moves downward, the models grow dramatically larger. Small annotations show key capabilities gained at each stage. The overall design resembles both a technological evolution chart and a natural growth pattern, reinforcing how these models evolved organically from the original idea.]</p>
+<p>The years following the Transformer paper saw an explosion of innovation. The architecture proved to be remarkably scalable – as models got bigger, their capabilities improved in unexpected ways.</p>
+<p>In 2018, OpenAI released GPT (Generative Pre-trained Transformer), adapting the decoder portion of the original architecture for text generation.</p>
+<p>Google countered with BERT (Bidirectional Encoder Representations from Transformers), which used the encoder portion for language understanding.</p>
+<p>Both approaches demonstrated the versatility of the Transformer architecture.</p>
+<p>"What's fascinating," Llion remarked during a reunion dinner with the original team in 2019, "is how different teams took our architecture in different directions. Some focused on the encoder, others on the decoder, and some used the full model."</p>
+<p>The scaling era had begun. GPT-2, released in 2019, showed that scaling up transformer models led to surprisingly capable text generation. GPT-3 in 2020, with 175 billion parameters, demonstrated emergent abilities that nobody had predicted.</p>
+<p>By 2022, transformer-based Large Language Models (LLMs) like PaLM, LaMDA, and later GPT-4 and Claude were showing capabilities that approached human-level performance on many tasks.</p>
+<p>"Did you imagine this would happen when we were working late nights back in 2016?" Łukasz asked Ashish.</p>
+<p>"Never," he admitted. "We thought we had a better architecture for machine translation. We never imagined it would lead to models that could write essays, code programs, and have conversations."</p>
+<h2 id="chapter-10-the-attention-legacy">Chapter 10: The Attention Legacy</h2>
+<p>![Panel 10: A futuristic scene showing applications of transformer technology in everyday life. The panel is divided into multiple areas showing diverse uses: medical diagnosis, creative writing, scientific discovery, education, and more. In the center, the original attention equation floats like a unifying principle connecting everything. The eight original researchers are shown in the foreground, older now, looking at this landscape with expressions of pride and amazement. The style combines realism with conceptual elements, and the color palette is bright and optimistic, suggesting a positive technological future built on their foundation.]</p>
+<p>By 2025, the Transformer architecture had transformed not just natural language processing but artificial intelligence as a whole. The original eight authors found themselves cited in tens of thousands of papers, their work forming the foundation for an entirely new generation of AI systems.</p>
+<p>"Attention is all you need," Jakob reflected, "turned out to be prophetic in ways we never anticipated."</p>
+<p>Their paper, which almost wasn't published due to competitive concerns, had accelerated AI progress by years or possibly decades by being openly shared with the research community.</p>
+<p>The attention mechanism they pioneered provided a new way of thinking about how neural networks could process information – not just sequentially or locally, but with direct connections between any elements, regardless of distance.</p>
+<p>This insight extended beyond language to computer vision, reinforcement learning, protein folding, and numerous other domains. The ability to model relationships between arbitrary elements of a dataset proved universally valuable.</p>
+<p>"I think what I'm most proud of," Ashish said during a retrospective talk in 2025, "is not just the paper itself, but how the research community built upon it. Science progresses when ideas are shared and improved upon collectively."</p>
+<p>The legacy of "Attention Is All You Need" wasn't just a more efficient architecture – it was a reminder that sometimes, the most profound innovations come from questioning fundamental assumptions and pursuing elegant simplicity.</p>
+<p>In the end, attention wasn't all they needed – they also needed courage to challenge the status quo, persistence to overcome technical challenges, and openness to share their discoveries with the world. But attention was the key that unlocked a new era of artificial intelligence.</p>
+<h2 id="appendix-understanding-attention-a-visual-explanation">Appendix: Understanding Attention: A Visual Explanation**</h2>
+<p>[Attention Explained: 
+Create a brightly colored wide-landscape drawing as it would appear in a graphic novel.</p>
+<p>A detailed diagram showing the sentence "The chicken did not cross the road because it was too [tired/wide]." The word "it" is highlighted and connects to other words with lines of varying thickness. Two versions are shown side by side - in one, "it" connects strongly to "chicken" (when "tired" is used), and in the other, "it" connects strongly to "road" (when "wide" is used). Arrows and zoomed-in sections show how the attention mechanism calculates scores between words. Mathematical formulas for calculating attention weights appear in simplified, visually appealing formats around the edges. The color scheme matches the main story's palette.]</p>
+<p>The key insight of the attention mechanism can be understood through our example sentence:</p>
+<p>"The chicken did not cross the road because <strong>it</strong> was too tired."</p>
+<ol>
+<li>
+<p><strong>The Problem</strong>: What does "it" refer to? Is it the chicken or the road?</p>
+</li>
+<li>
+<p><strong>How Attention Solves It</strong>: The model calculates "compatibility scores" between each word and every other word:</p>
+</li>
+<li><strong>it → chicken</strong>: Strong score (0.85)</li>
+<li><strong>it → road</strong>: Weaker score (0.12)</li>
+<li><strong>it → cross</strong>: Very weak score (0.03)</li>
+<li>
+<p>And so on...</p>
+</li>
+<li>
+<p><strong>Context Matters</strong>: If we change the sentence to "The chicken did not cross the road because <strong>it</strong> was too wide," the attention pattern shifts:</p>
+</li>
+<li><strong>it → chicken</strong>: Weaker score (0.14)</li>
+<li><strong>it → road</strong>: Strong score (0.81)</li>
+<li>
+<p><strong>it → cross</strong>: Very weak score (0.05)</p>
+</li>
+<li>
+<p><strong>How It's Calculated</strong>: Each word is converted into three vectors:</p>
+</li>
+<li>A <strong>Query</strong> vector (what information am I looking for?)</li>
+<li>A <strong>Key</strong> vector (what information do I contain?)</li>
+<li>
+<p>A <strong>Value</strong> vector (what information do I pass along?)</p>
+</li>
+<li>
+<p><strong>The Score</strong>: Attention score between words is calculated as the dot product of the Query of one word with the Keys of all other words.</p>
+</li>
+<li>
+<p><strong>The Result</strong>: These scores determine how much each word's Value impacts the representation of the current word.</p>
+</li>
+</ol>
+<p>This simple mechanism allows transformers to handle references, understand context, and capture long-range dependencies in text, which proved revolutionary for language understanding and generation.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../alexnet/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AlexNet">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                AlexNet
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../checklist/" class="md-footer__link md-footer__link--next" aria-label="Next: Checklist">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Checklist
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
