@@ -1202,10 +1202,10 @@ A split-screen showing eight different researchers in their natural working envi
 </details>
 
 <p>The team that would revolutionize NLP came together almost by chance – a collection of researchers from Google Brain, Google Research, and the University of Toronto:</p>
-<p>Ashish Vaswani and Noam Shazeer from Google Brain were quickly joined by Niki Parmar and Jakob Uszkoreit, who brought expertise in neural network architectures.</p>
-<p>Llion Jones, known for his meticulous attention to detail, joined to help with the implementation. Aidan Gomez, a visiting undergraduate researcher from the University of Toronto, brought fresh perspective and energy.</p>
-<p>Łukasz Kaiser, with his background in theoretical computer science and linguistics, provided crucial insights into how language models could be structured.</p>
-<p>Completing the team was Illia Polosukhin, whose practical engineering experience would be vital for making their theoretical ideas work in practice.</p>
+<p>Ashish Vaswani and Noam Shazeer from Google Brain were quickly joined by <a href="https://www.linkedin.com/in/nikiparmar/">Niki Parmar</a> and <a href="https://www.linkedin.com/in/jakob-uszkoreit-b238b51/">Jakob Uszkoreit</a>, who brought expertise in neural network architectures.</p>
+<p><a href="https://www.linkedin.com/in/llion-jones-9ab3064b/">Llion Jones</a>, known for his meticulous attention to detail, joined to help with the implementation. <a href="https://www.linkedin.com/in/aidangomez/">Aidan Gomez</a>, a visiting undergraduate researcher from the University of Toronto, brought fresh perspective and energy.</p>
+<p><a href="https://www.linkedin.com/in/lukaszkaiser/">Łukasz Kaiser</a>, with his background in theoretical computer science and linguistics, provided crucial insights into how language models could be structured.</p>
+<p>Completing the team was <a href="https://www.linkedin.com/in/illia-polosukhin-77b6538/">Illia Polosukhin</a>, whose practical engineering experience would be vital for making their theoretical ideas work in practice.</p>
 <p>Despite being at one of the world's leading AI research labs, they were going against the prevailing wisdom. RNNs and LSTMs were the dominant architectures for sequence modeling, and suggesting to completely remove them seemed almost heretical.</p>
 <h2 id="chapter-3-the-breakthrough-mechanism">Chapter 3: The Breakthrough Mechanism</h2>
 <p><img alt="" src="03-chicken-sentence.png" /></p>
@@ -1218,7 +1218,7 @@ A large, detailed diagram showing the self-attention mechanism. In the center is
 
 <p>At the heart of their innovation was the self-attention mechanism – a revolutionary way to process sequences of data like sentences. Unlike previous approaches that processed words in order or used sliding windows, self-attention allowed each word in a sentence to directly "attend" to every other word.</p>
 <p>"Let me show you why this matters," Ashish explained during a team meeting. He wrote on the whiteboard: "The chicken did not cross the road because <strong>it</strong> was too tired."</p>
-<p>"What does 'it' refer to? As humans, we know immediately that 'it' refers to 'the chicken.' But how does a computer know? In previous models, we'd need complex architectures to capture this relationship. With self-attention, each word calculates attention weights with every other word in the sentence."</p>
+<p>"What does <strong>it</strong> refer to? As humans, we know immediately that 'it' refers to 'the chicken.' But how does a computer know? In previous models, we'd need complex architectures to capture this relationship. With self-attention, each word calculates attention weights with every other word in the sentence."</p>
 <p>He drew arrows from "it" to every other word, making the arrow to "chicken" much thicker than the others.</p>
 <p>"See? The model learns to pay attention to relevant context. If we change the sentence to 'The chicken did not cross the road because <strong>it</strong> was too wide,' the attention pattern would shift, with 'it' now attending more to 'road' instead of 'chicken'."</p>
 <p>This elegant solution allowed the model to capture long-range dependencies that had been challenging for previous architectures.</p>
