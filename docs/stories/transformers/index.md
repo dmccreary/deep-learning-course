@@ -189,7 +189,8 @@ A world map with glowing points of light appearing across research centers globa
 
 When "Attention Is All You Need" was published as a preprint on arXiv in June 2017, the reaction was immediate and electric. Research labs and tech companies around the world dropped what they were doing to implement and build upon the Transformer architecture.
 
-"I've never seen anything like this," Jakob marveled as he tracked the paper's citations, which were growing exponentially. "Labs everywhere are adopting our approach."
+"I've never seen anything like this," Jakob marveled as he tracked the paper's citations, which were growing exponentially. "Labs everywhere are adopting our approach."  As of April 2025, the paper was cited over 170,000 times.  This makes it one of the top 10 cited
+papers in the last 100 years!
 
 Within months, the Transformer had become the foundation for new state-of-the-art results in almost every NLP task. Its efficient parallel computation meant it could be scaled to previously unimaginable sizes.
 
@@ -357,3 +358,8 @@ $$
 $$
 
 This formula is the core of the transformer architecture described in the "Attention Is All You Need" paper, allowing the model to weigh the importance of different words in relation to each other.
+
+## References
+
+* [Exclusive: the most-cited papers of the twenty-first century](https://www.nature.com/articles/d41586-025-01125-9)
+* [Meet the $4 Billion AI Superstars That Google Lost](https://www.bloomberg.com/opinion/features/2023-07-13/ex-google-scientists-kickstarted-the-generative-ai-era-of-chatgpt-midjourney)
