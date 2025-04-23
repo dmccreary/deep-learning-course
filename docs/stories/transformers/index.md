@@ -128,7 +128,7 @@ Niki Parmar demonstrated how the encoder-decoder structure allowed the model to 
 
 ## Chapter 6: The Paper Dilemma
 
-![](./06-team-coding-late-night.png)
+![](./06-publishing-conflict.png)
 <details class="show-prompt">
   <summary>Show Image Prompt</summary>Panel 6: 
 
@@ -151,7 +151,7 @@ After weeks of internal debate and multiple review meetings, they received condi
 
 ## Chapter 7: NIPS Submission Crunch
 
-![](./07-publishing-conflict.png)
+![](./07-team-coding-late-night.png)
 
 <details class="show-prompt">
   <summary>Show Image Prompt</summary>Panel 7: 
