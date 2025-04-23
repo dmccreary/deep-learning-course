@@ -18,7 +18,7 @@
         <link rel="prev" href="../alexnet/">
       
       
-        <link rel="next" href="../../checklist/">
+        <link rel="next" href="../chatgpt/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -606,6 +606,8 @@
       
         
       
+        
+      
     
     
     
@@ -850,6 +852,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#transformer-data-flow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformer Data Flow Diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#formulas-and-equations" class="md-nav__link">
     <span class="md-ellipsis">
       Formulas and Equations
@@ -913,6 +924,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatgpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ChatGPT
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1205,6 +1239,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#transformer-data-flow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transformer Data Flow Diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#formulas-and-equations" class="md-nav__link">
     <span class="md-ellipsis">
       Formulas and Equations
@@ -1426,13 +1469,12 @@ A world map with glowing points of light appearing across research centers globa
 </details>
 
 <p>When "Attention Is All You Need" was published as a preprint on arXiv in June 2017, the reaction was immediate and electric. Research labs and tech companies around the world dropped what they were doing to implement and build upon the Transformer architecture.</p>
-<p>"I've never seen anything like this," Jakob marveled as he tracked the paper's citations, which were growing exponentially. "Labs everywhere are adopting our approach."  As of April 2025, the paper was cited over 170,000 times.  This makes it one of the top 10 cited
-papers in the last 100 years!</p>
+<p>"I've never seen anything like this," Jakob marveled as he tracked the paper's citations, which were growing exponentially. "Labs everywhere are adopting our approach."  As of April 2025, the paper was cited over 173,000 times.  This makes it one of the top-10 most frequently cited papers in the last 25 years!</p>
 <p>Within months, the Transformer had become the foundation for new state-of-the-art results in almost every NLP task. Its efficient parallel computation meant it could be scaled to previously unimaginable sizes.</p>
 <p>At OpenAI, researchers were already thinking about how to adapt the Transformer architecture for generative pre-training. At Google itself, another team was developing BERT, which would use the Transformer encoder to revolutionize language understanding.</p>
 <p>What made the paper so influential wasn't just the architecture itself but its timing and accessibility. The code was released openly, allowing researchers everywhere to start experimenting immediately. The paper was clear and well-written, making the complex ideas accessible to a wide audience.</p>
 <h2 id="chapter-9-the-birth-of-llms">Chapter 9: The Birth of LLMs</h2>
-<p><img alt="" src="./09-transformer.png" /></p>
+<p><img alt="" src="09-transformer-tree.png" /></p>
 <details class="show-prompt">
   <summary>Show Image Prompt</summary>Panel 9: 
 
@@ -1515,6 +1557,9 @@ A detailed diagram showing the sentence "The chicken did not cross the road beca
 </li>
 </ol>
 <p>This simple mechanism allows transformers to handle references, understand context, and capture long-range dependencies in text, which proved revolutionary for language understanding and generation.</p>
+<h2 id="transformer-data-flow-diagram">Transformer Data Flow Diagram</h2>
+<p>Here is the actual diagram from the "Attention is All You Need" paper:</p>
+<p><img alt="" src="09-transformer-arch.png" /></p>
 <h2 id="formulas-and-equations">Formulas and Equations</h2>
 <h4 id="attention-formula-scaled-dot-product-attention">Attention Formula (Scaled Dot-Product Attention)</h4>
 <div class="arithmatex">\[
@@ -1567,6 +1612,8 @@ MultiHead(Q,K,V)\=Concat(head1,...,headh)WO\text{MultiHead}(Q, K, V) = \text{Con
 <p>This formula is the core of the transformer architecture described in the "Attention Is All You Need" paper, allowing the model to weigh the importance of different words in relation to each other.</p>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://en.wikipedia.org/wiki/Attention_Is_All_You_Need">Attention Is All You Need Wikipedia Article</a></li>
+<li><a href="https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/">Transformer: A Novel Neural Network Architecture for Language Understanding</a></li>
 <li><a href="https://www.nature.com/articles/d41586-025-01125-9">Exclusive: the most-cited papers of the twenty-first century</a></li>
 <li><a href="https://www.bloomberg.com/opinion/features/2023-07-13/ex-google-scientists-kickstarted-the-generative-ai-era-of-chatgpt-midjourney">Meet the $4 Billion AI Superstars That Google Lost</a></li>
 </ul>
@@ -1627,13 +1674,13 @@ MultiHead(Q,K,V)\=Concat(head1,...,headh)WO\text{MultiHead}(Q, K, V) = \text{Con
         
         
           
-          <a href="../../checklist/" class="md-footer__link md-footer__link--next" aria-label="Next: Checklist">
+          <a href="../chatgpt/" class="md-footer__link md-footer__link--next" aria-label="Next: ChatGPT">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Checklist
+                ChatGPT
               </div>
             </div>
             <div class="md-footer__button md-icon">
