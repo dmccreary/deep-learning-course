@@ -54,7 +54,7 @@ nav:
     - AI Winters: stories/ai-winters/index.md
     - AlexNet: stories/alexnet/index.md
     - Transformers: stories/transformers/index.md
-             
+    - ChatGPT: stories/chatgpt/index.md
   - Checklist: checklist.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md

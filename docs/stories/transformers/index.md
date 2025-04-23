@@ -189,8 +189,7 @@ A world map with glowing points of light appearing across research centers globa
 
 When "Attention Is All You Need" was published as a preprint on arXiv in June 2017, the reaction was immediate and electric. Research labs and tech companies around the world dropped what they were doing to implement and build upon the Transformer architecture.
 
-"I've never seen anything like this," Jakob marveled as he tracked the paper's citations, which were growing exponentially. "Labs everywhere are adopting our approach."  As of April 2025, the paper was cited over 170,000 times.  This makes it one of the top 10 cited
-papers in the last 100 years!
+"I've never seen anything like this," Jakob marveled as he tracked the paper's citations, which were growing exponentially. "Labs everywhere are adopting our approach."  As of April 2025, the paper was cited over 173,000 times.  This makes it one of the top-10 most frequently cited papers in the last 25 years!
 
 Within months, the Transformer had become the foundation for new state-of-the-art results in almost every NLP task. Its efficient parallel computation meant it could be scaled to previously unimaginable sizes.
 
@@ -200,7 +199,7 @@ What made the paper so influential wasn't just the architecture itself but its t
 
 ## Chapter 9: The Birth of LLMs
 
-![](./09-transformer.png)
+![](./09-transformer-tree.png)
 
 <details class="show-prompt">
   <summary>Show Image Prompt</summary>Panel 9: 
@@ -292,6 +291,13 @@ The key insight of the attention mechanism can be understood through our example
 
 This simple mechanism allows transformers to handle references, understand context, and capture long-range dependencies in text, which proved revolutionary for language understanding and generation.
 
+## Transformer Data Flow Diagram
+
+Here is the actual diagram from the "Attention is All You Need" paper:
+
+![](./09-transformer-arch.png)
+
+
 ## Formulas and Equations
 
 #### Attention Formula (Scaled Dot-Product Attention)
@@ -361,5 +367,7 @@ This formula is the core of the transformer architecture described in the "Atten
 
 ## References
 
+* [Attention Is All You Need Wikipedia Article](https://en.wikipedia.org/wiki/Attention_Is_All_You_Need)
+* [Transformer: A Novel Neural Network Architecture for Language Understanding](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
 * [Exclusive: the most-cited papers of the twenty-first century](https://www.nature.com/articles/d41586-025-01125-9)
 * [Meet the $4 Billion AI Superstars That Google Lost](https://www.bloomberg.com/opinion/features/2023-07-13/ex-google-scientists-kickstarted-the-generative-ai-era-of-chatgpt-midjourney)
