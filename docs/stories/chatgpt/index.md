@@ -2,11 +2,11 @@
 
 <details class="show-prompt">
   <summary>Show Narrative Prompt</summary>
-Please create a detailed, fun and entertaining story about the launch of the OpenAI product ChatGPT and its relevance to the rise of AI technologies.
+Given to Anthropic Claud 3.7 in the context of the Deep Learning course project.  Please create a detailed, fun and entertaining story about the launch of the OpenAI product ChatGPT and its relevance to the rise of AI technologies.
 
 Our goal is to have you generate the full text of the story, but to turn the story into a graphic novel with many illustrations that explain how the product ChatGPT was created.  Describe the challenges the team had and how they overcame these challenges.
 
-When appropriate, suggest an image that could be inserted into the story to make the story a graphic novel. Describe each image in detail and be consistent across all the images in the story for style.  When you describe an image, make sure to mention that it should be a colorful, bright wide-landscape drawing suitable for technology-forward optimistic graphic-novel.
+When appropriate, suggest an image that could be inserted into the story to make the story a graphic novel. Describe each image in detail and be consistent across all the images in the story for style.  When you describe an image, make sure to mention that it should be a colorful, bright wide-landscape drawing suitable for technology-forward optimistic graphic-novel.  All image prompts were given to OpenAI 4o.
 </details>
 
 ## Chapter 1: Seeds of Innovation

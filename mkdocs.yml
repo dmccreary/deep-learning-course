@@ -55,6 +55,7 @@ nav:
     - AlexNet: stories/alexnet/index.md
     - Transformers: stories/transformers/index.md
     - ChatGPT: stories/chatgpt/index.md
+    - Meta's Llama: stories/meta-llama/index.md
   - Checklist: checklist.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
