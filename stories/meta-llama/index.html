@@ -1,0 +1,1566 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An example of an intelligent textbook for teaching deep learning. All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/deep-learning-course/stories/meta-llama/">
+      
+      
+        <link rel="prev" href="../chatgpt/">
+      
+      
+        <link rel="next" href="../../checklist/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Meta's Llama - Deep Learning with AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-5MJ3S17WFF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-5MJ3S17WFF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-5MJ3S17WFF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Meta's Llama - Deep Learning with AI" >
+      
+        <meta  property="og:description"  content="An example of an intelligent textbook for teaching deep learning. All content licensed Creative Commons ShareAlike Attribution Noncommercial" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/deep-learning-course/assets/images/social/stories/meta-llama/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/deep-learning-course/stories/meta-llama/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Meta's Llama - Deep Learning with AI" >
+      
+        <meta  name="twitter:description"  content="An example of an intelligent textbook for teaching deep learning. All content licensed Creative Commons ShareAlike Attribution Noncommercial" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/deep-learning-course/assets/images/social/stories/meta-llama/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="gold">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-llama-effect-how-meta-disrupted-the-llm-industry" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Deep Learning with AI" class="md-header__button md-logo" aria-label="Deep Learning with AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Deep Learning with AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Meta's Llama
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/deep-learning-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Deep Learning with AI" class="md-nav__button md-logo" aria-label="Deep Learning with AI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Deep Learning with AI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/deep-learning-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Course Description
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Chapters
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../labs/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Labs
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Stories
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Stories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-winters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI Winters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alexnet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AlexNet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transformers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatgpt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ChatGPT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Meta's Llama
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meta's Llama
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-1-the-ai-arms-race-begins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 1: The AI Arms Race Begins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-assembling-the-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 2: Assembling the Team
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-the-gpu-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 3: The GPU Challenge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-the-training-begins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 4: The Training Begins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-the-first-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 5: The First Results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-6-the-strategic-debate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 6: The Strategic Debate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-7-the-open-source-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 7: The Open Source Decision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-8-llama-2-open-forever" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 8: Llama 2 - "Open Forever"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-9-industry-shockwaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 9: Industry Shockwaves
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-10-the-job-market-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 10: The Job Market Transformation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-11-the-rise-of-the-open-ai-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 11: The Rise of the Open AI Ecosystem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-12-metas-ultimate-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 12: Meta's Ultimate Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epilogue-the-legacy-of-the-llama-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epilogue: The Legacy of the Llama Decision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Checklist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Feedback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    References
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-1-the-ai-arms-race-begins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 1: The AI Arms Race Begins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-assembling-the-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 2: Assembling the Team
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-the-gpu-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 3: The GPU Challenge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-the-training-begins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 4: The Training Begins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-the-first-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 5: The First Results
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-6-the-strategic-debate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 6: The Strategic Debate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-7-the-open-source-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 7: The Open Source Decision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-8-llama-2-open-forever" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 8: Llama 2 - "Open Forever"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-9-industry-shockwaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 9: Industry Shockwaves
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-10-the-job-market-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 10: The Job Market Transformation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-11-the-rise-of-the-open-ai-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 11: The Rise of the Open AI Ecosystem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-12-metas-ultimate-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 12: Meta's Ultimate Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epilogue-the-legacy-of-the-llama-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epilogue: The Legacy of the Llama Decision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/dmccreary/deep-learning-course/blob/master/docs/stories/meta-llama/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="the-llama-effect-how-meta-disrupted-the-llm-industry">The Llama Effect: How Meta Disrupted the LLM Industry</h1>
+<details class="show-prompt">
+  <summary>Show Narrative Prompt</summary>
+Title: Making LLMs free: How Meta disrupted the LLM industry by giving away a product that took billions of dollars to build.
+
+Please create a detailed, fun and entertaining story about the decision that Meta made to build the large language model called "Llama" and its relevance to the rise open LLMs.
+
+Describe the challenges and costs the team at Meta had building Llama such as getting GPUS and how they overcame these challenges. Describe the incredible time and money that went into building Llama 2.
+
+Discuss the tradeoffs that the company Meta discussed internally to make it open source or charge for its use.  Discuss the strategy of "scorched earth" where you give a product away for free to prevent competitors from being able to charge for a product.  Describe the impact this had on other firms that were trying to sell access to their LLMs.  Describe how the job market for LLM engineers collapsed after Llama 2 and future versions was made open source "forever".
+
+Our goal is to have you generate the full text of the story, but to turn the story into a graphic novel with many illustrations that explain how the Meta product Llama was created.  
+
+When appropriate, suggest an image that could be inserted into the story to make the story a graphic novel. Describe each image in detail and be consistent across all the images in the story for style.  When you describe an image, make sure to mention that it should be a colorful, bright wide-landscape drawing suitable for technology-forward optimistic graphic-novel.
+</details>
+
+<h2 id="chapter-1-the-ai-arms-race-begins">Chapter 1: The AI Arms Race Begins</h2>
+<p><img alt="" src="01-llama-chessboard.png" /></p>
+<details>
+  <summary>Show Image Prompt</summary>
+Image 1: Create a colorful, bright wide-landscape drawing showing Meta headquarters in Menlo Park with a giant llama silhouette casting a shadow over Silicon Valley. In the foreground, tech companies are represented as chess pieces on a digital board, with Meta making a bold move. The style should be vibrant with tech-forward optimistic graphic-novel aesthetics.
+</details>
+
+<p>In the sprawling tech campus of Meta in Menlo Park, California, executives gathered in a glass-walled conference room in early 2022. The AI landscape was changing rapidly. OpenAI's GPT models and Google's research were capturing headlines and imagination. Meta, despite its massive resources and talent pool, was being perceived as falling behind in the AI revolution.</p>
+<p>"We can't afford to be left out of this," said Mark Zuckerberg, Meta's CEO, scanning the room. "The future of tech is being reshaped by large language models. We need our own competitive offering."</p>
+<p>The tech giant had already invested billions in AI research through its FAIR (Facebook AI Research) lab established in 2013. But now, a more ambitious project was taking shape - one that would eventually become known as Llama.</p>
+<p>"What if we don't just build another closed AI system?" suggested one executive. "What if we take a completely different approach?"</p>
+<h2 id="chapter-2-assembling-the-team">Chapter 2: Assembling the Team</h2>
+<p><img alt="" src="02-worldwide-team.png" /></p>
+<details><summary>Image Prompt</summary>
+Image 2: Create a colorful, bright wide-landscape drawing depicting a montage of Meta AI researchers being recruited from around the world. The image shows a global map with light beams connecting to Meta headquarters, with diverse faces of researchers working on complex equations and neural architecture diagrams. The style should maintain the tech-forward optimistic graphic-novel aesthetics with vibrant blues and purples.
+</details>
+
+<p>Meta began assembling an elite team of AI researchers, computational linguists, and engineering specialists from across the globe. The project would need the brightest minds in natural language processing, reinforcement learning, and distributed computing.</p>
+<p>Unlike traditional product teams that might work in isolation until launch, this team had a clear mandate: build a foundation model that could compete with or exceed the capabilities of GPT and other leading models, but with the potential to be shared with the world.</p>
+<p>"We're bringing together people who believe AI should be more open," explained one team leader during an early all-hands meeting. "This isn't just about catching up to competitors; it's about changing the game entirely."</p>
+<p>The team quickly expanded to hundreds of specialists, many relocating to California to join what was becoming one of the most ambitious AI projects in Meta's history.</p>
+<h2 id="chapter-3-the-gpu-challenge">Chapter 3: The GPU Challenge</h2>
+<p><img alt="" src="03-data-center.png" /></p>
+<details><summary>Image Prompt</summary>
+3: A colorful, bright wide-landscape drawing showing a massive data center filled with rows of GPU servers glowing with processing power. Engineers are shown navigating between server racks with diagnostic tablets, while monitors display training progress. In one corner, executives are reviewing mounting cost projections. The style should convey both technological scale and the financial investment with bright, optimistic tech-forward aesthetics.
+</details>
+
+<p>By mid-2022, the first major obstacle became apparent: securing enough computational power. Training a large language model requires enormous computational resources, primarily in the form of specialized GPUs (Graphics Processing Units).</p>
+<p>"We need thousands of NVIDIA A100 GPUs to train at the scale we're planning," explained the infrastructure lead. "And we're in the middle of a global chip shortage."</p>
+<p>The team faced a harsh reality: even for a company with Meta's resources, obtaining the necessary hardware during a worldwide semiconductor shortage was a significant challenge. The price per GPU had skyrocketed to over $10,000 each, and Meta would need thousands of them.</p>
+<p>"We're looking at an initial hardware investment of over $100 million just to begin serious training," the financial team reported. "And that's assuming we can even secure the supply."</p>
+<p>Meta leveraged its industry relationships, made advance commitments, and even designed custom cooling solutions to maximize GPU efficiency. The company repurposed entire data centers, prioritizing the Llama project over other computational needs.</p>
+<p>"This is probably the largest computational undertaking in our company's history," noted one engineering director as they toured a newly configured data center in Nevada, rows of specialized servers humming with activity.</p>
+<h2 id="chapter-4-the-training-begins">Chapter 4: The Training Begins</h2>
+<p><img alt="" src="04-building-llama.png" /></p>
+<details><summary>Image Prompt</summary>
+4: A colorful, bright wide-landscape drawing showing a visualization of the Llama training process. The image features a translucent llama figure composed of flowing data streams, with researchers monitoring real-time metrics on futuristic displays. Clock faces around the scene show the passage of months. One side shows the input of diverse text datasets flowing into the model, while the other shows emerging capabilities. The style should be dynamic and educational with the tech-forward optimistic aesthetic maintained throughout.
+</details>
+
+<p>By late 2022, training on the first Llama model began in earnest. The process would consume millions of dollars in computing resources each day.</p>
+<p>"We're processing trillions of tokens from hundreds of languages," explained the lead data scientist. "The model is learning from books, articles, code repositories, scientific papers - basically the written knowledge of humanity."</p>
+<p>Training a model of this scale wasn't just expensive; it was a technical marathon. Engineers worked in shifts, monitoring the training process 24/7. Any instability or unexpected behavior could waste days of computing time worth millions of dollars.</p>
+<p>"It's like building a rocket while it's launching," quipped one engineer during a 3 AM troubleshooting session. "We're constantly adjusting parameters, addressing biases, and fixing training anomalies."</p>
+<p>The scale was unprecedented for Meta. Each day of training cost approximately $2-3 million in computing resources alone. Over months of training, fine-tuning, and iterative improvements, the total cost would climb into the billions.</p>
+<p>"We're spending more each week on this project than many AI startups have raised in total," observed one executive during a budget review. "This better work."</p>
+<h2 id="chapter-5-the-first-results">Chapter 5: The First Results</h2>
+<p><img alt="" src="05-llama-demos.png" /></p>
+<details>
+ <summary>Image Prompt</summary>
+ 5: A colorful, bright wide-landscape drawing showing the first internal demonstrations of Llama capabilities. The scene depicts an auditorium at Meta headquarters where executives and team members are watching demonstrations on a giant screen. The screen shows Llama solving complex problems, generating code, and answering questions in multiple languages. Reactions range from amazement to strategic contemplation. The style should convey the excitement of breakthrough with the tech-forward optimistic graphic-novel aesthetic.
+ </details>
+
+<p>By early 2023, the first complete version of Llama was ready for internal testing. The results exceeded expectations. The model demonstrated remarkable capabilities in reasoning, language understanding, and knowledge representation - sometimes surpassing competing models on benchmark tests.</p>
+<p>"It's working," announced the project lead during the first major demonstration to Meta's executive team. "In some domains, we're seeing performance that matches or exceeds models from OpenAI and Anthropic."</p>
+<p>What made Llama particularly notable was its efficiency. The model achieved impressive results with fewer parameters than competitors, making it potentially more accessible for organizations with limited computational resources.</p>
+<p>As impressive as the technical achievements were, a bigger question loomed: what would Meta do with this powerful new technology? The traditional approach would be to create a proprietary service, similar to ChatGPT or Claude, and monetize access.</p>
+<p>But some on the team had more radical ideas.</p>
+<h2 id="chapter-6-the-strategic-debate">Chapter 6: The Strategic Debate</h2>
+<p><img alt="" src="06-open-source-decision.png" /></p>
+<details>
+ <summary>Image Prompt</summary>
+ 6: A colorful, bright wide-landscape drawing depicting a heated boardroom debate at Meta. The scene shows executives divided across a long table, with projection slides showing different business models. One side shows traditional monetization strategies with dollar signs, while the other shows open-source approaches with community growth metrics. Zuckerberg is at the head of the table, contemplatively listening to arguments from both sides. The style should convey the tension of this pivotal decision with dramatic lighting while maintaining the tech-forward optimistic graphic-novel aesthetic.
+ </details>
+
+<p>As Llama's capabilities became clear, intense strategic debates erupted within Meta's leadership. The investment had already reached billions of dollars. How should they recoup this massive expenditure?</p>
+<p>"The conventional approach would be to create a ChatGPT competitor," argued one executive. "We could charge enterprise customers for API access while offering limited free tiers to individuals. Revenue projections suggest we could recover our investment within 18-24 months."</p>
+<p>Others proposed a different path.</p>
+<p>"What if we open-source the model?" suggested another leader. "We could disrupt the entire market. No one could charge premium prices for something similar to what we're giving away for free."</p>
+<p>The debate continued for weeks. Financial models were created, market analyses were conducted, and competitive responses were gamed out. The decision would have enormous implications not just for Meta but for the entire AI industry.</p>
+<p>"This is classic scorched earth strategy," noted one business development director. "By giving away what others are selling, we eliminate their business model. It's aggressive, but potentially transformative for our position in AI."</p>
+<p>Zuckerberg, who had remained mostly quiet during these debates, finally weighed in: "Open is better aligned with Meta's long-term interests. We're not primarily an AI company - we're building the metaverse. Having AI become a commodity that everyone can use benefits our ecosystem."</p>
+<h2 id="chapter-7-the-open-source-decision">Chapter 7: The Open Source Decision</h2>
+<p><img alt="" src="07-open-announcement.png" /></p>
+<details>
+ <summary>Image Prompt</summary>
+ 7: A colorful, bright wide-landscape drawing showing Zuckerberg making the historic announcement of Llama going open source. The image shows him on stage with the Llama logo prominently displayed behind him. Split screens show reactions around the tech world - some competitors looking concerned, researchers celebrating, and developers immediately downloading the model. News headlines appear throughout the composition announcing this industry-shaking move. The style should be triumphant and momentous while maintaining the tech-forward optimistic graphic-novel aesthetic.
+ </details>
+
+<p>In February 2023, Meta announced the first open release of Llama. While this initial release came with some usage restrictions, it signaled Meta's intentions clearly: they were taking a fundamentally different approach to AI than their competitors.</p>
+<p>"Today, we're releasing Llama for research purposes," announced the official statement. "We believe that the open development of AI technologies is better for innovation, safety, and responsibility."</p>
+<p>The tech world was stunned. A company had spent billions developing technology that others were charging millions to access - and then essentially given it away. The strategic implications were immediately apparent to industry observers.</p>
+<p>"Meta just detonated a nuclear bomb in the AI business model landscape," wrote one prominent tech analyst. "How do you charge for something when a comparable version is available for free?"</p>
+<p>While this first release had some limitations, it was just the beginning of Meta's open strategy. The real industry earthquake would come a few months later.</p>
+<h2 id="chapter-8-llama-2-open-forever">Chapter 8: Llama 2 - "Open Forever"</h2>
+<p><img alt="" src="08-open-forever.png" /></p>
+<details><summary>Image Prompt</summary>
+8: A colorful, bright wide-landscape drawing showing the Llama 2 launch event with even greater impact. The scene shows Meta's campus with "LLAMA 2: OPEN FOREVER" projected on buildings. Multiple screens show the model's improved capabilities and the completely open license terms. One part of the image shows a globe with digital access points lighting up as developers worldwide immediately begin implementing the technology. The style should convey the global impact of this decision while maintaining the tech-forward optimistic graphic-novel aesthetic.
+</details>
+
+<p>In July 2023, Meta made an even bolder move: releasing Llama 2 with an unprecedented "open forever" commitment. This new version was not just research-oriented but fully commercial-ready, and organizations could use it in products without paying Meta royalties.</p>
+<p>"Today, we're releasing Llama 2 as a fully open source model," announced Zuckerberg. "We believe AI is better when it's open."</p>
+<p>The improvements in Llama 2 were substantial - it had been trained on 40% more data than the original, with significantly expanded context windows and improved performance across nearly all benchmarks. Most importantly, it came with commercial use rights that allowed companies to build products on top of it without paying Meta.</p>
+<p>The cost had been staggering - estimates suggested Meta had spent between $5-7 billion developing and training Llama 2. And they were giving it away for free.</p>
+<p>"This is one of the most expensive 'free' products in the history of technology," observed one industry analyst. "Meta has essentially made a multi-billion dollar donation to the tech ecosystem."</p>
+<h2 id="chapter-9-industry-shockwaves">Chapter 9: Industry Shockwaves</h2>
+<p><img alt="" src="09-building-on-llama.png" /></p>
+<details><summary>Image Prompt</summary>
+9: A colorful, bright wide-landscape drawing showing the aftermath in the AI industry. The image depicts various AI startups and companies represented as ships on a turbulent digital ocean, with some capsizing while others frantically change course. Stock tickers show falling prices for AI companies. In contrast, a massive community of developers is shown collaboratively building on Llama, creating a ecosystem of applications. The style should dramatically convey market disruption while maintaining the tech-forward optimistic graphic-novel aesthetic.
+</details>
+
+<p>The impact on the AI industry was immediate and profound. Smaller AI companies that had planned to compete with proprietary models suddenly found their core business strategy undermined. Why would customers pay for access to proprietary models when they could use Llama for free?</p>
+<p>"We're seeing a complete reassessment of business models across the sector," noted one venture capitalist. "Companies that were planning to sell API access to foundation models are pivoting to specialized applications and services instead."</p>
+<p>Valuations of AI startups focused purely on developing foundation models plummeted. Several smaller companies that had raised funds on the promise of creating competitive large language models announced layoffs or complete strategic pivots.</p>
+<p>"Meta has effectively commoditized a technology that others were hoping would be their primary revenue source," explained an industry analyst. "It's a classic example of a larger player with diverse revenue streams undermining a market they don't need to monetize directly."</p>
+<p>For enterprise customers, the calculus changed overnight. Using proprietary models with per-token pricing suddenly seemed financially questionable when comparable open alternatives existed.</p>
+<h2 id="chapter-10-the-job-market-transformation">Chapter 10: The Job Market Transformation</h2>
+<p><img alt="" src="10-dev-shift.png" /></p>
+<details><summary>Image Prompt</summary>
+10: A colorful, bright wide-landscape drawing depicting the changing AI job market. The image shows a split scene: on one side, LLM model development teams are being downsized with engineers leaving buildings with boxes; on the other side, application developers and AI implementation specialists are being hired in growing numbers. Digital job boards show changing salary trends and shifting demand. The central figure shows engineers moving from core model development to application building. The style should be informative while maintaining the tech-forward optimistic graphic-novel aesthetic.
+</details>
+
+<p>By late 2023, the job market for AI engineers had undergone a dramatic transformation. Companies that had been aggressively hiring specialists to build proprietary large language models suddenly froze recruitment or reduced headcount.</p>
+<p>"Why spend millions building what Meta is giving away for free?" became a common refrain in board rooms across the tech industry.</p>
+<p>Senior AI engineers who had commanded salaries of $500,000 or more to develop foundation models found their specialized skills less in demand. Compensation packages that had once seemed untouchable began to normalize.</p>
+<p>"We're seeing a 30-40% reduction in total compensation packages for core LLM development roles," reported one tech recruitment specialist. "Companies are reallocating their AI budgets from core model development to application building and implementation."</p>
+<p>However, this didn't mean AI talent overall was less valuable. The demand simply shifted. Engineers who could effectively implement, fine-tune, and build applications on top of open models like Llama became highly sought after.</p>
+<p>"The job market hasn't collapsed; it's transformed," explained an industry observer. "We're seeing explosive growth in roles focused on applying AI rather than building foundational models from scratch."</p>
+<h2 id="chapter-11-the-rise-of-the-open-ai-ecosystem">Chapter 11: The Rise of the Open AI Ecosystem</h2>
+<p><img alt="" src="11-many-apps.png" /></p>
+<details><summary>Image Prompt</summary>
+11: A colorful, bright wide-landscape drawing showing the thriving ecosystem that developed around open LLMs. The image depicts a vibrant digital marketplace with developers creating thousands of specialized applications built on Llama foundations. Different industries are shown implementing AI solutions that were previously unaffordable. Educational institutions are teaching with open models, and researchers from diverse backgrounds are contributing improvements. The style should be bustling and optimistic, showing the democratization of AI technology with the tech-forward optimistic graphic-novel aesthetic.
+</details>
+
+<p>As 2024 progressed, an unexpected phenomenon emerged. Rather than stifling innovation, Meta's open source strategy had accelerated it. Without needing to rebuild the fundamental technology, thousands of developers could focus on creating specialized applications and improvements.</p>
+<p>Small teams that could never have afforded to build or license proprietary models began developing innovative AI applications for specific industries and use cases. Academic researchers who had been priced out of working with cutting-edge AI now had access to state-of-the-art models.</p>
+<p>"We're seeing more diverse and creative applications of AI than ever before," noted one researcher. "When powerful models become accessible to everyone, innovation happens in places it never could have otherwise."</p>
+<p>Organizations in healthcare, education, scientific research, and public services - often operating with limited budgets - began implementing AI solutions that would have been financially impossible in a closed ecosystem.</p>
+<p>Meta continued releasing improvements, culminating in Llama 3, which closed the performance gap with even the most advanced proprietary models while maintaining the open license.</p>
+<h2 id="chapter-12-metas-ultimate-strategy">Chapter 12: Meta's Ultimate Strategy</h2>
+<p><img alt="" src="12-llama-foundation.png" /></p>
+<details><summary>Image Prompt</summary>
+12: A colorful, bright wide-landscape drawing depicting Meta's long-term vision. The image shows Llama becoming a foundation layer of the digital world, with Meta's metaverse and other products built on top. Zuckerberg is depicted as a chess player who has made a winning move, with AI becoming infrastructure rather than a product. The scene shows Meta products gaining adoption while competitors are distracted by model development. The style should be visionary and strategic while maintaining the tech-forward optimistic graphic-novel aesthetic.
+</details>
+
+<p>As the dust settled on Meta's disruptive strategy, the company's long-term vision became clearer. By commoditizing foundation models, Meta had shifted the competitive landscape to areas where it held advantages.</p>
+<p>"Meta doesn't need to sell AI as a product," explained one analyst. "They need AI as infrastructure for their vision of the metaverse and their family of apps. By making foundation models essentially free for everyone, they've redirected their competitors' resources while advancing their own strategic goals."</p>
+<p>For Meta, the billions spent developing Llama weren't wasted - they were an investment in reshaping the competitive landscape. While other tech giants had to either match Meta's open approach or justify premium pricing, Meta could focus on integrating AI throughout its products and services.</p>
+<p>"It's a brilliant strategic move when you consider Meta's overall business," noted a business strategist. "They've turned what could have been a costly distraction into a competitive advantage."</p>
+<h2 id="epilogue-the-legacy-of-the-llama-decision">Epilogue: The Legacy of the Llama Decision</h2>
+<p><img alt="" src="13-ai-for-all.png" /></p>
+<details><summary>Image Prompt</summary>
+13: A colorful, bright wide-landscape drawing showing the future landscape of AI. The image depicts AI as ubiquitous infrastructure rather than expensive proprietary technology. Scientists and developers from all backgrounds are shown advancing the technology collaboratively. The scene shows beneficial applications in medicine, education, and sustainability that wouldn't have been possible in a closed ecosystem. The style should be inspiring and forward-looking, emphasizing the democratization of advanced technology with the tech-forward optimistic graphic-novel aesthetic.
+</details>
+
+<p>Meta's decision to open-source Llama reshaped the AI industry in ways that extended far beyond business strategies and market valuations. By making advanced AI accessible to everyone, Meta had democratized a technology that might otherwise have remained concentrated in the hands of a few wealthy corporations.</p>
+<p>"In retrospect, the Llama decision may be seen as one of the most significant inflection points in the development of artificial intelligence," reflected an AI historian. "It transformed AI from a luxury that only the largest organizations could afford into a utility available to anyone with the skill to use it."</p>
+<p>The billions Meta invested—money that shareholders might have preferred to see directed toward immediate profits—had effectively funded a global public good. Researchers, developers, students, non-profits, and businesses of all sizes now had access to technology that would have cost millions to develop independently.</p>
+<p>"Meta's decision did cause short-term disruption," acknowledged an industry veteran. "But it also prevented an unhealthy concentration of AI power and accelerated beneficial applications that might never have emerged in a strictly commercial environment."</p>
+<p>The story of Llama demonstrated how strategic decisions made by large technology companies could reshape entire industries—sometimes in ways that extended beyond business concerns to influence how technology itself evolved and who could access its benefits.</p>
+<p>In the end, Meta had taken a technology that cost billions to develop and made it freely available to the world. Whatever the strategic motivations, the result was a more open, accessible, and innovative AI ecosystem that benefited far more people than a closed approach ever could have.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://ai.meta.com/llama/">Meta Llama Homepage</a></li>
+<li><a href="https://arxiv.org/abs/2307.09288">The Llama 2 Foundation Models Technical Report</a>  arXiv:2307.09288</li>
+<li><a href="https://about.fb.com/news/2024/04/introducing-llama-3/">Meta unveils Llama 3, a new family of open-source AI models</a></li>
+<li><a href="https://hdsr.mitpress.mit.edu/pub/sgzs3im6/release/2">The State of Open Source AI</a></li>
+<li><a href="https://www.wired.com/story/inside-metas-quest-to-build-a-universal-language-translator/">Inside Meta's Quest to Build a Universal Language Translator</a></li>
+<li><a href="https://spectrum.ieee.org/chatgpt-alternatives-open-source">The ChatGPT Competition: Open-Source Models Are Catching Up Fast</a></li>
+<li><a href="https://www.theverge.com/2023/8/2/23817559/meta-ai-llama-open-source-strategy">Meta's AI Strategy is More About Scorched Earth Than Saving the Future of Tech</a></li>
+<li><a href="https://venturebeat.com/ai/metas-llama-2-why-open-source-ai-may-win-out-over-closed-alternatives/">The Impact of Llama on the AI Ecosystem</a></li>
+<li><a href="https://hbr.org/2023/12/the-business-case-for-ai-open-source">The Rise of Open Source Foundation Models for AI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Llama_(language_model)">Llama (language model) on Wikipedia</a></li>
+<li><a href="https://www.cnbc.com/2023/10/16/metas-open-source-approach-to-ai-puzzles-wall-street-techies-love-it.html">Meta’s unique approach to developing AI puzzles Wall Street, but techies love it</a> CNBC- Mon, Oct 16 2023</li>
+<li><a href="https://www.reuters.com/technology/meta-makes-its-powerful-ai-model-llama-2-free-commercial-use-2023-07-18/">Meta makes its powerful AI model Llama 2 free for commercial use</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../chatgpt/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ChatGPT">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                ChatGPT
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../checklist/" class="md-footer__link md-footer__link--next" aria-label="Next: Checklist">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Checklist
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
