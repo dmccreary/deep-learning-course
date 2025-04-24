@@ -19,8 +19,7 @@ Describe how an entire intelligent-textbook for a college-level AI course can no
 Our goal is to have you generate the full text of the story, but to turn the story into a graphic novel with many illustrations that explain how the Meta product Llama was created. 
 
 When appropriate, suggest an image that could be inserted into the story to make the story a graphic novel. Describe each image in detail and be consistent across all the images in the story for style.  When you describe an image, make sure to mention that it should be a colorful, bright wide-landscape drawing suitable for technology-forward optimistic graphic-novel.
-
-I'll create a detailed, entertaining story about DeepSeek-R1 as a graphic novel. Let me work on this right away.
+</details>
 
 
 
