@@ -21,8 +21,6 @@ Our goal is to have you generate the full text of the story, but to turn the sto
 When appropriate, suggest an image that could be inserted into the story to make the story a graphic novel. Describe each image in detail and be consistent across all the images in the story for style.  When you describe an image, make sure to mention that it should be a colorful, bright wide-landscape drawing suitable for technology-forward optimistic graphic-novel.
 </details>
 
-
-
 ## Chapter 1: A Vision Against the Tide
 
 In the sprawling landscape of AI development, where the biggest players raced to build ever-larger language models with seemingly unlimited resources, a small team at DeepSeek saw a different path forward. While giants like OpenAI and Anthropic were building models requiring thousands of GPUs and hundreds of millions in funding, the DeepSeek team believed they could create something just as powerful, but far more efficient.
@@ -75,7 +73,7 @@ After months of experimentation, the team developed a multi-headed routing mecha
 
 While competitors were scaling up their datasets to trillions of tokens, the DeepSeek team took a different approach: they focused on data quality and training methodology rather than sheer volume.
 
-![](./04-results.pngg)
+![](./04-results.png)
 
 <details><summary>Show Image Prompt</summary>
 4: "Curated Learning" - A colorful, bright wide-landscape drawing showing the data curation process. The scene depicts team members carefully selecting and processing training data, visualized as glowing documents passing through various quality filters. Some researchers are shown enhancing particularly valuable datasets, which glow brighter as they receive special attention. In contrast to the "data firehose" approach shown in the background (representing competitors), the DeepSeek method is shown as a precise, surgical process. The image includes visual metrics showing how their curated smaller dataset produces better results than massive unfiltered data collections.
