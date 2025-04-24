@@ -43,7 +43,7 @@ In a bold strategic move that reshaped the AI industry, Meta invested billions t
 [Read the Meta Llama Story](./meta-llama/index.md)
 
 ## DeepSeek R1
-![](./deepseek-r1/){width="300"}
+![](./deepseek-r1/01-vision.png){width="300"}
 
 The DeepSeek-R1 story portrays a small, resourceful team challenging the AI industry's "bigger is better" paradigm by creating a remarkably efficient language model through innovative architecture choices. Using Mixture of Experts technology, custom software optimization, and strategic resource management, they build a powerful AI system that can run on consumer-grade hardware while delivering capabilities comparable to models requiring vastly more resources. The narrative highlights how their focus on data quality over quantity, specialized training methodologies, and superior engineering allows DeepSeek-R1 to democratize AI access—enabling applications like generating entire educational textbooks on personal computers and empowering users worldwide who lack enterprise infrastructure, ultimately proving that thoughtful design can triumph over brute-force approaches in advancing AI technology.
 
