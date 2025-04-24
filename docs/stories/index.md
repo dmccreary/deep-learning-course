@@ -28,7 +28,9 @@ This graphic novel sequence tells the origin story of deep learning's revolution
 
 [Read the Attention Revolution](./transformers/index.md)
 
-## ChatGPT
+## The Launch of ChatGPT
+
+This graphic novel chronicles how OpenAI's ChatGPT revolutionized artificial intelligence, beginning with a team of visionaries building on GPT-3's foundation to create a truly conversational AI assistant. Their breakthrough came through Reinforcement Learning from Human Feedback (RLHF), where human trainers guided the system toward more helpful, truthful responses. After an intense development sprint, ChatGPT's November 2022 launch saw unprecedented adoption, reaching a million users in just five days and triggering an industry-wide AI race. The story follows ChatGPT's evolution through GPT-4's multimodal capabilities, showcasing its impact across education, business, and software development while acknowledging ongoing challenges of alignment and truthfulness. Ultimately, ChatGPT transformed AI from an abstract concept into a personal experience, democratizing access to powerful language technology and sparking crucial global conversations about AI's role in society.
 
 [Read the ChatGPT Story](./chatgpt/index.md)
 
