@@ -25,7 +25,7 @@ When appropriate, suggest an image that could be inserted into the story to make
 
 ## Chapter 1: A Parisian Beginning
 
-In the vibrant tech scene of Paris, three visionaries - Clément Delangue, Julien Chaumond, and Thomas Wolf - came together with a shared dream that would eventually reshape the AI landscape. But like many great stories, theirs didn't begin with the triumph we know today.
+In 2016, three visionaries from Paris - Clément Delangue, Julien Chaumond, and Thomas Wolf - came together in New York with a shared dream that would eventually reshape the AI landscape. But like many great stories, theirs didn't begin with the triumph we know today.
 
 ![](./01-small-team.png)
 <details class="show-prompt">
@@ -325,6 +325,7 @@ use Hugging Face software to build and extend their own internal model hubs.
 
 ## References
 
+- [Wikipedia Page on Hugging Face](https://en.wikipedia.org/wiki/Hugging_Face)
 -   [TechCrunch: Hugging Face Wants to Become Your Artificial BFF](https://techcrunch.com/2017/03/09/hugging-face-wants-to-become-your-artificial-bff/) - March 9, 2017 - TechCrunch
 -   [Betaworks Camp: BotCamp Launch](https://www.betaworks.com/camp) - 2016 - Betaworks
 -   [TechCrunch: Hugging Face Raises $235M](https://techcrunch.com/2023/08/24/hugging-face-raises-235m-from-investors-including-salesforce-and-nvidia/) - August 29, 2023 - TechCrunch
