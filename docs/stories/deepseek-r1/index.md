@@ -2,11 +2,11 @@
 
 <details class="show-prompt">
   <summary>Show Narrative Prompt</summary>
-Please create a detailed, fun and entertaining story about the creation of the large language model called "DeepSeek-R1" and its relevance to the rise open, small and low-cost LLMs. 
+Please create a detailed, fun and entertaining story about the creation of the large language model called "DeepSeek-R1" and its relevance to the rise of open, small and low-cost LLMs. 
 
-Describe the challenges and costs the team had building DeepSeek-R1 and how they cleverly use Reinforcement Learning, resoning, and mixture-of-experts to create a high-quality language-model at a lower cost than other organizations.
+Describe the challenges and costs the team had building DeepSeek-R1 and how they cleverly use Reinforcement Learning, reasoning, and mixture-of-experts to create a high-quality language-model at a lower cost than other organizations.
 
-Describe how with the lack of  GPU the team had to use resources carefully to get good results.
+Describe how with the lack of GPUs the team had to use resources carefully to get good results.
 
 Describe the challenges the team faced and how they overcame these challenges. 
 
@@ -16,7 +16,7 @@ Discuss how the DeepSeek architecture allows even smaller commercial grade gamin
 
 Describe how an entire intelligent-textbook for a college-level AI course can now be generated on a local GPU using DeepSeek-R1.
 
-Our goal is to have you generate the full text of the story, but to turn the story into a graphic novel with many illustrations that explain how the Meta product Llama was created. 
+Our goal is to have you generate the full text of the story, but to turn the story into a graphic novel with many illustrations that explain how the Deepseek R1 product was created. 
 
 When appropriate, suggest an image that could be inserted into the story to make the story a graphic novel. Describe each image in detail and be consistent across all the images in the story for style.  When you describe an image, make sure to mention that it should be a colorful, bright wide-landscape drawing suitable for technology-forward optimistic graphic-novel.
 </details>
