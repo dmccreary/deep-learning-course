@@ -55,6 +55,7 @@ nav:
     - AlexNet: stories/alexnet/index.md
     - Transformers: stories/transformers/index.md
     - ChatGPT: stories/chatgpt/index.md
+    - Hugging Face: stories/hugging-face/index.md
     - Meta's Llama: stories/meta-llama/index.md
     - DeepSeek R1: stories/deepseek-r1/index.md
   - Checklist: checklist.md
