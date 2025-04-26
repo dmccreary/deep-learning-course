@@ -203,5 +203,15 @@ The story of ChatGPT reminds us that technology doesn't develop in isolation—i
 
 ## References
 
-* [The inside story of how ChatGPT was built from the people who made it](https://www.technologyreview.com/2023/03/03/1069311/inside-story-oral-history-how-chatgpt-built-openai/)
-Exclusive conversations that take us behind the scenes of a cultural phenomenon. By Will Douglas Heaven - MIT Review - March 3, 2023
+-   [The ChatGPT story: How a curious AI assistant took over the world](https://www.cnet.com/tech/the-chatgpt-story-how-a-curious-ai-assistant-took-over-the-world/) - February 8, 2023 - CNET
+-   [The inside story of how ChatGPT was built from the people who made it](https://www.technologyreview.com/2023/03/03/1069311/inside-story-oral-history-how-chatgpt-built-openai/) - March 3, 2023 - MIT Technology Review
+-   [How ChatGPT was created: A primer on what makes the AI chatbot so valuable](https://www.zdnet.com/article/how-chatgpt-was-created-primer-what-makes-ai-chatbot-valuable/) - January 31, 2023 - ZDNET
+-   [Sam Altman: OpenAI, GPT-4, ChatGPT, and the Future of AI](https://www.youtube.com/watch?v=L_Guz73e6fw) - March 15, 2023 - Lex Fridman Podcast
+-   [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155) - March 4, 2022 - arXiv (OpenAI Research)
+-   [InstructGPT: Training language models to follow instructions](https://openai.com/research/instruction-following) - January 27, 2022 - OpenAI Research Blog
+-   [ChatGPT: Optimizing Language Models for Dialogue](https://openai.com/blog/chatgpt) - November 30, 2022 - OpenAI Blog
+-   [How OpenAI Built ChatGPT So Quickly](https://www.forbes.com/sites/bernardmarr/2023/04/07/how-openai-built-chatgpt-so-quickly/) - April 7, 2023 - Forbes
+-   [Introducing ChatGPT](https://openai.com/blog/chatgpt) - November 30, 2022 - OpenAI Blog
+-   [The Story Behind ChatGPT's Meteoric Rise: How OpenAI's Chatbot Became an Overnight Sensation](https://time.com/6247678/openai-chatgpt-kenya-workers/) - January 18, 2023 - TIME
+- [The inside story of how ChatGPT was built from the people who made it](https://www.technologyreview.com/2023/03/03/1069311/inside-story-oral-history-how-chatgpt-built-openai/)
+Exclusive conversations that take us behind the scenes of a cultural phenomenon. By Will Douglas Heaven - March 3, 2023 - MIT Review
