@@ -54,6 +54,7 @@ nav:
     - AI Winters: stories/ai-winters/index.md
     - AlexNet: stories/alexnet/index.md
     - Transformers: stories/transformers/index.md
+    - Yann LeCun: stories/yann-lecun/index.md
     - ChatGPT: stories/chatgpt/index.md
     - Hugging Face: stories/hugging-face/index.md
     - Meta's Llama: stories/meta-llama/index.md
