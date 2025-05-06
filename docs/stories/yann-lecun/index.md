@@ -1,4 +1,5 @@
 # The Visionary who Saw the Future: Yann LeCun's Quest for Intelligent Machines
+
 ![](./00-cover.png)
 <details><summary>Show Image Prompt</summary>
 Cover Image:
@@ -79,6 +80,8 @@ A dynamic wide-landscape illustration showing the inner workings of a CNN proces
 Working late into countless nights, LeCun developed something revolutionary: convolutional neural networks (CNNs). While traditional neural networks struggled with images, treating each pixel independently, LeCun's CNNs understood that images had structure – edges, corners, shapes that mattered.
 
 His breakthrough came when his CNN successfully read handwritten digits on checks. The system learned to recognize numbers the way humans do – by understanding patterns and structures, not by memorizing every possible variation. AT&T saved millions of dollars with this technology, but LeCun knew this was just the beginning.
+
+**Note:** You can see Micro Simulations of [CNNs MicroSims here](../../sims/index.md).  Start with the [Sliding Window](../../sims/sliding-window/index.md) MicroSim and proceed from there.
 
 ![](04.png)
 <details><summary>Show Image Prompt</summary>
