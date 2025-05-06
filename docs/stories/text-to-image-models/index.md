@@ -190,7 +190,7 @@ Independent creators flourished in this new landscape. Stories that might never 
 ![](13.png)
 <details class="show-prompt">
   <summary>Show Image Prompt</summary>
-13: Please generate a new drawing. A bright, colorful wide-landscape panel showing Jonathan, Robin, and Aditya looking toward a sunrise/horizon with futuristic silhouettes representing future innovations. The tech-forward style should create an optimistic mood with warm colors and forward-looking imagery.
+13: Please generate a new drawing. A bright, colorful wide-landscape panel showing Mr. Jonathan Ho, Mr. Robin Rombach, and Mr. Aditya Ramesh looking toward a sunrise/horizon with futuristic silhouettes representing future innovations. The tech-forward style should create an optimistic mood with warm colors and forward-looking imagery.
 </details>
 
 
