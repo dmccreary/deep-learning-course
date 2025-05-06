@@ -217,3 +217,16 @@ The story of text-to-image diffusion models is itself a testament to human ingen
 And like the best stories, this one is far from over. It's still being written – and illustrated – every day.
 
 **THE END**
+
+## References
+
+-   [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) - June 19, 2020 - arXiv Jonathan Ho's original DDPM paper that revolutionized diffusion models
+-   [DDPM GitHub Repository](https://github.com/hojonathanho/diffusion) - 2020 - GitHub The official code implementation of Jonathan Ho's groundbreaking diffusion model
+-   [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752) - December 20, 2021 - arXiv Robin Rombach's seminal paper introducing Latent Diffusion Models
+-   [Latent Diffusion Models GitHub](https://github.com/CompVis/latent-diffusion) - 2022 - GitHub Official repository for Rombach's Latent Diffusion Models, which became Stable Diffusion
+-   [Latent Diffusion Models Explained](https://paperswithcode.com/method/latent-diffusion-model) - 2022 - Papers with Code Technical overview of how Latent Diffusion Models work
+-   [DALL-E: Creating Images from Text](https://openai.com/index/dall-e/) - January 5, 2021 - OpenAI Original announcement of DALL-E by Aditya Ramesh
+-   [Hierarchical Text-Conditional Image Generation with CLIP Latents](https://arxiv.org/abs/2204.06125) - April 13, 2022 - arXiv Aditya Ramesh's paper on DALL-E 2, which uses CLIP for improved text understanding
+-   [DALL-E Explained GitHub](https://github.com/simonsanvil/DALL-E-Explained/blob/main/README.md) - 2021 - GitHub Detailed explanation of how DALL-E works with code implementation
+-   [CVPR Paper: High-Resolution Image Synthesis With Latent Diffusion Models](https://openaccess.thecvf.com/content/CVPR2022/html/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.html) - June 2022 - CVPR Proceedings Peer-reviewed conference publication of Rombach's LDM work
+-   [Two Years After DALL-E Debut, Its Inventor is "Surprised" by Impact](https://venturebeat.com/ai/two-years-after-dall-e-debut-its-inventor-is-surprised-by-impact/) - February 23, 2023 - VentureBeat Interview with Aditya Ramesh reflecting on the impact of his invention

@@ -39,6 +39,13 @@ This graphic novel chronicles how OpenAI's ChatGPT revolutionized artificial int
 
 [Read the ChatGPT Story](./chatgpt/index.md)
 
+
+## Diffusion Dreams: The Epic Tale of Text-to-Image Revolution
+
+This story chronicles how three brilliant researchers transformed AI image generation through their complementary breakthroughs: Jonathan Ho revolutionized the mathematical framework of diffusion models in 2020, making them viable for high-quality image creation; Robin Rombach tackled the massive computational requirements by developing Latent Diffusion Models that compressed the process into a more efficient space; and Aditya Ramesh bridged the gap between language and visuals by creating systems that could accurately interpret and visualize natural language prompts. Their combined innovations culminated in powerful, accessible text-to-image systems that democratized visual creation, enabling anyone—from professional artists to everyday people—to generate sophisticated imagery from simple text descriptions, ultimately revolutionizing fields from art and design to education and publishing, including the ability to create entire graphic novels through a collaborative process between human creativity and machine capabilities.
+
+[Read the Diffusion Dreams Story](./text-to-image-models/index.md)
+
 ## Meta's Llama
 ![](./meta-llama/01-llama-chessboard.png){width="300"}
 
