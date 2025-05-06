@@ -26,11 +26,12 @@ This graphic novel sequence tells the origin story of deep learning's revolution
 
 "Attention Revolution: How a Paper Changed AI Forever" tells the story of how a team of eight researchers at Google (Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan Gomez, Łukasz Kaiser, and Illia Polosukhin) revolutionized AI in 2017 with their paper "Attention Is All You Need." Working largely as a side project, they developed the transformer architecture that replaced traditional RNNs and CNNs with a revolutionary self-attention mechanism, allowing words to directly relate to each other regardless of distance. Despite internal concerns about giving away competitive advantages, they published their findings, which quickly became the foundation for modern language models like BERT, GPT, and later large language models. The paper's key innovation—the attention mechanism—proved remarkably versatile and scalable, enabling AI to better understand context and references (like knowing "it" refers to "chicken" in "The chicken did not cross the road because it was too tired"), ultimately transforming not just natural language processing but the entire field of artificial intelligence.
 
-## Hugging Faces
+## Yann LeCun
+![](./yann-lecun/00-cover.png){ width="400pt"}
 
-Hugging Face was founded in 2016 by three French entrepreneurs - Clément Delangue, Julien Chaumond, and Thomas Wolf - who initially created a chatbot app. The company, named after the hugging face emoji (🤗), pivoted from its consumer-focused beginnings when they made a crucial decision to open-source the natural language processing models powering their chatbot, which unexpectedly generated tremendous interest from the AI developer community. This strategic shift transformed Hugging Face into an open platform for machine learning, hosting repositories of models, datasets, and applications that has now grown to include over a million public models. The company has raised approximately $400 million across multiple funding rounds, reaching a valuation of $4.5 billion in 2023, and has expanded while maintaining its commitment to democratizing AI through open-source collaboration rather than the closed, proprietary approaches favored by tech giants.
+This story chronicles Yann LeCun's journey from a curious teenager in 1970s Paris to a pioneering AI researcher who revolutionized machine learning. It follows his development of convolutional neural networks (CNNs) at AT&T Bell Labs for optical character recognition, his forward-thinking establishment of the NYU Center for Data Science in 2012, and his collaboration in founding ICLR to unite the field. The narrative culminates with his 2019 Turing Award and explores his thoughtful skepticism about achieving AGI through large language models alone, emphasizing his belief that future AI systems need comprehensive world models to achieve true intelligence. Throughout, the story illustrates how LeCun combined deep technical innovation with visionary leadership to challenge the status quo and transform what was possible in artificial intelligence.
 
-[Read the Attention Revolution](./transformers/index.md)
+[Read the Yann LeCun Story](./yann-lecun/index.md)
 
 ## The Launch of ChatGPT
 ![](./chatgpt/01-silicon-valley-building.png){width="300"}
@@ -39,6 +40,11 @@ This graphic novel chronicles how OpenAI's ChatGPT revolutionized artificial int
 
 [Read the ChatGPT Story](./chatgpt/index.md)
 
+## Hugging Faces
+
+Hugging Face was founded in 2016 by three French entrepreneurs - Clément Delangue, Julien Chaumond, and Thomas Wolf - who initially created a chatbot app. The company, named after the hugging face emoji (🤗), pivoted from its consumer-focused beginnings when they made a crucial decision to open-source the natural language processing models powering their chatbot, which unexpectedly generated tremendous interest from the AI developer community. This strategic shift transformed Hugging Face into an open platform for machine learning, hosting repositories of models, datasets, and applications that has now grown to include over a million public models. The company has raised approximately $400 million across multiple funding rounds, reaching a valuation of $4.5 billion in 2023, and has expanded while maintaining its commitment to democratizing AI through open-source collaboration rather than the closed, proprietary approaches favored by tech giants.
+
+[Read the Attention Revolution](./transformers/index.md)
 
 ## Diffusion Dreams: The Epic Tale of Text-to-Image Revolution
 
