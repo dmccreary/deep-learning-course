@@ -76,7 +76,7 @@ theme:
   logo: img/logo.png
   favicon: img/favicon.ico
   palette:
-    primary: custom
+    primary: 'darkred'
     accent: 'gold'
   include_sidebar: true
   features:
