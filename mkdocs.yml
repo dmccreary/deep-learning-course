@@ -119,6 +119,9 @@ extra_javascript:
   # this is the MathJax 3 script to enable LaTeX equation rendering  
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 extra:
+  schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
+  textbook_name: Deep Learning with AI
+  textbook_version: "1.0"
   analytics:
     provider: google
     property: G-5MJ3S17WFF
